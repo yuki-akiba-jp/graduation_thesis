@@ -4,7 +4,7 @@
 
 #UML
 
-![png](https://raw.githubusercontent.com/graduation-thesis-app/graduation_thesis/main/uml/main.png)
+![png](https://raw.githubusercontent.com/yuki-akiba-jp/graduation_thesis/main/uml/main.png)
 
 #Layout(figma)
 
