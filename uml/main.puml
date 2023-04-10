@@ -1,0 +1,9 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+!include ./Table.puml
+!include ./Player.puml
+!include ./Problem.puml
+Table *-- Player
+Table *-- Problem
+@enduml

@@ -1,0 +1,4 @@
+class Table{
+  -players: Player[]
+  -problems: Problem[]
+}
