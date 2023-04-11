@@ -1,5 +1,6 @@
-class Player{
+class Team{
   -id: number
   -name: string
   -score: number
+  -players: Player[]
 }
