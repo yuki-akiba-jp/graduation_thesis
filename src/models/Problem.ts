@@ -7,13 +7,13 @@ export class Problem {
 
   constructor(
     id: number,
-    problemname: string,
+    problemName: string,
     description: string,
     answers: string[],
     choices: string[]
   ) {
     this.id = id;
-    this.problemname = problemname;
+    this.problemName = problemName;
     this.description = description;
     this.answers = answers;
     this.choices = choices;

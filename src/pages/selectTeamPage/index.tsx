@@ -10,7 +10,9 @@ import {
   Flex,
   Grid,
   Box,
-  HStack, GridItem, Spacer,
+  HStack,
+  GridItem,
+  Spacer,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -85,25 +87,4 @@ function TeamPanel({ teamName }) {
 
 function handleClickEnter() {
   console.log("Link clicked");
-}
-
-function MyComponent() {
-  return (
-    <Grid
-      templateColumns="repeat(3, 1fr)"
-      templateRows="repeat(3, 1fr)"
-      gap="4"
-    >
-      {[...Array(9)].map((_, i) => (
-        <GridItem
-          key={i}
-          backgroundColor="gray.200"
-          p="4"
-          alignContent={"center"}
-        >
-          Panel {i + 1}
-        </GridItem>
-      ))}
-    </Grid>
-  );
 }
