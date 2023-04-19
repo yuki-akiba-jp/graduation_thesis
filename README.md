@@ -13,3 +13,17 @@
 #Demo
 
 #Usage
+
+1.
+
+```
+git clone https://github.com/yuki-akiba-jp/graduation_thesis.git
+
+cd graduation_thesis
+
+npm install
+
+npm run dev
+```
+
+[http://localhost:3000/](http://localhost:3000/)

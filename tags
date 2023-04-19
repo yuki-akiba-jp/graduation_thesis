@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+const.reactStrictMode	next.config.js	/^  reactStrictMode: true,$/;"	p
+hasDockerEnv	node_modules/is-docker/index.js	/^function hasDockerEnv() {$/;"	f
+hasDockerCGroup	node_modules/is-docker/index.js	/^function hasDockerCGroup() {$/;"	f
+HookMap	node_modules/tapable/lib/HookMap.js	/^HookMap.prototype.tap = util.deprecate(function(key, options, fn) {$/;"	c
+HookMap.tap	node_modules/tapable/lib/HookMap.js	/^HookMap.prototype.tap = util.deprecate(function(key, options, fn) {$/;"	m
+HookMap.tapAsync	node_modules/tapable/lib/HookMap.js	/^HookMap.prototype.tapAsync = util.deprecate(function(key, options, fn) {$/;"	m
+HookMap.tapPromise	node_modules/tapable/lib/HookMap.js	/^HookMap.prototype.tapPromise = util.deprecate(function(key, options, fn) {$/;"	m
+const	node_modules/tapable/lib/SyncWaterfallHook.js	/^const COMPILE = function(options) {$/;"	f
+SyncWaterfallHook	node_modules/tapable/lib/SyncWaterfallHook.js	/^function SyncWaterfallHook(args = [], name = undefined) {$/;"	f
+SyncWaterfallHook	node_modules/tapable/lib/SyncWaterfallHook.js	/^SyncWaterfallHook.prototype = null;$/;"	c
+const	node_modules/tapable/lib/AsyncSeriesWaterfallHook.js	/^const COMPILE = function(options) {$/;"	f
+AsyncSeriesWaterfallHook	node_modules/tapable/lib/AsyncSeriesWaterfallHook.js	/^function AsyncSeriesWaterfallHook(args = [], name = undefined) {$/;"	f
+AsyncSeriesWaterfallHook	node_modules/tapable/lib/AsyncSeriesWaterfallHook.js	/^AsyncSeriesWaterfallHook.prototype = null;$/;"	c
+const	node_modules/tapable/lib/AsyncSeriesLoopHook.js	/^const COMPILE = function(options) {$/;"	f
+AsyncSeriesLoopHook	node_modules/tapable/lib/AsyncSeriesLoopHook.js	/^function AsyncSeriesLoopHook(args = [], name = undefined) {$/;"	f
+AsyncSeriesLoopHook	node_modules/tapable/lib/AsyncSeriesLoopHook.js	/^AsyncSeriesLoopHook.prototype = null;$/;"	c
