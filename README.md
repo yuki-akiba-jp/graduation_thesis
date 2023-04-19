@@ -2,6 +2,8 @@
 
 [proposal link(goto google slide)](https://docs.google.com/presentation/d/1GKUPFWZzB3xPCd55HY_4h1yUJOsplH0LWmvnU8Fxl6w/edit#slide=id.p){:target:"\_blank"}
 
+<p><a href="https://docs.google.com/presentation/d/1GKUPFWZzB3xPCd55HY_4h1yUJOsplH0LWmvnU8Fxl6w/edit#slide=id.p" target="_blank">proposal link(goto google slide)</a></p>
+
 #UML
 
 ![png](https://raw.githubusercontent.com/yuki-akiba-jp/graduation_thesis/main/uml/main.png){:target:"\_blank"}
