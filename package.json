@@ -31,9 +31,6 @@
     "lint-staged": "^13.2.1"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": "npm run lint:precommit"
-  },
-  "temp": {
     "src/**/*.{ts,tsx}": "npm run lint:precommit",
     "src/**/*.{js,jsx,ts,tsx,json,css,scss}": "npm run fmt:precommit"
   },
