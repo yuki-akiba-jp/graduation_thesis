@@ -22,8 +22,15 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import React from "react";
+import { useRouter } from "next/router";
 
 export default function SelectProblemFieldPage() {
+  const router = useRouter();
+  useEffect(() => {
+    if (!router.isReady) return;
+    console.log("query:", router.query.name);
+    console.log("query:", router.query.teamName);
+  });
   const problemFields = [
     "sns",
     "network",
@@ -43,8 +50,8 @@ export default function SelectProblemFieldPage() {
         gap={6}
         m={10}
       >
-        {problemFields.map((field) => (
-          <FieldPanel fieldName={field} />
+        {problemFields.map((field, index) => (
+          <FieldPanel fieldName={field} key={index} />
         ))}
       </Grid>
     </>

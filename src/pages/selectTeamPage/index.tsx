@@ -15,9 +15,9 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import React from "react";
+import { useRouter } from "next/router";
 
 export default function SelectTeamPage() {
-  const [name, setName] = useState<string>("");
   const teams = [
     "one team",
     "two team",
@@ -26,8 +26,16 @@ export default function SelectTeamPage() {
     "five team",
   ];
 
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    console.log("query:", router.query.name);
+  });
+
   return (
     <>
+      <div>username: {router.query.name}</div>
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -37,8 +45,8 @@ export default function SelectTeamPage() {
         gap={6}
         m={10}
       >
-        {teams.map((team) => (
-          <TeamPanel teamName={team} />
+        {teams.map((team, index) => (
+          <TeamPanel teamName={team} key={index} />
         ))}
       </Grid>
     </>
@@ -75,7 +83,12 @@ function TeamPanel({ teamName }) {
             colorScheme={"orange"}
             w="100%"
             type="button"
-            onClick={() => handleClickEnter()}
+            onClick={() => {
+              router.push({
+                pathname: "/selectTeamPage",
+                query: { name: name, teamName: teamName },
+              });
+            }}
           >
             Enter room
           </Button>

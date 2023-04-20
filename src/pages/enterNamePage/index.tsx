@@ -10,11 +10,14 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import React from "react";
-import { Router } from "next/router";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import SelectTeamPage from "../selectTeamPage";
 
 export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
+
+  const router = useRouter();
 
   return (
     <Flex
@@ -71,7 +74,12 @@ export default function EnterNamePage() {
               colorScheme={"orange"}
               w="100%"
               type="button"
-              onClick={() => handleClick(name)}
+              onClick={() => {
+                router.push({
+                  pathname: "/selectTeamPage",
+                  query: { name: name },
+                });
+              }}
             >
               Enter
             </Button>
@@ -82,17 +90,4 @@ export default function EnterNamePage() {
   );
 }
 
-function handleClick(name: string) {
-  // If the name is empty, return
-  try {
-    if (name == "") throw new Error("Name cannot be empty");
-
-    // If the name is not empty, go to the next page ,using react router with name state
-    const router = new Router('/selectTeamPage',{name: name});
-  } catch (e) {
-    console.log(e);
-  }
-  if (name == "") {
-    throw new Error("Name cannot be empty");
-  }
-}
+function handleClick(name: string) {}

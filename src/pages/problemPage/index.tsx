@@ -77,8 +77,13 @@ export default function ProblemPage({ problem }: { problem: Problem }) {
               gap={6}
               m={10}
             >
-              {choices.map((choice) => (
-                <Button colorScheme={"orange"} w="100%" type="button">
+              {choices.map((choice, index) => (
+                <Button
+                  colorScheme={"orange"}
+                  w="100%"
+                  type="button"
+                  key={index}
+                >
                   choice1
                 </Button>
               ))}
