@@ -11,12 +11,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
-import SelectTeamPage from "../selectTeamPage";
 
 export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
-
   const router = useRouter();
 
   return (

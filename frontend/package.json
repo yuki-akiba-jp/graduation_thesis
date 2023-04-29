@@ -1,5 +1,5 @@
 {
-  "name": "ctf-app",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,8 @@
     "next": "^13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
