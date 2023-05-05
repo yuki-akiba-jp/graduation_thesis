@@ -1,5 +1,0 @@
-class Field{
-  -name: string
-  -imgUrl: string
-  -problems: Problem[]
-}

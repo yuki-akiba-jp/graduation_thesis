@@ -1,4 +1,4 @@
-import { FormEvent, ChangeEvent, useState } from "react";
+import { FormEvent, ChangeEvent, useState, useEffect } from "react";
 import {
   VStack,
   FormControl,
@@ -11,10 +11,17 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { userNameState, teamNameState } from "@/recoilStates";
+import axios from "axios";
 
 export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
   const router = useRouter();
+
+  useEffect(() => {
+    localStorage.setItem("userName", name);
+  }, [name]);
 
   return (
     <Flex
@@ -74,7 +81,6 @@ export default function EnterNamePage() {
               onClick={() => {
                 router.push({
                   pathname: "/selectTeamPage",
-                  query: { name: name },
                 });
               }}
             >
@@ -87,4 +93,3 @@ export default function EnterNamePage() {
   );
 }
 
-function handleClick(name: string) {}

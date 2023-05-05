@@ -1,4 +1,5 @@
 import { FormEvent, ChangeEvent, useState, useEffect, Fragment } from "react";
+import axios from "axios";
 import {
   VStack,
   FormControl,
@@ -16,26 +17,86 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { userNameState, teamNameState } from "@/recoilStates";
+const server_url =
+  process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:5000";
 
 export default function SelectTeamPage() {
-  const teams = [
+  const router = useRouter();
+  const [teamName, setTeamName] = useState<string>("");
+  const [userName, setUserName] = useState<string>("");
+  const [teamNames, setTeamNames] = useState<string[]>([
     "one team",
     "two team",
     "three team",
     "four team",
     "five team",
-  ];
+  ]);
 
-  const router = useRouter();
+  const handleClickCreateTeamBtn = async () => {
+    try {
+      const res = await axios.post(`${server_url}/api/teams`, {
+        name: teamName,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const postTeamName = async (teamName: string) => {
+    try {
+      const res = await axios.post(`${server_url}/api/teams`, {
+        name: teamName,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const deleteTeamName = async (teamName: string) => {
+    try {
+      const res = await axios.put(`${server_url}/api/teams/deleteTeam`, {
+        name: teamName,
+      });
+      console.log("del", res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getTeamNames = async () => {
+    try {
+      const res = await axios.get(`${server_url}/api/teams`);
+      console.log(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const initForDevelopment = async () => {
+    teamNames.map((teamName) => deleteTeamName(teamName));
+    // teamNames.map((teamName) => postTeamName(teamName));
+    getTeamNames();
+  };
 
   useEffect(() => {
     if (!router.isReady) return;
-    console.log("query:", router.query.name);
+    setUserName(localStorage.getItem("userName") || "");
+    initForDevelopment();
+    // setTeamNames([]);
   });
 
   return (
     <>
-      <div>username: {router.query.name}</div>
+      <div>username: {userName}</div>
+      <Button
+        colorScheme={"orange"}
+        type="button"
+        onClick={() => {
+          handleClickCreateTeamBtn();
+        }}
+      >
+        create team
+      </Button>
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -45,15 +106,33 @@ export default function SelectTeamPage() {
         gap={6}
         m={10}
       >
-        {teams.map((team, index) => (
-          <TeamPanel teamName={team} key={index} />
+        {teamNames.map((teamName, index) => (
+          <TeamPanel teamName={teamName} key={index} />
         ))}
       </Grid>
     </>
   );
 }
 
-function TeamPanel({ teamName }) {
+function TeamPanel({ teamName }: { teamName: string }) {
+  const router = useRouter();
+  const [player, setPlayer] = useState<string>("");
+  useEffect(() => {
+    if (!router.isReady) return;
+    setPlayer(localStorage.getItem("userName") || "name");
+  });
+  const joinTeam = async () => {
+    try {
+      const res = await axios.put(`${server_url}/api/teams/joinTeam`, {
+        name: teamName,
+        player: player,
+      });
+      console.log("teamName", teamName);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <Container
       maxW={{ base: "sm", md: "xl" }}
@@ -84,10 +163,14 @@ function TeamPanel({ teamName }) {
             w="100%"
             type="button"
             onClick={() => {
-              router.push({
-                pathname: "/selectTeamPage",
-                query: { name: name, teamName: teamName },
-              });
+              joinTeam();
+              router.push(
+                {
+                  pathname: "/selectProblemPage",
+                  query: { name: router.query.name, teamName: teamName },
+                },
+                "/selectProblemPage"
+              );
             }}
           >
             Enter room

@@ -3,12 +3,16 @@ import { Link } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { useState } from "react";
+import axios from "axios";
 
+console.log(process.env.NEXT_PUBLIC_SERVER_URL);
 export default function Home() {
   const router = useRouter();
+
   useEffect(() => {
     router.push("/enterNamePage");
-  });
+  }, []);
   return (
     <>
       <div>

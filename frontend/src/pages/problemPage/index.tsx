@@ -23,22 +23,18 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { Problem } from "@/models/Problem";
+import { useRouter } from "next/router";
 
-export default function ProblemPage({ problem }: { problem: Problem }) {
-  const choices = [
-    "choice",
-    "choice",
-    "choice",
-    "choice",
-    "choice",
-    "choice",
-    "choice",
-    "choice",
-    "choice",
-  ];
+export default function ProblemPage() {
+  const router = useRouter();
+  console.log(router.query);
+
+  const problem = router.query.problem;
+  console.log(problem);
+
   return (
     <>
+      {problem}
       <Container
         minW="100vw"
         minH="100vh"
@@ -53,7 +49,7 @@ export default function ProblemPage({ problem }: { problem: Problem }) {
           textAlign={"center"}
           mb={5}
         >
-          problemName
+          name
         </Heading>
 
         <VStack
@@ -77,16 +73,18 @@ export default function ProblemPage({ problem }: { problem: Problem }) {
               gap={6}
               m={10}
             >
-              {choices.map((choice, index) => (
-                <Button
-                  colorScheme={"orange"}
-                  w="100%"
-                  type="button"
-                  key={index}
-                >
-                  choice1
-                </Button>
-              ))}
+              {
+                // problem.choices.map((choice, index) => (
+                //   <Button
+                //     colorScheme={"orange"}
+                //     w="100%"
+                //     type="button"
+                //     key={index}
+                //   >
+                //     {choice}
+                //   </Button>
+                // ))
+              }
             </Grid>
           </FormControl>
         </VStack>

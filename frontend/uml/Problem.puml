@@ -1,8 +1,0 @@
-class Problem{
-  -name: string
-  -imgUrl:string
-  -problemDescription: string
-  -answerChoices: string[]
-  -answerIndexInChoices: number
-  -reward: number
-}
