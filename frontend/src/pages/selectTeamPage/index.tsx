@@ -11,6 +11,14 @@ import {
   Flex,
   Grid,
   Box,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
   HStack,
   GridItem,
   Spacer,
@@ -19,39 +27,13 @@ import React from "react";
 import { useRouter } from "next/router";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { userNameState, teamNameState } from "@/recoilStates";
-const server_url =
-  process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:5000";
+import { server_url } from "../../const";
 
 export default function SelectTeamPage() {
   const router = useRouter();
-  const [teamName, setTeamName] = useState<string>("");
   const [userName, setUserName] = useState<string>("");
-  const [teamNames, setTeamNames] = useState<string[]>([
-    "one team",
-    "two team",
-    "three team",
-    "four team",
-    "five team",
-  ]);
+  const [teamNames, setTeamNames] = useState<string[]>([]);
 
-  const handleClickCreateTeamBtn = async () => {
-    try {
-      const res = await axios.post(`${server_url}/api/teams`, {
-        name: teamName,
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  const postTeamName = async (teamName: string) => {
-    try {
-      const res = await axios.post(`${server_url}/api/teams`, {
-        name: teamName,
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
   const deleteTeamName = async (teamName: string) => {
     try {
       const res = await axios.put(`${server_url}/api/teams/deleteTeam`, {
@@ -63,40 +45,27 @@ export default function SelectTeamPage() {
     }
   };
 
-  const getTeamNames = async () => {
-    try {
-      const res = await axios.get(`${server_url}/api/teams`);
-      console.log(res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const initForDevelopment = async () => {
-    teamNames.map((teamName) => deleteTeamName(teamName));
-    // teamNames.map((teamName) => postTeamName(teamName));
-    getTeamNames();
-  };
-
   useEffect(() => {
     if (!router.isReady) return;
     setUserName(localStorage.getItem("userName") || "");
-    initForDevelopment();
-    // setTeamNames([]);
+    const fetchTeamNames = async () => {
+      try {
+        const res = await axios.get(`${server_url}/api/teams`);
+        let names: string[] = [];
+        res.data.map((obj) => names.push(obj.name));
+        setTeamNames(names);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchTeamNames();
+    // teamNames.map((teamName) => deleteTeamName(teamName));
   });
 
   return (
     <>
       <div>username: {userName}</div>
-      <Button
-        colorScheme={"orange"}
-        type="button"
-        onClick={() => {
-          handleClickCreateTeamBtn();
-        }}
-      >
-        create team
-      </Button>
+      <ModalWindow />
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -116,7 +85,7 @@ export default function SelectTeamPage() {
 
 function TeamPanel({ teamName }: { teamName: string }) {
   const router = useRouter();
-  const [player, setPlayer] = useState<string>("");
+  const [playerName, setPlayer] = useState<string>("");
   useEffect(() => {
     if (!router.isReady) return;
     setPlayer(localStorage.getItem("userName") || "name");
@@ -125,9 +94,9 @@ function TeamPanel({ teamName }: { teamName: string }) {
     try {
       const res = await axios.put(`${server_url}/api/teams/joinTeam`, {
         name: teamName,
-        player: player,
+        playerName: playerName,
       });
-      console.log("teamName", teamName);
+      console.log(res.data);
     } catch (err) {
       console.log(err);
     }
@@ -164,13 +133,9 @@ function TeamPanel({ teamName }: { teamName: string }) {
             type="button"
             onClick={() => {
               joinTeam();
-              router.push(
-                {
-                  pathname: "/selectProblemPage",
-                  query: { name: router.query.name, teamName: teamName },
-                },
-                "/selectProblemPage"
-              );
+              router.push({
+                pathname: "/selectProblemPage",
+              });
             }}
           >
             Enter room
@@ -181,6 +146,82 @@ function TeamPanel({ teamName }: { teamName: string }) {
   );
 }
 
-function handleClickEnter() {
-  console.log("Link clicked");
+function ModalWindow() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [teamName, setTeamName] = useState<string>("");
+
+  const handleClickCreateTeamBtn = async () => {
+    try {
+      const res = await axios.post(`${server_url}/api/teams`, {
+        name: teamName,
+      });
+    } catch (err: any) {
+      if (err.response.status === 400) {
+        if (teamName.length < 3 || teamName.length > 20)
+          alert("Team name should be between 3 and 20 characters");
+        else alert("Team name already exists");
+      }
+      console.log(err);
+    }
+  };
+  return (
+    <>
+      <Button colorScheme={"orange"} type="button" onClick={onOpen}>
+        New Team
+      </Button>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Chakra UI Modal</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            This is the modal content. You can put anything you like here.
+          </ModalBody>
+
+          <ModalFooter>
+            <FormControl>
+              <Input
+                variant={"solid"}
+                borderWidth={1}
+                color={"gray.800"}
+                _placeholder={{
+                  color: "gray.400",
+                }}
+                borderColor={useColorModeValue("gray.300", "gray.700")}
+                id={"name"}
+                type={"name"}
+                minLength={3}
+                required
+                placeholder={"team name"}
+                aria-label={"team name"}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  setTeamName(e.target.value)
+                }
+              />
+            </FormControl>
+            <Button
+              colorScheme="blue"
+              mr={3}
+              variant="ghost"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              cancel
+            </Button>
+            <Button
+              colorScheme="orange"
+              onClick={() => {
+                handleClickCreateTeamBtn();
+                onClose();
+              }}
+            >
+              Create Team
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
 }

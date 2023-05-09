@@ -11,6 +11,8 @@ const registerTeams = require("./routes/teams");
 app.use(express.json());
 app.use(cors());
 app.use("/api/teams", require("./routes/teams"));
+app.use("/api/players", require("./routes/players"));
+app.use("/api/problems", require("./routes/problems"));
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -21,11 +23,11 @@ const io = new Server(server, {
 });
 
 io.on("connection", (socket) => {
-  socket.on("join_team", (data) => {
+  socket.on("enter_problem", (data) => {
     socket.join(data);
   });
 
-  socket.on("post_name", (data) => {
+  socket.on("leave_problem", (data) => {
     console.log(data.name);
     // io.to(data.team).emit("members", team);
   });

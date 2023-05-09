@@ -5,6 +5,7 @@ import {
   useEffect,
   Fragment,
   Profiler,
+  use,
 } from "react";
 import {
   VStack,
@@ -23,30 +24,25 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
-interface Problem {
-  name: string;
-  description: string;
-  questions: string[];
-  answers: string[];
-  score: number;
-}
-export default function SelectProblemPage() {
-  const chatgpt: Problem = {
-    name: "chatgpt",
-    description: "chatgpt",
-    questions: ["hello", "how are you", "what is your name"],
-    answers: ["hi", "good", "chatgpt"],
-    score: 0,
-  };
-  const twitter: Problem = {
-    name: "twitter",
-    description: "twitter",
-    questions: ["hello", "how are you", "what is your name"],
-    answers: ["hi", "good", "chatgpt"],
-    score: 0,
-  };
+import axios from "axios";
+import { server_url, problemId } from "../../const";
+import { Problem } from "../../models/Problem";
 
-  const problems = [chatgpt, twitter];
+export default function SelectProblemPage() {
+  const [problems, setProblems] = useState<Problem[]>([]);
+  useEffect(() => {
+    const fetchProblems = async () => {
+      try {
+        let fetchedProblems: Problem[] = [];
+        const res = await axios.get(`${server_url}/api/problems/all`);
+        res.data.map((problem: Problem) => fetchedProblems.push(problem));
+        setProblems(fetchedProblems);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchProblems();
+  }, []);
 
   return (
     <>
@@ -67,7 +63,7 @@ export default function SelectProblemPage() {
   );
 }
 
-function ProblemPanel({ problem }) {
+function ProblemPanel({ problem }: { problem: Problem }) {
   const router = useRouter();
 
   return (
@@ -86,6 +82,14 @@ function ProblemPanel({ problem }) {
       >
         {problem.name}
       </Heading>
+      <Heading
+        as={"h5"}
+        fontSize={{ base: "md", sm: "2md" }}
+        textAlign={"center"}
+        mb={5}
+      >
+        {problem.description}
+      </Heading>
       <VStack
         direction={{ base: "column", md: "row" }}
         as={"form"}
@@ -100,13 +104,10 @@ function ProblemPanel({ problem }) {
             w="100%"
             type="button"
             onClick={() => {
-              router.push(
-                {
-                  pathname: "/problemPage",
-                  query: { problem: problem },
-                },
-                "/problemPage"
-              );
+              localStorage.setItem(problemId, problem._id);
+              router.push({
+                pathname: "/problemPage",
+              });
             }}
           >
             Enter room

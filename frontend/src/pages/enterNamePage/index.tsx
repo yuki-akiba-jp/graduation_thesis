@@ -15,6 +15,8 @@ import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { userNameState, teamNameState } from "@/recoilStates";
 import axios from "axios";
 
+const server_url =
+  process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:5000";
 export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
   const router = useRouter();
@@ -78,10 +80,22 @@ export default function EnterNamePage() {
               colorScheme={"orange"}
               w="100%"
               type="button"
-              onClick={() => {
-                router.push({
-                  pathname: "/selectTeamPage",
-                });
+              onClick={async () => {
+                try {
+                  const res = await axios.post(`${server_url}/api/players`, {
+                    name: name,
+                  });
+                  router.push({
+                    pathname: "/selectTeamPage",
+                  });
+                } catch (err: any) {
+                  if (err.response.status === 400) {
+                    if (name.length < 3 || name.length > 20)
+                      alert("name should be between 3 and 20 characters");
+                    else alert("this name already exists");
+                  }
+                  console.log(err);
+                }
               }}
             >
               Enter
@@ -92,4 +106,3 @@ export default function EnterNamePage() {
     </Flex>
   );
 }
-

@@ -24,17 +24,42 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
+import { problemId, server_url } from "../../const";
+import { Problem } from "@/models/Problem";
+import axios from "axios";
 
 export default function ProblemPage() {
   const router = useRouter();
-  console.log(router.query);
+  const [problem, setProblem] = useState<Problem>();
+  const [selectedChoices, setSelectedChoices] = useState<string[]>([]);
+  const handleClickChoice = (choice: string) => {
+    if (selectedChoices.includes(choice)) {
+      let choices = [...selectedChoices];
+      choices.splice(selectedChoices.indexOf(choice), 1);
+      setSelectedChoices(choices);
+      return;
+    }
+    const maxSelectedChoces = 3;
+    if (selectedChoices.length < maxSelectedChoces) {
+      setSelectedChoices([...selectedChoices, choice]);
+    }
+  };
 
-  const problem = router.query.problem;
-  console.log(problem);
+  useEffect(() => {
+    const fetchProblem = async () => {
+      try {
+        const id = localStorage.getItem(problemId);
+        const res = await axios.get(`${server_url}/api/problems/problem/${id}`);
+        setProblem(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchProblem();
+  }, []);
 
   return (
     <>
-      {problem}
       <Container
         minW="100vw"
         minH="100vh"
@@ -49,7 +74,7 @@ export default function ProblemPage() {
           textAlign={"center"}
           mb={5}
         >
-          name
+          {problem?.name}
         </Heading>
 
         <VStack
@@ -62,7 +87,7 @@ export default function ProblemPage() {
         >
           <FormControl w={{ base: "100%", md: "100%" }}>
             <Text fontSize="md" fontWeight="bold" mb={4} textAlign="center">
-              description
+              {problem?._id}
             </Text>
             <Grid
               templateColumns={{
@@ -73,19 +98,27 @@ export default function ProblemPage() {
               gap={6}
               m={10}
             >
-              {
-                // problem.choices.map((choice, index) => (
-                //   <Button
-                //     colorScheme={"orange"}
-                //     w="100%"
-                //     type="button"
-                //     key={index}
-                //   >
-                //     {choice}
-                //   </Button>
-                // ))
-              }
+              {problem?.selectableChoices.map((choice, index) => (
+                <Button
+                  colorScheme={"orange"}
+                  w="100%"
+                  type="button"
+                  key={index}
+                  onClick={() => handleClickChoice(choice)}
+                >
+                  {choice}
+                  {selectedChoices.includes(choice) ? "✅" : ""}
+                </Button>
+              ))}
             </Grid>
+            <Button
+              colorScheme="teal"
+              w="30%"
+              justifyContent="center"
+              type="button"
+            >
+              submit
+            </Button>
           </FormControl>
         </VStack>
       </Container>
