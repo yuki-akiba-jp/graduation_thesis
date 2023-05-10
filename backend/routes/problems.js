@@ -5,7 +5,6 @@ const Problem = require("../models/Problem");
 router.get("/problem/:id", async (req, res) => {
   try {
     const problem = await Problem.findById(req.params.id);
-    console.log("id", problem);
     return res.status(200).json(problem);
   } catch (err) {
     return res.status(500).json(err);
@@ -28,9 +27,9 @@ router.post("/", async (req, res) => {
       description: req.body.description,
       answers: req.body.answers,
       choices: req.body.choices,
-      selectableChoices: [...req.body.answers, ...req.body.choices],
+      selectedChoices: [],
       reward: req.body.reward,
-      isCompleted: false,
+      score: 0,
     });
     const problem = await newProblem.save();
     return res.status(200).json(problem);

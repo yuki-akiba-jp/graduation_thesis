@@ -5,6 +5,6 @@ export interface Problem {
   questions: string[];
   answers: string[];
   choices: string[];
-  selectableChoices: string[];
+  selectedChoices: string[];
   score: number;
 }

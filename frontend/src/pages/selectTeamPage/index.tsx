@@ -52,7 +52,7 @@ export default function SelectTeamPage() {
       try {
         const res = await axios.get(`${server_url}/api/teams`);
         let names: string[] = [];
-        res.data.map((obj) => names.push(obj.name));
+        res.data.map((obj: any) => names.push(obj.name));
         setTeamNames(names);
       } catch (err) {
         console.log(err);

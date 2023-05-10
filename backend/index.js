@@ -31,7 +31,11 @@ io.on("connection", (socket) => {
     console.log(data.name);
     // io.to(data.team).emit("members", team);
   });
+  socket.on("disconnect", () => {
+    console.log("user disconnected");
+  });
 });
+
 mongoose.connect(process.env.MONGODB_URL).then(() => {
   console.log("mongodb connected");
 });

@@ -110,7 +110,7 @@ function ProblemPanel({ problem }: { problem: Problem }) {
               });
             }}
           >
-            Enter room
+            Try it
           </Button>
         </FormControl>
       </VStack>

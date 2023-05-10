@@ -6,7 +6,7 @@ const ProblemSchema = new mongoose.Schema({
   choices: { type: [String], required: true },
   selectableChoices: { type: [String], required: true },
   reward: { type: Number, required: true },
-  isCompleted: { type: Boolean, default: false },
+  score: { type: Number, required: true },
 });
 
 const Problem = mongoose.model("Problem", ProblemSchema);

@@ -20,21 +20,22 @@ import { useRouter } from "next/router";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { userNameState, teamNameState } from "@/recoilStates";
 import axios from "axios";
-import { server_url } from "../const"
+import { server_url } from "../const";
 
 export default function CreateProblemPage() {
+  const router = useRouter();
   const [name, setName] = useState<string>("name");
   const [description, setDescription] = useState<string>("description");
   const [reward, setReward] = useState<number>(0);
-  const [answers, setAnswers] = useState<string[]>(["1", "2", "3"]);
+  const [answers, setAnswers] = useState<string[]>(["ans1", "ans2", "ans3"]);
   const [choices, setChoices] = useState<string[]>([
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
+    "choice1",
+    "choice2",
+    "choice3",
+    "choice4",
+    "choice5",
+    "choice6",
+    "choice7",
   ]);
 
   const handleAnswerChange = (index: number, value: string) => {
@@ -143,7 +144,11 @@ export default function CreateProblemPage() {
             </NumberInput>
           </FormControl>
 
-          <Button type="submit" colorScheme="teal">
+          <Button
+            type="submit"
+            colorScheme="teal"
+            onClick={() => router.push("/selectProblemPage")}
+          >
             Submit
           </Button>
         </VStack>

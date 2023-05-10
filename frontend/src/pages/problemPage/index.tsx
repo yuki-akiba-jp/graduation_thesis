@@ -32,6 +32,7 @@ export default function ProblemPage() {
   const router = useRouter();
   const [problem, setProblem] = useState<Problem>();
   const [selectedChoices, setSelectedChoices] = useState<string[]>([]);
+  const [selectableChoices, setSelectableChoices] = useState<string[]>([]);
   const handleClickChoice = (choice: string) => {
     if (selectedChoices.includes(choice)) {
       let choices = [...selectedChoices];
@@ -51,11 +52,15 @@ export default function ProblemPage() {
         const id = localStorage.getItem(problemId);
         const res = await axios.get(`${server_url}/api/problems/problem/${id}`);
         setProblem(res.data);
+        setSelectedChoices(res.data.selectableChoices);
+        setSelectableChoices([...res.data.answers, ...res.data.choices]);
       } catch (err) {
         console.log(err);
       }
     };
     fetchProblem();
+    console.log(selectableChoices);
+    console.log(selectedChoices);
   }, []);
 
   return (
@@ -69,14 +74,16 @@ export default function ProblemPage() {
         // p={30}
       >
         <Heading
-          as={"h2"}
-          fontSize={{ base: "xl", sm: "2xl" }}
+          as={"h1"}
+          fontSize={{ base: "2xl", sm: "3xl" }}
           textAlign={"center"}
           mb={5}
         >
-          {problem?.name}
+          problem name: {problem?.name}
+          {selectedChoices.map((choice, index) => (
+            <Text key={index}>{choice}</Text>
+          ))}
         </Heading>
-
         <VStack
           direction={{ base: "column", md: "row" }}
           as={"form"}
@@ -87,7 +94,10 @@ export default function ProblemPage() {
         >
           <FormControl w={{ base: "100%", md: "100%" }}>
             <Text fontSize="md" fontWeight="bold" mb={4} textAlign="center">
-              {problem?._id}
+              id:{problem?._id}
+            </Text>
+            <Text fontSize="md" fontWeight="bold" mb={4} textAlign="center">
+              description: {problem?.description}
             </Text>
             <Grid
               templateColumns={{
@@ -98,16 +108,17 @@ export default function ProblemPage() {
               gap={6}
               m={10}
             >
-              {problem?.selectableChoices.map((choice, index) => (
+              {selectableChoices.map((choice, index) => (
                 <Button
-                  colorScheme={"orange"}
+                  colorScheme={
+                    selectedChoices.includes(choice) ? "green" : "orange"
+                  }
                   w="100%"
                   type="button"
                   key={index}
                   onClick={() => handleClickChoice(choice)}
                 >
                   {choice}
-                  {selectedChoices.includes(choice) ? "✅" : ""}
                 </Button>
               ))}
             </Grid>
@@ -116,12 +127,24 @@ export default function ProblemPage() {
               w="30%"
               justifyContent="center"
               type="button"
+              onClick={() => {
+                const score = getScore(problem!.answers, selectedChoices);
+                //make modal window to notify score
+                alert(`your score is ${score}`);
+              }}
             >
-              submit
+              submit answer
             </Button>
           </FormControl>
         </VStack>
       </Container>
     </>
   );
+}
+
+function getScore(answers: string[], selectedChoices: string[]) {
+  let correctAnswersCount = 0;
+  for (const choice of selectedChoices)
+    if (answers.includes(choice)) correctAnswersCount++;
+  return Math.floor((correctAnswersCount / answers.length) * 100);
 }
