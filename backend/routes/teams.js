@@ -73,6 +73,16 @@ router.put("/deleteTeam", async (req, res) => {
   }
 });
 
+router.put("/updateSelectedChoices/:teamId", async (req, res) => {
+  try {
+    console.log(req.body.selectedChoices);
+    const team = await Team.findById(req.params.teamId);
+    await team.updateOne({ $set: { selectedChoices: req.body.selectedChoices } });
+  } catch (err) {
+    return res.status(500).json(err);
+  }
+});
+
 router.delete("/", async (req, res) => {
   if (req.body.userId === req.params.id || req.body.isAdmin) {
     try {

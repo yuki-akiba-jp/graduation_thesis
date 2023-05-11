@@ -80,9 +80,6 @@ export default function ProblemPage() {
           mb={5}
         >
           problem name: {problem?.name}
-          {selectedChoices.map((choice, index) => (
-            <Text key={index}>{choice}</Text>
-          ))}
         </Heading>
         <VStack
           direction={{ base: "column", md: "row" }}
@@ -127,9 +124,13 @@ export default function ProblemPage() {
               w="30%"
               justifyContent="center"
               type="button"
-              onClick={() => {
+              onClick={async () => {
                 const score = getScore(problem!.answers, selectedChoices);
+                await axios.put(`${server_url}/api/teams/updateSelectedChoices/${problem?._id}`, {
+                  selectedChoices,
+                });
                 //make modal window to notify score
+
                 alert(`your score is ${score}`);
               }}
             >
