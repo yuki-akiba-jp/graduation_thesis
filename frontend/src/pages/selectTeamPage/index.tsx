@@ -25,8 +25,6 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
-import { useRecoilValue, useSetRecoilState } from "recoil";
-import { userNameState, teamNameState } from "@/recoilStates";
 import { server_url } from "../../const";
 import { userIdStrage, teamIdStrage } from "../../const";
 

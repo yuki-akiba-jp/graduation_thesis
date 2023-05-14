@@ -18,7 +18,6 @@ import {
 import React from "react";
 import { useRouter } from "next/router";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
-import { userNameState, teamNameState } from "@/recoilStates";
 import axios from "axios";
 import { server_url } from "../const";
 

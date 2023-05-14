@@ -19,7 +19,8 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "@chakra-ui/react";
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -165,7 +166,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4} onClick={onToggle}>
       <Flex
         py={2}
         as={Link}
@@ -210,6 +211,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 interface NavItem {
   label: string;
   href?: string;
+  children?: React.ReactNode;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
