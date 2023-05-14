@@ -11,19 +11,17 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
-import { userNameState, teamNameState } from "@/recoilStates";
+import { userIdStrage } from "@/const";
 import axios from "axios";
+import { server_url } from "@/const";
 
-const server_url =
-  process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:5000";
 export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
   const router = useRouter();
 
-  useEffect(() => {
-    localStorage.setItem("userName", name);
-  }, [name]);
+  // useEffect(() => {
+  //   localStorage.setItem("userName", name);
+  // }, [name]);
 
   return (
     <Flex
@@ -64,11 +62,8 @@ export default function EnterNamePage() {
                 color: "gray.400",
               }}
               borderColor={useColorModeValue("gray.300", "gray.700")}
-              id={"name"}
-              type={"name"}
               required
               placeholder={"Your name"}
-              aria-label={"Your name"}
               value={name}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setName(e.target.value)
@@ -85,6 +80,7 @@ export default function EnterNamePage() {
                   const res = await axios.post(`${server_url}/api/players`, {
                     name: name,
                   });
+                  localStorage.setItem(userIdStrage, res.data._id);
                   router.push({
                     pathname: "/selectTeamPage",
                   });

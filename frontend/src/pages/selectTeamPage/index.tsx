@@ -28,43 +28,22 @@ import { useRouter } from "next/router";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { userNameState, teamNameState } from "@/recoilStates";
 import { server_url } from "../../const";
+import { userIdStrage, teamIdStrage } from "../../const";
 
 export default function SelectTeamPage() {
   const router = useRouter();
-  const [userName, setUserName] = useState<string>("");
-  const [teamNames, setTeamNames] = useState<string[]>([]);
-
-  const deleteTeamName = async (teamName: string) => {
-    try {
-      const res = await axios.put(`${server_url}/api/teams/deleteTeam`, {
-        name: teamName,
-      });
-      console.log("del", res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  const { playerName, teamNames, fetchPlayerName, fetchTeamNames } =
+    useSelectTeamPage();
 
   useEffect(() => {
     if (!router.isReady) return;
-    setUserName(localStorage.getItem("userName") || "");
-    const fetchTeamNames = async () => {
-      try {
-        const res = await axios.get(`${server_url}/api/teams`);
-        let names: string[] = [];
-        res.data.map((obj: any) => names.push(obj.name));
-        setTeamNames(names);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+    fetchPlayerName();
     fetchTeamNames();
-    // teamNames.map((teamName) => deleteTeamName(teamName));
   });
 
   return (
     <>
-      <div>username: {userName}</div>
+      <div>playerName: {playerName}</div>
       <ModalWindow />
       <Grid
         templateColumns={{
@@ -85,18 +64,20 @@ export default function SelectTeamPage() {
 
 function TeamPanel({ teamName }: { teamName: string }) {
   const router = useRouter();
-  const [playerName, setPlayer] = useState<string>("");
+  const { playerName, teamNames, fetchPlayerName, fetchTeamNames } =
+    useSelectTeamPage();
+
   useEffect(() => {
     if (!router.isReady) return;
-    setPlayer(localStorage.getItem("userName") || "name");
+    fetchPlayerName();
   });
   const joinTeam = async () => {
     try {
-      const res = await axios.put(`${server_url}/api/teams/joinTeam`, {
+      const newTeam = await axios.put(`${server_url}/api/teams/joinTeam`, {
         name: teamName,
         playerName: playerName,
       });
-      console.log(res.data);
+      localStorage.setItem(teamIdStrage, newTeam.data._id);
     } catch (err) {
       console.log(err);
     }
@@ -224,4 +205,32 @@ function ModalWindow() {
       </Modal>
     </>
   );
+}
+
+function useSelectTeamPage() {
+  const router = useRouter();
+  const [playerName, setPlayerName] = useState<string>("");
+  const [teamNames, setTeamNames] = useState<string[]>([]);
+  const fetchPlayerName = async () => {
+    try {
+      const player = await axios.get(
+        `${server_url}/api/players/${localStorage.getItem(userIdStrage)}`
+      );
+      const playerName = player.data.name;
+      setPlayerName(playerName);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const fetchTeamNames = async () => {
+    try {
+      const res = await axios.get(`${server_url}/api/teams`);
+      let names: string[] = [];
+      res.data.map((obj: any) => names.push(obj.name));
+      setTeamNames(names);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  return { playerName, teamNames, fetchPlayerName, fetchTeamNames };
 }

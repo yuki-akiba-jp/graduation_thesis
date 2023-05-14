@@ -4,8 +4,30 @@ const Player = require("../models/Player");
 const Problem = require("../models/Problem");
 
 router.get("/", async (req, res) => {
-  const teams = await Team.find();
-  return res.status(200).json(teams);
+  try {
+    const teams = await Team.find();
+    return res.status(200).json(teams);
+  } catch (err) {
+    return res.status(500).json(err);
+  }
+});
+router.get("/teamInfo/:teamId", async (req, res) => {
+  try {
+    const team = await Team.findById(req.params.teamId);
+    return res.status(200).json(team);
+  } catch (err) {
+    return res.status(500).json(err);
+  }
+});
+
+router.get("/problems/:teamId/:problemId", async (req, res) => {
+  try {
+    const team = await Team.findById(req.params.teamId);
+    const problem = team.problems.id(req.params.problemId);
+    return res.status(200).json(problem);
+  } catch (err) {
+    return res.status(500).json(err);
+  }
 });
 
 async function isTeamNameValid(name) {
@@ -15,6 +37,7 @@ async function isTeamNameValid(name) {
   if (name.length < 3 || name.length > 20) return false;
   return true;
 }
+
 router.post("/", async (req, res) => {
   try {
     if (!(await isTeamNameValid(req.body.name)))
@@ -57,7 +80,7 @@ router.put("/joinTeam", async (req, res) => {
       { $push: { players: newPlayer } },
       { new: true }
     );
-    return res.status(200).json("ok");
+    return res.status(200).json(newTeam);
   } catch (err) {
     console.log(err);
     return res.status(500).json(err);
@@ -72,12 +95,42 @@ router.put("/deleteTeam", async (req, res) => {
     return res.status(500).json(err);
   }
 });
-
-router.put("/updateSelectedChoices/:teamId", async (req, res) => {
+router.put("/updateScore/:teamId", async (req, res) => {
   try {
-    console.log(req.body.selectedChoices);
     const team = await Team.findById(req.params.teamId);
-    await team.updateOne({ $set: { selectedChoices: req.body.selectedChoices } });
+    let updatedScore = 0;
+    team.problems.forEach((problem) => (updatedScore += problem.score));
+
+    const updatedTeam = await Team.updateOne(
+      { _id: req.params.teamId },
+      { $set: { score: updatedScore } },
+      { new: true }
+    );
+    return res.status(200).json(updatedTeam);
+  } catch (err) {
+    return res.status(500).json(err);
+  }
+});
+
+router.put("/updateProblem/:teamId/:problemId", async (req, res) => {
+  try {
+    const teamId = req.params.teamId;
+    const problemId = req.params.problemId;
+    // const problem = await team.problems.id(req.params.problemId);
+    const updatedTeam = await Team.updateOne(
+      { _id: teamId, "problems._id": problemId },
+      {
+        $set: {
+          "problems.$.selectedChoices": req.body.selectedChoices,
+          "problems.$.score": req.body.score,
+        },
+      },
+      { new: true }
+    );
+
+    const team = await Team.findById(req.params.teamId);
+
+    return res.status(200).json(team);
   } catch (err) {
     return res.status(500).json(err);
   }

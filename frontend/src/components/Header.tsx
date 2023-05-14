@@ -7,7 +7,6 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
   useColorModeValue,
@@ -20,7 +19,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-
+import Link from "next/link";
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -215,11 +214,20 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
+    label: "createProblem",
+    href: "/createProblemPage",
+  },
+
+  {
+    label: "selectTeam",
+    href: "/selectTeamPage",
+  },
+  {
     label: "teamInfo",
-    href: "#",
+    href: "/teamInfoPage",
   },
   {
     label: "ranking",
-    href: "#",
+    href: "/rankingPage",
   },
 ];

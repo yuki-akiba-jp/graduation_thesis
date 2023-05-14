@@ -24,43 +24,23 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
-import { problemId, server_url } from "../../const";
+import { server_url } from "../../const";
 import { Problem } from "@/models/Problem";
+import { problemIdStrage, teamIdStrage, userIdStrage } from "../../const";
 import axios from "axios";
 
 export default function ProblemPage() {
   const router = useRouter();
-  const [problem, setProblem] = useState<Problem>();
-  const [selectedChoices, setSelectedChoices] = useState<string[]>([]);
-  const [selectableChoices, setSelectableChoices] = useState<string[]>([]);
-  const handleClickChoice = (choice: string) => {
-    if (selectedChoices.includes(choice)) {
-      let choices = [...selectedChoices];
-      choices.splice(selectedChoices.indexOf(choice), 1);
-      setSelectedChoices(choices);
-      return;
-    }
-    const maxSelectedChoces = 3;
-    if (selectedChoices.length < maxSelectedChoces) {
-      setSelectedChoices([...selectedChoices, choice]);
-    }
-  };
+  const {
+    fetchProblem,
+    problem,
+    selectedChoices,
+    selectableChoices,
+    handleClickChoice,
+  } = useProblemPage();
 
   useEffect(() => {
-    const fetchProblem = async () => {
-      try {
-        const id = localStorage.getItem(problemId);
-        const res = await axios.get(`${server_url}/api/problems/problem/${id}`);
-        setProblem(res.data);
-        setSelectedChoices(res.data.selectableChoices);
-        setSelectableChoices([...res.data.answers, ...res.data.choices]);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     fetchProblem();
-    console.log(selectableChoices);
-    console.log(selectedChoices);
   }, []);
 
   return (
@@ -80,6 +60,7 @@ export default function ProblemPage() {
           mb={5}
         >
           problem name: {problem?.name}
+          problem score: {problem?.score}
         </Heading>
         <VStack
           direction={{ base: "column", md: "row" }}
@@ -90,11 +71,13 @@ export default function ProblemPage() {
           }}
         >
           <FormControl w={{ base: "100%", md: "100%" }}>
-            <Text fontSize="md" fontWeight="bold" mb={4} textAlign="center">
-              id:{problem?._id}
-            </Text>
-            <Text fontSize="md" fontWeight="bold" mb={4} textAlign="center">
-              description: {problem?.description}
+            <Text
+              fontSize={{ base: "2xl", sm: "3xl" }}
+              fontWeight="bold"
+              mb={4}
+              textAlign="center"
+            >
+              {problem?.description}
             </Text>
             <Grid
               templateColumns={{
@@ -126,12 +109,18 @@ export default function ProblemPage() {
               type="button"
               onClick={async () => {
                 const score = getScore(problem!.answers, selectedChoices);
-                await axios.put(`${server_url}/api/teams/updateSelectedChoices/${problem?._id}`, {
-                  selectedChoices,
-                });
-                //make modal window to notify score
-
-                alert(`your score is ${score}`);
+                const teamId = localStorage.getItem(teamIdStrage);
+                await axios.put(
+                  `${server_url}/api/teams/updateProblem/${teamId}/${problem?._id}`,
+                  {
+                    selectedChoices,
+                    score,
+                  }
+                );
+                await axios.put(
+                  `${server_url}/api/teams/updateScore/${teamId}`
+                );
+                fetchProblem();
               }}
             >
               submit answer
@@ -148,4 +137,45 @@ function getScore(answers: string[], selectedChoices: string[]) {
   for (const choice of selectedChoices)
     if (answers.includes(choice)) correctAnswersCount++;
   return Math.floor((correctAnswersCount / answers.length) * 100);
+}
+
+function useProblemPage() {
+  const [problem, setProblem] = useState<Problem>();
+  const [selectedChoices, setSelectedChoices] = useState<string[]>([]);
+  const [selectableChoices, setSelectableChoices] = useState<string[]>([]);
+  const handleClickChoice = (choice: string) => {
+    if (selectedChoices.includes(choice)) {
+      let choices = [...selectedChoices];
+      choices.splice(selectedChoices.indexOf(choice), 1);
+      setSelectedChoices(choices);
+      return;
+    }
+    const maxSelectedChoces = 3;
+    if (selectedChoices.length < maxSelectedChoces) {
+      setSelectedChoices([...selectedChoices, choice]);
+    }
+  };
+  const fetchProblem = async () => {
+    try {
+      const problemId = localStorage.getItem(problemIdStrage);
+      const teamId = localStorage.getItem(teamIdStrage);
+      console.log(problemId, teamId);
+      const res = await axios.get(
+        `${server_url}/api/teams/problems/${teamId}/${problemId}`
+      );
+      setProblem(res.data);
+      setSelectedChoices(res.data.selectedChoices);
+      setSelectableChoices([...res.data.answers, ...res.data.choices]);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  return {
+    problem,
+    setProblem,
+    selectedChoices,
+    selectableChoices,
+    handleClickChoice,
+    fetchProblem,
+  };
 }

@@ -1,6 +1,6 @@
 import React from "react";
 type Props = {};
-export const SpeedTableComponent: React.FC<Props> = (props) => {
+export const TeamInfoComponent: React.FC<Props> = (props) => {
   const {} = props;
 
   return (

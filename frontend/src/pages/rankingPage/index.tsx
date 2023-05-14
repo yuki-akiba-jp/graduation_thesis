@@ -1,0 +1,36 @@
+import React from "react";
+import { useEffect } from "react";
+import axios from "axios";
+import { server_url } from "@/const";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { Container, Heading, VStack } from "@chakra-ui/react";
+import { TeamInfo } from "@/components/TeamInfo";
+import { Team } from "@/models/Team";
+
+export default function RankingPage() {
+  const router = useRouter();
+  const [teams, setTeams] = useState<Team[]>([]);
+  useEffect(() => {
+    const fetchTeams = async () => {
+      const res = await axios.get(`${server_url}/api/teams`);
+      setTeams(res.data);
+    };
+    fetchTeams();
+  }, []);
+  return (
+    <>
+      <Container maxW="container.lg">
+        <VStack spacing={8}>
+          <Heading as="h1" size="2xl">
+            RANKING
+          </Heading>
+          {teams &&
+            teams.map((team, index) => (
+              <TeamInfo team={team} index={index} key={index} />
+            ))}
+        </VStack>
+      </Container>
+    </>
+  );
+}

@@ -25,7 +25,7 @@ import {
 import React from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import { server_url, problemId } from "../../const";
+import { server_url, problemIdStrage } from "../../const";
 import { Problem } from "../../models/Problem";
 
 export default function SelectProblemPage() {
@@ -104,7 +104,7 @@ function ProblemPanel({ problem }: { problem: Problem }) {
             w="100%"
             type="button"
             onClick={() => {
-              localStorage.setItem(problemId, problem._id);
+              localStorage.setItem(problemIdStrage, problem._id);
               router.push({
                 pathname: "/problemPage",
               });
