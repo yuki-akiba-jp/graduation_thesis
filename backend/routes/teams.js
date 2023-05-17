@@ -43,6 +43,7 @@ router.post("/", async (req, res) => {
     if (!(await isTeamNameValid(req.body.name)))
       return res.status(400).json("invalid");
     const problems = await Problem.find();
+
     const newTeam = new Team({
       name: req.body.name,
       score: 0,
@@ -55,6 +56,26 @@ router.post("/", async (req, res) => {
     return res.status(500).json(err);
   }
 });
+router.put("/addProblem/:problemId", async (req, res) => {
+  try {
+    const teams = await Team.find();
+    const problem = await Problem.findById(req.params.problemId);
+    teams.map(async (team) => {
+      const updatedTeam = await Team.updateOne(
+        { _id: team._id },
+        { $push: { problems: problem } },
+        { new: true }
+      );
+    });
+
+    return res.status(200).json("ok");
+  } catch (err) {
+    return res.status(500).json(err);
+  }
+});
+
+
+
 
 router.put("/joinTeam", async (req, res) => {
   try {

@@ -150,7 +150,7 @@ function useProblemPage() {
       setSelectedChoices(choices);
       return;
     }
-    const maxSelectedChoces = 3;
+    const maxSelectedChoces = 1;
     if (selectedChoices.length < maxSelectedChoces) {
       setSelectedChoices([...selectedChoices, choice]);
     }
@@ -159,7 +159,6 @@ function useProblemPage() {
     try {
       const problemId = localStorage.getItem(problemIdStrage);
       const teamId = localStorage.getItem(teamIdStrage);
-      console.log(problemId, teamId);
       const res = await axios.get(
         `${server_url}/api/teams/problems/${teamId}/${problemId}`
       );

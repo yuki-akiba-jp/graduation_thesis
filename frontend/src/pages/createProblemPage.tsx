@@ -19,22 +19,18 @@ import React from "react";
 import { useRouter } from "next/router";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import axios from "axios";
-import { server_url } from "../const";
+import { problemIdStrage, server_url } from "../const";
 
 export default function CreateProblemPage() {
   const router = useRouter();
   const [name, setName] = useState<string>("name");
   const [description, setDescription] = useState<string>("description");
   const [reward, setReward] = useState<number>(0);
-  const [answers, setAnswers] = useState<string[]>(["ans1", "ans2", "ans3"]);
+  const [answers, setAnswers] = useState<string[]>(["ans1"]);
   const [choices, setChoices] = useState<string[]>([
     "choice1",
     "choice2",
     "choice3",
-    "choice4",
-    "choice5",
-    "choice6",
-    "choice7",
   ]);
 
   const handleAnswerChange = (index: number, value: string) => {
@@ -53,7 +49,7 @@ export default function CreateProblemPage() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (
       name === "" ||
@@ -64,19 +60,19 @@ export default function CreateProblemPage() {
       alert("Please fill in all fields");
       return;
     }
-    console.log("Name:", name);
-    console.log("Description:", description);
-    console.log("Reward:", reward);
-    console.log("Answers:", answers);
-    console.log("Choices:", choices);
     try {
-      const res = axios.post(`${server_url}/api/problems`, {
+      const res = await axios.post(`${server_url}/api/problems`, {
         name,
         description,
         answers,
         choices,
         reward,
       });
+      const problemId = res.data._id;
+      const updateteams = await axios.put(
+        `${server_url}/api/teams/addProblem/${problemId}`
+      );
+      console.log(updateteams.data);
     } catch (err) {
       console.log(err);
     }
