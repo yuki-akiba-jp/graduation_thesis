@@ -3,8 +3,8 @@ export interface Problem {
   name: string;
   description: string;
   questions: string[];
-  answers: string[];
+  answer: string;
   choices: string[];
-  selectedChoices: string[];
-  score: number;
+  selectedChoice: string;
+  reward: number;
 }

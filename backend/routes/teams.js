@@ -74,9 +74,6 @@ router.put("/addProblem/:problemId", async (req, res) => {
   }
 });
 
-
-
-
 router.put("/joinTeam", async (req, res) => {
   try {
     const team = await Team.findOne({ name: req.body.name });
@@ -120,7 +117,10 @@ router.put("/updateScore/:teamId", async (req, res) => {
   try {
     const team = await Team.findById(req.params.teamId);
     let updatedScore = 0;
-    team.problems.forEach((problem) => (updatedScore += problem.score));
+    team.problems.forEach((problem) => {
+      if (problem.selectedChoice === problem.answer)
+        updatedScore += problem.reward;
+    });
 
     const updatedTeam = await Team.updateOne(
       { _id: req.params.teamId },
@@ -142,8 +142,7 @@ router.put("/updateProblem/:teamId/:problemId", async (req, res) => {
       { _id: teamId, "problems._id": problemId },
       {
         $set: {
-          "problems.$.selectedChoices": req.body.selectedChoices,
-          "problems.$.score": req.body.score,
+          "problems.$.selectedChoice": req.body.selectedChoice,
         },
       },
       { new: true }

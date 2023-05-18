@@ -19,15 +19,35 @@ router.get("/all", async (req, res) => {
   }
 });
 
+router.post("/addProblemsArray", async (req, res) => {
+  try {
+    const problemsArray = require("../problemsArray");
+    problemsArray.map(async (problem) => {
+      const newProblem = await new Problem({
+        name: problem.name,
+        description: problem.description,
+        answer: problem.answer,
+        choices: problem.choices,
+        selectedChoice: problem.selectedChoice,
+        reward: problem.reward,
+      });
+      await newProblem.save();
+    });
+
+    return res.status(200).json("ok");
+  } catch (err) {
+    return res.status(500).json(err);
+  }
+});
+
 router.post("/", async (req, res) => {
   try {
-    console.log(req.body);
     const newProblem = await new Problem({
       name: req.body.name,
       description: req.body.description,
-      answers: req.body.answers,
+      answer: req.body.answer,
       choices: req.body.choices,
-      selectedChoices: [],
+      selectedChoice: "",
       reward: req.body.reward,
       score: 0,
     });

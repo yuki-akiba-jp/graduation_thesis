@@ -13,6 +13,7 @@ app.use(cors());
 app.use("/api/teams", require("./routes/teams"));
 app.use("/api/players", require("./routes/players"));
 app.use("/api/problems", require("./routes/problems"));
+app.use("/api/deletes", require("./routes/deletes"));
 const server = http.createServer(app);
 
 const io = new Server(server, {

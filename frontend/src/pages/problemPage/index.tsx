@@ -34,7 +34,7 @@ export default function ProblemPage() {
   const {
     fetchProblem,
     problem,
-    selectedChoices,
+    selectedChoice,
     selectableChoices,
     handleClickChoice,
   } = useProblemPage();
@@ -60,7 +60,6 @@ export default function ProblemPage() {
           mb={5}
         >
           problem name: {problem?.name}
-          problem score: {problem?.score}
         </Heading>
         <VStack
           direction={{ base: "column", md: "row" }}
@@ -83,16 +82,14 @@ export default function ProblemPage() {
               templateColumns={{
                 base: "repeat(1, 1fr)",
                 sm: "repeat(2, 1fr)",
-                md: "repeat(3,1fr)",
+                md: "repeat(2,1fr)",
               }}
               gap={6}
               m={10}
             >
               {selectableChoices.map((choice, index) => (
                 <Button
-                  colorScheme={
-                    selectedChoices.includes(choice) ? "green" : "orange"
-                  }
+                  colorScheme={choice === selectedChoice ? "green" : "orange"}
                   w="100%"
                   type="button"
                   key={index}
@@ -108,19 +105,20 @@ export default function ProblemPage() {
               justifyContent="center"
               type="button"
               onClick={async () => {
-                const score = getScore(problem!.answers, selectedChoices);
                 const teamId = localStorage.getItem(teamIdStrage);
                 await axios.put(
                   `${server_url}/api/teams/updateProblem/${teamId}/${problem?._id}`,
                   {
-                    selectedChoices,
-                    score,
+                    selectedChoice,
                   }
                 );
                 await axios.put(
                   `${server_url}/api/teams/updateScore/${teamId}`
                 );
                 fetchProblem();
+                if (problem?.answer === selectedChoice)
+                  alert("correct answer!");
+                else alert("wrong answer...");
               }}
             >
               submit answer
@@ -132,28 +130,12 @@ export default function ProblemPage() {
   );
 }
 
-function getScore(answers: string[], selectedChoices: string[]) {
-  let correctAnswersCount = 0;
-  for (const choice of selectedChoices)
-    if (answers.includes(choice)) correctAnswersCount++;
-  return Math.floor((correctAnswersCount / answers.length) * 100);
-}
-
 function useProblemPage() {
   const [problem, setProblem] = useState<Problem>();
-  const [selectedChoices, setSelectedChoices] = useState<string[]>([]);
+  const [selectedChoice, setSelectedChoice] = useState<string>("");
   const [selectableChoices, setSelectableChoices] = useState<string[]>([]);
   const handleClickChoice = (choice: string) => {
-    if (selectedChoices.includes(choice)) {
-      let choices = [...selectedChoices];
-      choices.splice(selectedChoices.indexOf(choice), 1);
-      setSelectedChoices(choices);
-      return;
-    }
-    const maxSelectedChoces = 1;
-    if (selectedChoices.length < maxSelectedChoces) {
-      setSelectedChoices([...selectedChoices, choice]);
-    }
+    setSelectedChoice(choice);
   };
   const fetchProblem = async () => {
     try {
@@ -163,8 +145,8 @@ function useProblemPage() {
         `${server_url}/api/teams/problems/${teamId}/${problemId}`
       );
       setProblem(res.data);
-      setSelectedChoices(res.data.selectedChoices);
-      setSelectableChoices([...res.data.answers, ...res.data.choices]);
+      setSelectedChoice(res.data.selectedChoice);
+      setSelectableChoices([...res.data.choices]);
     } catch (err) {
       console.log(err);
     }
@@ -172,7 +154,7 @@ function useProblemPage() {
   return {
     problem,
     setProblem,
-    selectedChoices,
+    selectedChoice,
     selectableChoices,
     handleClickChoice,
     fetchProblem,

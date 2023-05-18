@@ -90,6 +90,14 @@ function ProblemPanel({ problem }: { problem: Problem }) {
       >
         {problem.description}
       </Heading>
+      <Heading
+        as={"h5"}
+        fontSize={{ base: "md", sm: "2md" }}
+        textAlign={"center"}
+        mb={5}
+      >
+        reward: {problem.reward}
+      </Heading>
       <VStack
         direction={{ base: "column", md: "row" }}
         as={"form"}

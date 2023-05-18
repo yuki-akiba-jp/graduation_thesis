@@ -1,13 +1,13 @@
 "use client";
-import { Link } from "@chakra-ui/react";
+import { Button, Link } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { userIdStrage } from "@/const";
+import { server_url } from "@/const";
 
-console.log(process.env.NEXT_PUBLIC_SERVER_URL);
 export default function Home() {
   const router = useRouter();
 
@@ -15,14 +15,25 @@ export default function Home() {
     // if (localStorage.getItem(userIdStrage) !== null) {
     //   router.push("/selectTeamPage");
     // }
-    router.push("/enterNamePage");
+    // router.push("/enterNamePage");
   }, []);
   return (
     <>
       <div>
-        <Link href="/enterNamePage" color="blue.400">
+        <Link href="/enterNamePage" color="blue.400" colorScheme="teal">
           start app
         </Link>
+        <Button
+          colorScheme="orange"
+          onClick={async () => {
+            const del = await axios.delete(`${server_url}/api/deletes`);
+            const res = await axios.post(
+              `${server_url}/api/problems/addProblemsArray`
+            );
+          }}
+        >
+          init
+        </Button>
       </div>
     </>
   );
