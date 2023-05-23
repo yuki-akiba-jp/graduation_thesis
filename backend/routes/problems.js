@@ -10,14 +10,6 @@ router.get("/problem/:id", async (req, res) => {
     return res.status(500).json(err);
   }
 });
-router.get("/all", async (req, res) => {
-  try {
-    const problems = await Problem.find();
-    return res.status(200).json(problems);
-  } catch (err) {
-    return res.status(500).json(err);
-  }
-});
 
 router.post("/addProblemsArray", async (req, res) => {
   try {

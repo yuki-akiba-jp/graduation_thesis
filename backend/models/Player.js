@@ -5,7 +5,7 @@ const PlayerSchema = new mongoose.Schema({
     require: true,
     min: 3,
     max: 20,
-    unique: true,
+    // unique: true,
   },
   score: Number,
   teamName: {

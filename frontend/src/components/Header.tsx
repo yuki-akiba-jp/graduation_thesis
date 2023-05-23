@@ -21,6 +21,7 @@ import {
 } from "@chakra-ui/icons";
 // import Link from "next/link";
 import { Link } from "@chakra-ui/react";
+import { userIdStrage, teamIdStrage } from "@/const";
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
 

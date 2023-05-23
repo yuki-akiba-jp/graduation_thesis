@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { server_url } from "@/const";
@@ -11,11 +11,11 @@ import { Team } from "@/models/Team";
 export default function RankingPage() {
   const router = useRouter();
   const [teams, setTeams] = useState<Team[]>([]);
+  const fetchTeams = useCallback(async () => {
+    const res = await axios.get(`${server_url}/api/teams`);
+    setTeams(res.data);
+  }, []);
   useEffect(() => {
-    const fetchTeams = async () => {
-      const res = await axios.get(`${server_url}/api/teams`);
-      setTeams(res.data);
-    };
     fetchTeams();
   }, []);
   return (
@@ -26,9 +26,11 @@ export default function RankingPage() {
             RANKING
           </Heading>
           {teams &&
-            teams.map((team, index) => (
-              <TeamInfo team={team} index={index} key={index} />
-            ))}
+            teams
+              .sort((a, b) => b.score - a.score)
+              .map((team, index) => (
+                <TeamInfo team={team} index={index} key={index} />
+              ))}
         </VStack>
       </Container>
     </>

@@ -1,4 +1,12 @@
-import { FormEvent, ChangeEvent, useState, useEffect, Fragment } from "react";
+import {
+  FormEvent,
+  ChangeEvent,
+  useState,
+  useEffect,
+  Fragment,
+  useMemo,
+  useCallback,
+} from "react";
 import axios from "axios";
 import {
   VStack,
@@ -24,7 +32,7 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import React from "react";
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import { server_url } from "../../const";
 import { userIdStrage, teamIdStrage } from "../../const";
 
@@ -34,10 +42,11 @@ export default function SelectTeamPage() {
     useSelectTeamPage();
 
   useEffect(() => {
+    console.log("called");
     if (!router.isReady) return;
     fetchPlayerName();
     fetchTeamNames();
-  });
+  }, [router.isReady, fetchPlayerName, fetchTeamNames]);
 
   return (
     <>
@@ -69,7 +78,7 @@ function TeamPanel({ teamName }: { teamName: string }) {
     if (!router.isReady) return;
     fetchPlayerName();
   });
-  const joinTeam = async () => {
+  const joinTeam = useCallback(async () => {
     try {
       const newTeam = await axios.put(`${server_url}/api/teams/joinTeam`, {
         name: teamName,
@@ -79,7 +88,7 @@ function TeamPanel({ teamName }: { teamName: string }) {
     } catch (err) {
       console.log(err);
     }
-  };
+  }, [teamName, playerName]);
 
   return (
     <Container
@@ -128,12 +137,14 @@ function TeamPanel({ teamName }: { teamName: string }) {
 function ModalWindow() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [teamName, setTeamName] = useState<string>("");
+  const router = useRouter();
 
-  const handleClickCreateTeamBtn = async () => {
+  const handleClickCreateTeamBtn = useCallback(async () => {
     try {
       const res = await axios.post(`${server_url}/api/teams`, {
         name: teamName,
       });
+      router.reload();
     } catch (err: any) {
       if (err.response.status === 400) {
         if (teamName.length < 3 || teamName.length > 20)
@@ -142,7 +153,7 @@ function ModalWindow() {
       }
       console.log(err);
     }
-  };
+  }, [teamName, router]);
   return (
     <>
       <Button colorScheme={"orange"} type="button" onClick={onOpen}>
@@ -209,7 +220,7 @@ function useSelectTeamPage() {
   const router = useRouter();
   const [playerName, setPlayerName] = useState<string>("");
   const [teamNames, setTeamNames] = useState<string[]>([]);
-  const fetchPlayerName = async () => {
+  const fetchPlayerName = useCallback(async () => {
     try {
       const player = await axios.get(
         `${server_url}/api/players/${localStorage.getItem(userIdStrage)}`
@@ -219,8 +230,9 @@ function useSelectTeamPage() {
     } catch (err) {
       console.log(err);
     }
-  };
-  const fetchTeamNames = async () => {
+  }, []);
+
+  const fetchTeamNames = useCallback(async () => {
     try {
       const res = await axios.get(`${server_url}/api/teams`);
       let names: string[] = [];
@@ -229,6 +241,6 @@ function useSelectTeamPage() {
     } catch (err) {
       console.log(err);
     }
-  };
+  }, []);
   return { playerName, teamNames, fetchPlayerName, fetchTeamNames };
 }

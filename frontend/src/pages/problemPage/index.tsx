@@ -7,6 +7,14 @@ import {
   Profiler,
 } from "react";
 import {
+  ModalOverlay,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  ModalContent,
+  Stack,
+  Modal,
   VStack,
   FormControl,
   Input,
@@ -22,6 +30,7 @@ import {
   Spacer,
   Text,
 } from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/hooks";
 import React from "react";
 import { useRouter } from "next/router";
 import { server_url } from "../../const";
@@ -56,10 +65,11 @@ export default function ProblemPage() {
         <Heading
           as={"h1"}
           fontSize={{ base: "2xl", sm: "3xl" }}
+          fontStyle={"italic"}
           textAlign={"center"}
           mb={5}
         >
-          problem name: {problem?.name}
+          {problem?.name}
         </Heading>
         <VStack
           direction={{ base: "column", md: "row" }}
@@ -71,7 +81,7 @@ export default function ProblemPage() {
         >
           <FormControl w={{ base: "100%", md: "100%" }}>
             <Text
-              fontSize={{ base: "2xl", sm: "3xl" }}
+              fontSize={{ base: "xl", sm: "2xl" }}
               fontWeight="bold"
               mb={4}
               textAlign="center"
@@ -94,35 +104,18 @@ export default function ProblemPage() {
                   type="button"
                   key={index}
                   onClick={() => handleClickChoice(choice)}
+                  isTruncated
                 >
                   {choice}
                 </Button>
               ))}
             </Grid>
-            <Button
-              colorScheme="teal"
-              w="30%"
-              justifyContent="center"
-              type="button"
-              onClick={async () => {
-                const teamId = localStorage.getItem(teamIdStrage);
-                await axios.put(
-                  `${server_url}/api/teams/updateProblem/${teamId}/${problem?._id}`,
-                  {
-                    selectedChoice,
-                  }
-                );
-                await axios.put(
-                  `${server_url}/api/teams/updateScore/${teamId}`
-                );
-                fetchProblem();
-                if (problem?.answer === selectedChoice)
-                  alert("correct answer!");
-                else alert("wrong answer...");
-              }}
-            >
-              submit answer
-            </Button>
+
+            <SubmitAnswerModal
+              problem={problem}
+              selectedChoice={selectedChoice}
+              fetchProblem={fetchProblem}
+            />
           </FormControl>
         </VStack>
       </Container>
@@ -159,4 +152,99 @@ function useProblemPage() {
     handleClickChoice,
     fetchProblem,
   };
+}
+
+function SubmitAnswerModal({
+  problem,
+  selectedChoice,
+  fetchProblem,
+}: {
+  problem: any;
+  selectedChoice: string;
+  fetchProblem: () => void;
+}) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
+
+  return (
+    <>
+      <HStack justifyContent={"center"}>
+        <Button
+          colorScheme="blue"
+          w="30%"
+          type="button"
+          onClick={() => {
+            router.push({
+              pathname: "/selectProblemPage",
+            });
+          }}
+          isTruncated
+        >
+          goto problems page
+        </Button>
+        <Button
+          colorScheme="teal"
+          w="30%"
+          type="button"
+          onClick={async () => {
+            const teamId = localStorage.getItem(teamIdStrage);
+            await axios.put(
+              `${server_url}/api/teams/updateProblem/${teamId}/${problem?._id}`,
+              {
+                selectedChoice,
+              }
+            );
+            await axios.put(`${server_url}/api/teams/updateScore/${teamId}`);
+            fetchProblem();
+            onOpen();
+          }}
+          isTruncated
+        >
+          submit answer
+        </Button>
+      </HStack>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>RESULT</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            {problem?.answer === selectedChoice ? (
+              <Text fontSize="2xl" fontWeight="bold" textAlign="center">
+                correct answer!
+              </Text>
+            ) : (
+              <Text fontSize="2xl" fontWeight="bold" textAlign="center">
+                wrong answer...
+              </Text>
+            )}
+          </ModalBody>
+
+          <ModalFooter>
+            <Button
+              colorScheme="blue"
+              mr={3}
+              variant="ghost"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              back to problem
+            </Button>
+            <Button
+              colorScheme="orange"
+              onClick={() => {
+                router.push({
+                  pathname: "/selectProblemPage",
+                });
+                onClose();
+              }}
+            >
+              goto problems page
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
 }

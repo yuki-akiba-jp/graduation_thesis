@@ -27,6 +27,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { server_url, problemIdStrage } from "../../const";
 import { Problem } from "../../models/Problem";
+import { teamIdStrage } from "../../const";
 
 export default function SelectProblemPage() {
   const [problems, setProblems] = useState<Problem[]>([]);
@@ -34,7 +35,10 @@ export default function SelectProblemPage() {
     const fetchProblems = async () => {
       try {
         let fetchedProblems: Problem[] = [];
-        const res = await axios.get(`${server_url}/api/problems/all`);
+        const teamId = localStorage.getItem(teamIdStrage);
+        const res = await axios.get(
+          `${server_url}/api/teams/${teamId}/problemsAll`
+        );
         res.data.map((problem: Problem) => fetchedProblems.push(problem));
         setProblems(fetchedProblems);
       } catch (err) {
@@ -69,7 +73,8 @@ function ProblemPanel({ problem }: { problem: Problem }) {
   return (
     <Container
       maxW={{ base: "sm", md: "xl" }}
-      bg={useColorModeValue("gray", "blue.100")}
+      // bg={useColorModeValue("gray", "blue.100")}
+      bg={problem?.selectedChoice === problem?.answer ? "green.100" : "red.100"}
       boxShadow={"xl"}
       rounded={"lg"}
       p={30}
@@ -81,14 +86,6 @@ function ProblemPanel({ problem }: { problem: Problem }) {
         mb={5}
       >
         {problem.name}
-      </Heading>
-      <Heading
-        as={"h5"}
-        fontSize={{ base: "md", sm: "2md" }}
-        textAlign={"center"}
-        mb={5}
-      >
-        {problem.description}
       </Heading>
       <Heading
         as={"h5"}
