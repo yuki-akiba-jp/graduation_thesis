@@ -6,11 +6,11 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { Container, Heading, VStack } from "@chakra-ui/react";
 import { TeamInfo } from "@/components/TeamInfo";
-import { Team } from "@/models/Team";
+import { ITeam } from "@/models/ITeam";
 
 export default function RankingPage() {
   const router = useRouter();
-  const [teams, setTeams] = useState<Team[]>([]);
+  const [teams, setTeams] = useState<ITeam[]>([]);
   const fetchTeams = useCallback(async () => {
     const res = await axios.get(`${server_url}/api/teams`);
     setTeams(res.data);

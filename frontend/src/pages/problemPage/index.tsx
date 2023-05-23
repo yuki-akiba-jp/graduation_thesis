@@ -34,9 +34,9 @@ import { useDisclosure } from "@chakra-ui/hooks";
 import React from "react";
 import { useRouter } from "next/router";
 import { server_url } from "../../const";
-import { Problem } from "@/models/Problem";
 import { problemIdStrage, teamIdStrage, userIdStrage } from "../../const";
 import axios from "axios";
+import { IProblem } from "@/models/IProblem";
 
 export default function ProblemPage() {
   const router = useRouter();
@@ -124,7 +124,7 @@ export default function ProblemPage() {
 }
 
 function useProblemPage() {
-  const [problem, setProblem] = useState<Problem>();
+  const [problem, setProblem] = useState<IProblem>();
   const [selectedChoice, setSelectedChoice] = useState<string>("");
   const [selectableChoices, setSelectableChoices] = useState<string[]>([]);
   const handleClickChoice = (choice: string) => {
@@ -180,7 +180,7 @@ function SubmitAnswerModal({
           }}
           isTruncated
         >
-          goto problems page
+          back
         </Button>
         <Button
           colorScheme="teal"
@@ -200,7 +200,7 @@ function SubmitAnswerModal({
           }}
           isTruncated
         >
-          submit answer
+          submit
         </Button>
       </HStack>
       <Modal isOpen={isOpen} onClose={onClose}>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Heading, Text, Box } from "@chakra-ui/react";
-import { Team } from "@/models/Team";
+import { ITeam } from "@/models/ITeam";
 
-export function TeamInfo({ team, index }: { team: Team; index: number }) {
+export function TeamInfo({ team, index }: { team: ITeam; index: number }) {
   return (
     <>
       <Box key={team._id} p={5} shadow="md" borderWidth="1px">

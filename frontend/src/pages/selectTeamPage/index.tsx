@@ -42,7 +42,6 @@ export default function SelectTeamPage() {
     useSelectTeamPage();
 
   useEffect(() => {
-    console.log("called");
     if (!router.isReady) return;
     fetchPlayerName();
     fetchTeamNames();
