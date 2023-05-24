@@ -6,10 +6,10 @@ import { server_url } from "@/const";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { Container, Heading, Text, VStack } from "@chakra-ui/react";
-import { Team } from "@/models/Team";
+import { ITeam } from "@/models/ITeam";
 export default function TeamInfoPage() {
   const router = useRouter();
-  const [team, setTeam] = useState<Team | null>(null);
+  const [team, setTeam] = useState<ITeam | null>(null);
   useEffect(() => {
     const teamId = localStorage.getItem(teamIdStrage);
     const fetchTeam = async () => {
