@@ -26,20 +26,20 @@ import React from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { server_url, problemIdStrage } from "../../const";
-import { Problem } from "../../models/Problem";
+import { IProblem } from "@/models/IProblem";
 import { teamIdStrage } from "../../const";
 
 export default function SelectProblemPage() {
-  const [problems, setProblems] = useState<Problem[]>([]);
+  const [problems, setProblems] = useState<IProblem[]>([]);
   useEffect(() => {
     const fetchProblems = async () => {
       try {
-        let fetchedProblems: Problem[] = [];
+        let fetchedProblems: IProblem[] = [];
         const teamId = localStorage.getItem(teamIdStrage);
         const res = await axios.get(
           `${server_url}/api/teams/${teamId}/problemsAll`
         );
-        res.data.map((problem: Problem) => fetchedProblems.push(problem));
+        res.data.map((problem: IProblem) => fetchedProblems.push(problem));
         setProblems(fetchedProblems);
       } catch (err) {
         console.log(err);
@@ -67,7 +67,7 @@ export default function SelectProblemPage() {
   );
 }
 
-function ProblemPanel({ problem }: { problem: Problem }) {
+function ProblemPanel({ problem }: { problem: IProblem }) {
   const router = useRouter();
 
   return (
