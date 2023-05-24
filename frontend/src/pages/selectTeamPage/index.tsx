@@ -79,7 +79,7 @@ function TeamPanel({ teamName }: { teamName: string }) {
   });
   const joinTeam = useCallback(async () => {
     try {
-      const newTeam = await axios.put(`/api/teams/joinTeam`, {
+      const newTeam = await axios.put(`${server_url}/api/teams/joinTeam`, {
         name: teamName,
         playerName: playerName,
       });
