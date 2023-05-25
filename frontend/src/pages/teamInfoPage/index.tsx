@@ -30,7 +30,7 @@ export default function TeamInfoPage() {
           <Text fontSize="xl">Score: {team?.score}</Text>
           <Text fontSize="xl">
             Players:
-            {team?.players.map((player) => player.name).join(",") ?? ""}
+            {team?.players.map((player) => player?.name).join(",") ?? ""}
           </Text>
         </VStack>
       </Container>

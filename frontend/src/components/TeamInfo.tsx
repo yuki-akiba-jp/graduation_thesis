@@ -11,7 +11,7 @@ export function TeamInfo({ team, index }: { team: ITeam; index: number }) {
         </Heading>
         <Text mt={2}>Score: {team.score}</Text>
         <Text mt={2}>
-          player: {team.players.map((player) => player.name).join(",") ?? ""}
+          player: {team.players.map((player) => player?.name).join(",") ?? ""}
         </Text>
       </Box>
     </>
