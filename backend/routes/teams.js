@@ -85,7 +85,7 @@ router.put("/joinTeam", async (req, res) => {
 
     const player = await Player.findOne({ name: req.body.playerName });
 
-    if (player.teamName)
+    if (player && player.teamName)
       if ((await Team.findOne({ name: player.teamName })) !== null) {
         const oldTeam = await Team.findOneAndUpdate(
           { name: player.teamName },
