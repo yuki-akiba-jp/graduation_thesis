@@ -13,7 +13,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import { userIdStrage } from "@/const";
 import axios from "axios";
-import { server_url } from "@/const";
 
 export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
@@ -77,7 +76,7 @@ export default function EnterNamePage() {
               type="button"
               onClick={async () => {
                 try {
-                  const res = await axios.post(`${server_url}/api/players`, {
+                  const res = await axios.post(`/api/players`, {
                     name: name,
                   });
                   localStorage.setItem(userIdStrage, res.data._id);

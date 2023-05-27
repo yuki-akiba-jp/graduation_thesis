@@ -33,7 +33,6 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Router, useRouter } from "next/router";
-import { server_url } from "../../const";
 import { userIdStrage, teamIdStrage } from "../../const";
 
 export default function SelectTeamPage() {
@@ -79,15 +78,18 @@ function TeamPanel({ teamName }: { teamName: string }) {
   });
   const joinTeam = useCallback(async () => {
     try {
-      const newTeam = await axios.put(`${server_url}/api/teams/joinTeam`, {
+      const newTeam = await axios.put(`/api/teams/joinTeam`, {
         name: teamName,
         playerName: playerName,
       });
       localStorage.setItem(teamIdStrage, newTeam.data._id);
+      router.push({
+        pathname: "/selectProblemPage",
+      });
     } catch (err) {
       console.log(err);
     }
-  }, [teamName, playerName]);
+  }, [teamName, playerName, router]);
 
   return (
     <Container
@@ -118,11 +120,8 @@ function TeamPanel({ teamName }: { teamName: string }) {
             colorScheme={"orange"}
             w="100%"
             type="button"
-            onClick={() => {
-              joinTeam();
-              router.push({
-                pathname: "/selectProblemPage",
-              });
+            onClick={async () => {
+              await joinTeam();
             }}
           >
             Enter room
@@ -140,7 +139,7 @@ function ModalWindow() {
 
   const handleClickCreateTeamBtn = useCallback(async () => {
     try {
-      const res = await axios.post(`${server_url}/api/teams`, {
+      const res = await axios.post(`/api/teams`, {
         name: teamName,
       });
       router.reload();
@@ -222,7 +221,7 @@ function useSelectTeamPage() {
   const fetchPlayerName = useCallback(async () => {
     try {
       const player = await axios.get(
-        `${server_url}/api/players/${localStorage.getItem(userIdStrage)}`
+        `/api/players/${localStorage.getItem(userIdStrage)}`
       );
       const playerName = player.data.name;
       setPlayerName(playerName);
@@ -233,7 +232,7 @@ function useSelectTeamPage() {
 
   const fetchTeamNames = useCallback(async () => {
     try {
-      const res = await axios.get(`${server_url}/api/teams`);
+      const res = await axios.get(`/api/teams`);
       let names: string[] = [];
       res.data.map((obj: any) => names.push(obj.name));
       setTeamNames(names);

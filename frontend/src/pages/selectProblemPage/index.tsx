@@ -25,21 +25,22 @@ import {
 import React from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import { server_url, problemIdStrage } from "../../const";
-import { IProblem } from "@/models/IProblem";
+import { problemIdStrage } from "../../const";
+import { ProblemDocument } from "../../models/Problem";
 import { teamIdStrage } from "../../const";
 
 export default function SelectProblemPage() {
-  const [problems, setProblems] = useState<IProblem[]>([]);
+  const [problems, setProblems] = useState<ProblemDocument[]>([]);
   useEffect(() => {
     const fetchProblems = async () => {
       try {
-        let fetchedProblems: IProblem[] = [];
+        let fetchedProblems: ProblemDocument[] = [];
         const teamId = localStorage.getItem(teamIdStrage);
-        const res = await axios.get(
-          `${server_url}/api/teams/${teamId}/problemsAll`
-        );
-        res.data.map((problem: IProblem) => fetchedProblems.push(problem));
+        const res = await axios.get(`/api/teams/${teamId}/problemsAll`);
+        if (Array.isArray(res.data))
+          res.data.map((problem: ProblemDocument) =>
+            fetchedProblems.push(problem)
+          );
         setProblems(fetchedProblems);
       } catch (err) {
         console.log(err);
@@ -67,7 +68,7 @@ export default function SelectProblemPage() {
   );
 }
 
-function ProblemPanel({ problem }: { problem: IProblem }) {
+function ProblemPanel({ problem }: { problem: ProblemDocument }) {
   const router = useRouter();
 
   return (

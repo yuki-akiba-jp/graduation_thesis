@@ -1,18 +1,17 @@
 import React, { useCallback } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-import { server_url } from "@/const";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { Container, Heading, VStack } from "@chakra-ui/react";
 import { TeamInfo } from "@/components/TeamInfo";
-import { ITeam } from "@/models/ITeam";
+import { TeamDocument } from "@/models/Team";
 
 export default function RankingPage() {
   const router = useRouter();
-  const [teams, setTeams] = useState<ITeam[]>([]);
+  const [teams, setTeams] = useState<TeamDocument[]>([]);
   const fetchTeams = useCallback(async () => {
-    const res = await axios.get(`${server_url}/api/teams`);
+    const res = await axios.get(`/api/teams`);
     setTeams(res.data);
   }, []);
   useEffect(() => {
@@ -27,7 +26,7 @@ export default function RankingPage() {
           </Heading>
           {teams &&
             teams
-              .sort((a, b) => b.score - a.score)
+              .sort((a, b) => (b.score || 0) - (a.score || 0))
               .map((team, index) => (
                 <TeamInfo team={team} index={index} key={index} />
               ))}

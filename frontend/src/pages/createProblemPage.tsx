@@ -17,9 +17,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import axios from "axios";
-import { problemIdStrage, server_url } from "../const";
+import { problemIdStrage } from "../const";
 
 export default function CreateProblemPage() {
   const router = useRouter();
@@ -61,7 +60,7 @@ export default function CreateProblemPage() {
       return;
     }
     try {
-      const res = await axios.post(`${server_url}/api/problems`, {
+      const res = await axios.post(`/api/problems`, {
         name,
         description,
         answers,
@@ -69,9 +68,7 @@ export default function CreateProblemPage() {
         reward,
       });
       const problemId = res.data._id;
-      const updateteams = await axios.put(
-        `${server_url}/api/teams/addProblem/${problemId}`
-      );
+      const updateteams = await axios.put(`/api/teams/addProblem/${problemId}`);
       console.log(updateteams.data);
     } catch (err) {
       console.log(err);

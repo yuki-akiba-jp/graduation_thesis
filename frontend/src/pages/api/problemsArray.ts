@@ -1,4 +1,4 @@
-export let problems = [
+export let problemsArray = [
   {
     name: "Safe Clicking",
     description:

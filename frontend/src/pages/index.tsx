@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { userIdStrage } from "@/const";
-import { server_url } from "@/const";
 
 export default function Home() {
   const router = useRouter();
@@ -26,10 +25,8 @@ export default function Home() {
         <Button
           colorScheme="orange"
           onClick={async () => {
-            const del = await axios.delete(`${server_url}/api/deletes`);
-            const res = await axios.post(
-              `${server_url}/api/problems/addProblemsArray`
-            );
+            const del = await axios.delete(`/api/deletes`);
+            const res = await axios.post(`/api/problems/addProblemsArray`);
           }}
         >
           init

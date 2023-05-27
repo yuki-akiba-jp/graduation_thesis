@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const Team = require("../models/Team");
-const Player = require("../models/Player");
-const Problem = require("../models/Problem");
+const Team = require("../../frontend/src/pages/api/models/Team");
+const Player = require("../../frontend/src/pages/api/models/Player");
+const Problem = require("../../frontend/src/pages/api/models/Problem");
 
 router.delete("/", async (req, res) => {
   try {

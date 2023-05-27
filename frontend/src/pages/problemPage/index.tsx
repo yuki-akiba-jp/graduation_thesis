@@ -33,11 +33,10 @@ import {
 import { useDisclosure } from "@chakra-ui/hooks";
 import React from "react";
 import { useRouter } from "next/router";
-import { server_url } from "../../const";
 import { problemIdStrage, teamIdStrage, userIdStrage } from "../../const";
 import axios from "axios";
-import { IProblem } from "@/models/IProblem";
 
+import { ProblemDocument } from "../../models/Problem";
 export default function ProblemPage() {
   const router = useRouter();
   const {
@@ -124,7 +123,7 @@ export default function ProblemPage() {
 }
 
 function useProblemPage() {
-  const [problem, setProblem] = useState<IProblem>();
+  const [problem, setProblem] = useState<ProblemDocument>();
   const [selectedChoice, setSelectedChoice] = useState<string>("");
   const [selectableChoices, setSelectableChoices] = useState<string[]>([]);
   const handleClickChoice = (choice: string) => {
@@ -134,9 +133,7 @@ function useProblemPage() {
     try {
       const problemId = localStorage.getItem(problemIdStrage);
       const teamId = localStorage.getItem(teamIdStrage);
-      const res = await axios.get(
-        `${server_url}/api/teams/problems/${teamId}/${problemId}`
-      );
+      const res = await axios.get(`/api/teams/problems/${teamId}/${problemId}`);
       setProblem(res.data);
       setSelectedChoice(res.data.selectedChoice);
       setSelectableChoices([...res.data.choices]);
@@ -189,12 +186,12 @@ function SubmitAnswerModal({
           onClick={async () => {
             const teamId = localStorage.getItem(teamIdStrage);
             await axios.put(
-              `${server_url}/api/teams/updateProblem/${teamId}/${problem?._id}`,
+              `/api/teams/updateProblem/${teamId}/${problem?._id}`,
               {
                 selectedChoice,
               }
             );
-            await axios.put(`${server_url}/api/teams/updateScore/${teamId}`);
+            await axios.put(`/api/teams/updateScore/${teamId}`);
             fetchProblem();
             onOpen();
           }}

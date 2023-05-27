@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const Team = require("../models/Team");
-const Problem = require("../models/Problem");
+const Team = require("../../frontend/src/pages/api/models/Team");
+const Problem = require("../../frontend/src/pages/api/models/Problem");
 
 router.get("/problem/:id", async (req, res) => {
   try {

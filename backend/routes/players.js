@@ -1,10 +1,11 @@
 const router = require("express").Router();
-const Player = require("../models/Player");
+const Player = require("../../frontend/src/pages/api/models/Player");
 
 router.get("/all", async (req, res) => {
   const players = await Player.find();
   return res.status(200).json(players);
 });
+
 router.get("/:id", async (req, res) => {
   try {
     const player = await Player.findById(req.params.id);
