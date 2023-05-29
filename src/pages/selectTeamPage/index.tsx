@@ -3,8 +3,6 @@ import {
   ChangeEvent,
   useState,
   useEffect,
-  Fragment,
-  useMemo,
   useCallback,
 } from "react";
 import axios from "axios";
@@ -16,9 +14,7 @@ import {
   useColorModeValue,
   Heading,
   Container,
-  Flex,
   Grid,
-  Box,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -27,12 +23,9 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
-  HStack,
-  GridItem,
-  Spacer,
 } from "@chakra-ui/react";
 import React from "react";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { userIdStrage, teamIdStrage } from "../../const";
 
 export default function SelectTeamPage() {
@@ -42,9 +35,10 @@ export default function SelectTeamPage() {
 
   useEffect(() => {
     if (!router.isReady) return;
+    if (!localStorage.getItem(userIdStrage)) router.push("/");
     fetchPlayerName();
     fetchTeamNames();
-  }, [router.isReady, fetchPlayerName, fetchTeamNames]);
+  }, [router, fetchPlayerName, fetchTeamNames]);
 
   return (
     <>

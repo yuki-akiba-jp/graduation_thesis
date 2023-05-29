@@ -13,14 +13,11 @@ import React from "react";
 import { useRouter } from "next/router";
 import { userIdStrage } from "@/const";
 import axios from "axios";
+import { NextRequest, NextResponse } from "next/server";
 
 export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
   const router = useRouter();
-
-  // useEffect(() => {
-  //   localStorage.setItem("userName", name);
-  // }, [name]);
 
   return (
     <Flex

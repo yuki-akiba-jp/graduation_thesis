@@ -19,9 +19,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-// import Link from "next/link";
 import { Link } from "@chakra-ui/react";
-import { userIdStrage, teamIdStrage } from "@/const";
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -216,11 +214,6 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: "createProblem",
-    href: "/createProblemPage",
-  },
-
   {
     label: "selectTeam",
     href: "/selectTeamPage",
