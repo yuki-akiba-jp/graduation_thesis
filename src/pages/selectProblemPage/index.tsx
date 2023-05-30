@@ -31,6 +31,7 @@ import { teamIdStrage } from "../../const";
 
 export default function SelectProblemPage() {
   const [problems, setProblems] = useState<ProblemDocument[]>([]);
+  const [teamName, setTeamName] = useState<string>("");
   const fetchProblems = async () => {
     try {
       let fetchedProblems: ProblemDocument[] = [];
@@ -45,12 +46,33 @@ export default function SelectProblemPage() {
       console.log(err);
     }
   };
+  const fetchTeamName = async () => {
+    try {
+      const teamId = localStorage.getItem(teamIdStrage);
+      const res = await axios.get(`/api/teams/teamInfo/${teamId}`);
+      setTeamName(res.data.name);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     fetchProblems();
+    fetchTeamName();
   }, []);
 
   return (
     <>
+      {teamName && (
+        <Heading
+          as={"h2"}
+          fontSize={{ base: "xl", sm: "2xl" }}
+          textAlign={"center"}
+          mb={5}
+        >
+          teamname: {teamName}
+        </Heading>
+      )}
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",

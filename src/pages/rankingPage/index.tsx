@@ -3,10 +3,11 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { Container, Heading, VStack } from "@chakra-ui/react";
+import { Button, Container, Heading, VStack } from "@chakra-ui/react";
 import { TeamInfo } from "../../components/TeamInfo";
 import { TeamDocument } from "@/models/Team";
 import { userIdStrage } from "@/const";
+import Link from "next/link";
 
 export default function RankingPage() {
   const router = useRouter();
@@ -27,6 +28,9 @@ export default function RankingPage() {
   return (
     <>
       <Container maxW="container.lg">
+        <Link href="/selectProblemPage" color="blue.400">
+          <Button colorScheme="teal">goto select problems page</Button>
+        </Link>
         <VStack spacing={8}>
           <Heading as="h1" size="2xl">
             RANKING

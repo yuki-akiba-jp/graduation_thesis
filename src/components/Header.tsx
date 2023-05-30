@@ -219,10 +219,6 @@ const NAV_ITEMS: Array<NavItem> = [
     href: "/selectTeamPage",
   },
   {
-    label: "teamInfo",
-    href: "/teamInfoPage",
-  },
-  {
     label: "ranking",
     href: "/rankingPage",
   },
