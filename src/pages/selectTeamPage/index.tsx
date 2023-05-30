@@ -34,10 +34,13 @@ export default function SelectTeamPage() {
     useSelectTeamPage();
 
   useEffect(() => {
-    if (!router.isReady) return;
-    if (!localStorage.getItem(userIdStrage)) router.push("/enterNamePage");
-    fetchPlayerName();
-    fetchTeamNames();
+    if (!localStorage.getItem(userIdStrage)) {
+      router.push("/enterNamePage");
+      return;
+    } else {
+      fetchPlayerName();
+      fetchTeamNames();
+    }
   }, [router, fetchPlayerName, fetchTeamNames]);
 
   return (

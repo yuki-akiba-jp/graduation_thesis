@@ -20,6 +20,7 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import { Link } from "@chakra-ui/react";
+import SelectProblemPage from "@/pages/selectProblemPage";
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -215,8 +216,16 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
+    label: "changeName",
+    href: "/enterNamePage",
+  },
+  {
     label: "selectTeam",
     href: "/selectTeamPage",
+  },
+  {
+    label: "problems",
+    href: "/selectProblemPage",
   },
   {
     label: "ranking",

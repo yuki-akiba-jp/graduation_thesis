@@ -18,7 +18,6 @@ export default function RankingPage() {
   }, []);
 
   useEffect(() => {
-    if (!router.isReady) return;
     if (!localStorage.getItem(userIdStrage)) {
       router.push("/enterNamePage");
       return;
@@ -28,9 +27,6 @@ export default function RankingPage() {
   return (
     <>
       <Container maxW="container.lg">
-        <Link href="/selectProblemPage" color="blue.400">
-          <Button colorScheme="teal">goto select problems page</Button>
-        </Link>
         <VStack spacing={8}>
           <Heading as="h1" size="2xl">
             RANKING

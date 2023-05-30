@@ -32,6 +32,7 @@ import { teamIdStrage } from "../../const";
 export default function SelectProblemPage() {
   const [problems, setProblems] = useState<ProblemDocument[]>([]);
   const [teamName, setTeamName] = useState<string>("");
+  const router = useRouter();
   const fetchProblems = async () => {
     try {
       let fetchedProblems: ProblemDocument[] = [];
@@ -57,9 +58,13 @@ export default function SelectProblemPage() {
   };
 
   useEffect(() => {
+    if (!localStorage.getItem(teamIdStrage)) {
+      router.push("/enterNamePage");
+      return;
+    }
     fetchProblems();
     fetchTeamName();
-  }, []);
+  }, [router]);
 
   return (
     <>
