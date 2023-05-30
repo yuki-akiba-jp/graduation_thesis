@@ -4,8 +4,9 @@ import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { Container, Heading, VStack } from "@chakra-ui/react";
-import { TeamInfo } from "@/components/TeamInfo";
+import { TeamInfo } from "../../components/TeamInfo";
 import { TeamDocument } from "@/models/Team";
+import { userIdStrage } from "@/const";
 
 export default function RankingPage() {
   const router = useRouter();
@@ -14,9 +15,15 @@ export default function RankingPage() {
     const res = await axios.get(`/api/teams`);
     setTeams(res.data);
   }, []);
+
   useEffect(() => {
+    if (!router.isReady) return;
+    if (!localStorage.getItem(userIdStrage)) {
+      router.push("/enterNamePage");
+      return;
+    }
     fetchTeams();
-  }, []);
+  }, [router, fetchTeams]);
   return (
     <>
       <Container maxW="container.lg">

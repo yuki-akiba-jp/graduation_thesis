@@ -35,7 +35,7 @@ export default function SelectTeamPage() {
 
   useEffect(() => {
     if (!router.isReady) return;
-    if (!localStorage.getItem(userIdStrage)) router.push("/");
+    if (!localStorage.getItem(userIdStrage)) router.push("/enterNamePage");
     fetchPlayerName();
     fetchTeamNames();
   }, [router, fetchPlayerName, fetchTeamNames]);

@@ -31,21 +31,21 @@ import { teamIdStrage } from "../../const";
 
 export default function SelectProblemPage() {
   const [problems, setProblems] = useState<ProblemDocument[]>([]);
+  const fetchProblems = async () => {
+    try {
+      let fetchedProblems: ProblemDocument[] = [];
+      const teamId = localStorage.getItem(teamIdStrage);
+      const res = await axios.get(`/api/teams/${teamId}/problemsAll`);
+      if (Array.isArray(res.data))
+        res.data.map((problem: ProblemDocument) =>
+          fetchedProblems.push(problem)
+        );
+      setProblems(fetchedProblems);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   useEffect(() => {
-    const fetchProblems = async () => {
-      try {
-        let fetchedProblems: ProblemDocument[] = [];
-        const teamId = localStorage.getItem(teamIdStrage);
-        const res = await axios.get(`/api/teams/${teamId}/problemsAll`);
-        if (Array.isArray(res.data))
-          res.data.map((problem: ProblemDocument) =>
-            fetchedProblems.push(problem)
-          );
-        setProblems(fetchedProblems);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     fetchProblems();
   }, []);
 

@@ -11,11 +11,15 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    // if (localStorage.getItem(userIdStrage) !== null) {
-    //   router.push("/selectTeamPage");
-    // }
-    // router.push("/enterNamePage");
-  }, []);
+    if (!router.isReady) return;
+    if (!localStorage.getItem(userIdStrage)) {
+      router.push("/enterNamePage");
+      return;
+    } else {
+      router.push("/selectProblemPage");
+      return;
+    }
+  }, [router]);
   return (
     <>
       <div>
