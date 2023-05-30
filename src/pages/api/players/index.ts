@@ -2,7 +2,7 @@ import dbConnect from "@/lib/dbConnect";
 import { NextApiRequest, NextApiResponse } from "next";
 import Player from "../../../models/Player";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
 
   await dbConnect();
@@ -36,3 +36,5 @@ async function isPlayerNameValid(name: string) {
   if (name.length < 3 || name.length > 20) return false;
   return true;
 }
+
+export default handler;

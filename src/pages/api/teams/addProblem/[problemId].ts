@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import Team from "../../../../models/Team";
 import Problem from "../../../../models/Problem";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const {
     query: { problemId },
     method,
@@ -32,3 +32,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       return res.status(400).json("not allowed method");
   }
 };
+
+export default handler;

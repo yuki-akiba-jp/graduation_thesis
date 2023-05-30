@@ -4,7 +4,7 @@ import Team from "../../../models/Team";
 import Player from "../../../models/Player";
 import Problem from "../../../models/Problem";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler =   async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
 
   await dbConnect();
@@ -27,3 +27,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       return res.status(400).json("not allowed method");
   }
 };
+
+export default handler;

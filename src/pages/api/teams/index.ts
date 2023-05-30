@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import Team from "../../../models/Team";
 import Problem from "../../../models/Problem";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const {
     query: { teamId, problemId },
     method,
@@ -51,3 +51,5 @@ async function isTeamNameValid(name: string) {
   if (name.length < 3 || name.length > 20) return false;
   return true;
 }
+
+export default handler;
