@@ -27,7 +27,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { problemIdStrage } from "../../const";
 import { ProblemDocument } from "../../models/Problem";
-import { teamIdStrage } from "../../const";
+import { teamIdStrage, userIdStrage } from "../../const";
 
 export default function SelectProblemPage() {
   const [problems, setProblems] = useState<ProblemDocument[]>([]);
@@ -58,7 +58,10 @@ export default function SelectProblemPage() {
   };
 
   useEffect(() => {
-    if (!localStorage.getItem(teamIdStrage)) {
+    if (
+      !localStorage.getItem(teamIdStrage) ||
+      !localStorage.getItem(userIdStrage)
+    ) {
       router.push("/enterNamePage");
       return;
     }
