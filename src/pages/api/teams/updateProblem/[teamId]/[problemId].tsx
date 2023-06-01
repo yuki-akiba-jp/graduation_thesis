@@ -24,7 +24,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         );
 
         const team = await Team.findById(teamId);
-
         return res.status(200).json(team);
       } catch (err) {
         return res.status(500).json(err);
