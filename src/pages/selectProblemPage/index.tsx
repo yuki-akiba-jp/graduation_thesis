@@ -58,11 +58,12 @@ export default function SelectProblemPage() {
   };
 
   useEffect(() => {
-    if (
-      !localStorage.getItem(teamIdStrage) ||
-      !localStorage.getItem(userIdStrage)
-    ) {
+    if (!localStorage.getItem(userIdStrage)) {
       router.push("/enterNamePage");
+      return;
+    }
+    if(!localStorage.getItem(teamIdStrage)){
+      router.push("/selectTeamPage");
       return;
     }
     fetchProblems();
