@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import Problem from "../../../models/Problem";
 import { problemsArray } from "../problemsArray";
 
- const handler =  async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
 
   await dbConnect();
@@ -19,6 +19,8 @@ import { problemsArray } from "../problemsArray";
             choices: problem.choices,
             selectedChoice: problem.selectedChoice,
             reward: problem.reward,
+            answerCount: 0,
+            answerCountLimit: 2,
           });
           await newProblem.save();
         });

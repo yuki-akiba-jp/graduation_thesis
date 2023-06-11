@@ -62,7 +62,7 @@ export default function SelectProblemPage() {
       router.push("/enterNamePage");
       return;
     }
-    if(!localStorage.getItem(teamIdStrage)){
+    if (!localStorage.getItem(teamIdStrage)) {
       router.push("/selectTeamPage");
       return;
     }
@@ -126,6 +126,14 @@ function ProblemPanel({ problem }: { problem: ProblemDocument }) {
         mb={5}
       >
         reward: {problem.reward}
+      </Heading>
+      <Heading
+        as={"h5"}
+        fontSize={{ base: "md", sm: "2md" }}
+        textAlign={"center"}
+        mb={5}
+      >
+        {problem.answerCount} / {problem.answerCountLimit}
       </Heading>
       <VStack
         direction={{ base: "column", md: "row" }}

@@ -69,6 +69,7 @@ export default function ProblemPage() {
           mb={5}
         >
           {problem?.name}
+          {problem?.answerCount} / {problem?.answerCountLimit}
         </Heading>
         <VStack
           direction={{ base: "column", md: "row" }}
@@ -136,7 +137,7 @@ function useProblemPage() {
       const res = await axios.get(`/api/teams/problems/${teamId}/${problemId}`);
       setProblem(res.data);
       setSelectedChoice(res.data.selectedChoice);
-      setSelectableChoices([...res.data.choices]);
+      setSelectableChoices([res.data.answer, ...res.data.choices]);
     } catch (err) {
       console.log(err);
     }
@@ -184,6 +185,10 @@ function SubmitAnswerModal({
           w="30%"
           type="button"
           onClick={async () => {
+            if (problem?.answerCount >= problem?.answerCountLimit) {
+              alert("answer count limit");
+              return;
+            }
             const teamId = localStorage.getItem(teamIdStrage);
             await axios.put(
               `/api/teams/updateProblem/${teamId}/${problem?._id}`,

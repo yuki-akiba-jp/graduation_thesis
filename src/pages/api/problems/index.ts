@@ -2,7 +2,7 @@ import dbConnect from "@/lib/dbConnect";
 import { NextApiRequest, NextApiResponse } from "next";
 import Problem from "../../../models/Problem";
 
- const handler =  async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
 
   await dbConnect();
@@ -18,6 +18,8 @@ import Problem from "../../../models/Problem";
           selectedChoice: "",
           reward: req.body.reward,
           score: 0,
+          answerCount: 0,
+          answerCountLimit: 2,
         });
         const problem = await newProblem.save();
         return res.status(200).json(problem);

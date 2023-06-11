@@ -7,6 +7,8 @@ export interface IProblem {
   choices: string[];
   selectedChoice?: string;
   reward: number;
+  answerCount: number;
+  answerCountLimit: number;
 }
 
 export interface ProblemDocument extends IProblem, Document {}
@@ -18,6 +20,8 @@ const ProblemSchema = new mongoose.Schema<ProblemDocument>({
   choices: { type: [String], required: true },
   selectedChoice: { type: String, required: false },
   reward: { type: Number, required: true },
+  answerCount: { type: Number, required: true },
+  answerCountLimit: { type: Number, required: true },
 });
 
 let Problem: Model<ProblemDocument>;

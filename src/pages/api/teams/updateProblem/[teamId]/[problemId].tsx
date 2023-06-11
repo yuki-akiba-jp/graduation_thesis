@@ -19,6 +19,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             $set: {
               "problems.$.selectedChoice": req.body.selectedChoice,
             },
+            $inc: {
+              "problems.$.answerCount": 1,
+            },
           },
           { new: true }
         );
