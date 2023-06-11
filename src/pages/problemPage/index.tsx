@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import {
   FormEvent,
   ChangeEvent,
@@ -49,7 +50,7 @@ export default function ProblemPage() {
 
   useEffect(() => {
     fetchProblem();
-  }, []);
+  }, [fetchProblem]);
 
   return (
     <>
@@ -130,7 +131,7 @@ function useProblemPage() {
   const handleClickChoice = (choice: string) => {
     setSelectedChoice(choice);
   };
-  const fetchProblem = async () => {
+  const fetchProblem = useCallback(async () => {
     try {
       const problemId = localStorage.getItem(problemIdStrage);
       const teamId = localStorage.getItem(teamIdStrage);
@@ -141,7 +142,8 @@ function useProblemPage() {
     } catch (err) {
       console.log(err);
     }
-  };
+  }, [setProblem, setSelectedChoice, setSelectableChoices]);
+
   return {
     problem,
     setProblem,
