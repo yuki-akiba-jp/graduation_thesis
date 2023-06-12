@@ -23,7 +23,7 @@ export default function Home() {
             サイバーセキュリティの世界へようこそ
           </Heading>
           <Text fontSize="xl" marginBottom="2rem">
-          腕試しをしてみよう
+            腕試しをしてみよう
           </Text>
           <Button colorScheme="blue" size="lg">
             <Link href="/enterNamePage">Start app</Link>
