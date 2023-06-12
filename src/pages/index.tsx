@@ -20,7 +20,7 @@ export default function Home() {
       <Flex direction="column" align="center" justify="center" height="100vh">
         <Box textAlign="center">
           <Heading as="h1" size="2xl" marginBottom="1rem">
-            Welcome to CyberQuiz!
+            Welcome to cyber security app!
           </Heading>
           <Text fontSize="xl" marginBottom="2rem">
             Test your cybersecurity knowledge and improve your skills.
