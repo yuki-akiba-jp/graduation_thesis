@@ -227,16 +227,7 @@ function SubmitAnswerModal({
           <ModalFooter>
             <Button
               colorScheme="blue"
-              mr={3}
               variant="ghost"
-              onClick={() => {
-                onClose();
-              }}
-            >
-              back to problem
-            </Button>
-            <Button
-              colorScheme="orange"
               onClick={() => {
                 router.push({
                   pathname: "/selectProblemPage",
@@ -244,7 +235,16 @@ function SubmitAnswerModal({
                 onClose();
               }}
             >
-              goto problems page
+              問題一覧へ
+            </Button>
+            <Button
+              colorScheme="orange"
+              mr={3}
+              onClick={() => {
+                onClose();
+              }}
+            >
+              もう一回
             </Button>
           </ModalFooter>
         </ModalContent>
