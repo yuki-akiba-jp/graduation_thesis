@@ -100,6 +100,7 @@ export default function EnterNamePage() {
             </Button>
           </FormControl>
         </VStack>
+        ※Enterを押した後、数秒時間がかかる場合があります。
       </Container>
     </Flex>
   );
