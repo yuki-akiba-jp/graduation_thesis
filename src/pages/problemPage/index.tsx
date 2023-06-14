@@ -57,29 +57,32 @@ export default function ProblemPage() {
       <Container
         minW="100vw"
         minH="100vh"
-        bg={useColorModeValue("gray", "blue.100")}
         boxShadow={"xl"}
         rounded={"lg"}
-        // p={30}
+        alignItems={"center"}
       >
-        <Heading
-          as={"h1"}
-          fontSize={{ base: "2xl", sm: "3xl" }}
-          fontStyle={"italic"}
-          textAlign={"center"}
-          mb={5}
-        >
-          {problem?.name}
-          {problem?.answerCount} / {problem?.answerCountLimit}
-        </Heading>
         <VStack
           direction={{ base: "column", md: "row" }}
+          rounded={"xl"}
           as={"form"}
           spacing={{ base: "1", md: "10" }}
+          bg={useColorModeValue("blue.100", "gray.700")}
           onSubmit={(e: FormEvent) => {
             e.preventDefault();
           }}
+          py={20}
         >
+          <Heading
+            as={"h1"}
+            fontSize={{ base: "2xl", sm: "3xl" }}
+            fontStyle={"italic"}
+            textAlign={"center"}
+            mb={5}
+          >
+            {problem?.name}
+            <Spacer />
+            {problem?.answerCount} / {problem?.answerCountLimit}
+          </Heading>
           <FormControl w={{ base: "100%", md: "100%" }}>
             <Text
               fontSize={{ base: "xl", sm: "2xl" }}
@@ -105,7 +108,11 @@ export default function ProblemPage() {
                   type="button"
                   key={index}
                   onClick={() => handleClickChoice(choice)}
-                  isTruncated
+                  whiteSpace={"normal"}
+                  height={"auto"}
+                  blockSize={"auto"}
+                  p={5}
+                  // isTruncated
                 >
                   {choice}
                 </Button>
@@ -188,7 +195,9 @@ function SubmitAnswerModal({
           type="button"
           onClick={async () => {
             if (problem?.answerCount >= problem?.answerCountLimit) {
-              alert("answer count limit");
+              alert(
+                `回答数の上限に達しました。正解は[${problem?.answer}]です。`
+              );
               return;
             }
             const teamId = localStorage.getItem(teamIdStrage);

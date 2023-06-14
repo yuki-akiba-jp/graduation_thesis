@@ -158,11 +158,9 @@ function ModalWindow() {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Chakra UI Modal</ModalHeader>
+          <ModalHeader>Create Team</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            This is the modal content. You can put anything you like here.
-          </ModalBody>
+          <ModalBody>チーム名を入力してね</ModalBody>
 
           <ModalFooter>
             <FormControl>
@@ -183,6 +181,7 @@ function ModalWindow() {
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   setTeamName(e.target.value)
                 }
+                autoFocus
               />
             </FormControl>
             <Button
@@ -202,7 +201,7 @@ function ModalWindow() {
                 onClose();
               }}
             >
-              Create Team
+              ok
             </Button>
           </ModalFooter>
         </ModalContent>

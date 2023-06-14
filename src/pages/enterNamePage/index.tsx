@@ -18,6 +18,10 @@ import { NextRequest, NextResponse } from "next/server";
 export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
   const router = useRouter();
+  const inputref = React.useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    inputref.current?.focus();
+  }, []);
 
   return (
     <Flex
@@ -51,6 +55,7 @@ export default function EnterNamePage() {
         >
           <FormControl>
             <Input
+              ref={inputref}
               variant={"solid"}
               borderWidth={1}
               color={"gray.800"}
@@ -64,6 +69,7 @@ export default function EnterNamePage() {
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setName(e.target.value)
               }
+              autoFocus
             />
           </FormControl>
           <FormControl w={{ base: "100%", md: "40%" }}>

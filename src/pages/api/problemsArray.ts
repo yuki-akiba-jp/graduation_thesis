@@ -26,7 +26,7 @@ export let problemsArray = [
   {
     name: "ダウンロード",
     description: "オンライン上で面白そうなブラウザゲームを発見した。どうする？",
-    answer: "信頼できるサイトからしかダウンロードしない",
+    answer: "信頼できるサイトならダウンロードする",
     choices: [
       "面白そうならダウンロードする",
       "ダウンロードしてから削除する",
@@ -137,6 +137,14 @@ export let problemsArray = [
       "覚えやすいように生年月日を入れる",
       "名前と生年月日を入れる",
     ],
+    selectedChoice: "",
+    reward: 20,
+  },
+  {
+    name: "信頼できるサイト",
+    description: "信頼できるサイトか見分けるにはどこを見る？",
+    answer: "サイトのURL",
+    choices: ["サイトのトップページ", "サイトのヘッダー", "サイトの名前"],
     selectedChoice: "",
     reward: 20,
   },
