@@ -1,9 +1,41 @@
 export let problemsArray = [
   {
-    name: "passward",
+    name: "パスワード1",
     description: "どれが一番いいパスワード？",
-    answer: "Maebashi2023City",
+    answer: "Maebashi1023City",
     choices: ["password", "cityMaebashi", "Tokyo2020"],
+    selectedChoice: "",
+    reward: 10,
+  },
+  {
+    name: "パスワード2",
+    description: "どれが一番いいパスワード？",
+    answer: "Maebashi1@23City",
+    choices: ["Maebashi1023City", "City@Maebashi", "Tokyo2@2@"],
+    selectedChoice: "",
+    reward: 10,
+  },
+  {
+    name: "パスワード3",
+    description: "適切なのはどれ？",
+    answer: "パスワードは使い回さない",
+    choices: [
+      "パスワードは使い回す",
+      "パスワードは友達に教えておく",
+      "パスワードは覚えやすいものを使う",
+    ],
+    selectedChoice: "",
+    reward: 10,
+  },
+  {
+    name: "パスワード4",
+    description: "パスワードに関して、適切なのはどれ？",
+    answer: "小文字と大文字のアルファベットと数字を使用する",
+    choices: [
+      "小文字と大文字のアルファベットを使用する",
+      "名前と生年月日とペットの名前を組み合わせる",
+      "パスワードは1つを使い回す",
+    ],
     selectedChoice: "",
     reward: 10,
   },
@@ -17,7 +49,7 @@ export let problemsArray = [
   },
   {
     name: "ネットの知らない人とのやりとり",
-    description: "ネットで知らない人から本名を聞かれた。どうする？",
+    description: "SNSで知らない人から本名を聞かれた。どうする？",
     answer: "本名を教えない",
     choices: ["本名を教える", "相手の本名を聞く", "嘘の名前を教える"],
     selectedChoice: "",
@@ -137,6 +169,19 @@ export let problemsArray = [
     description: "最も危険な可能性のあるウェブサイトはどれ？",
     answer: "http://から始まる",
     choices: ["https://から始まる", ".orgで終わる", ".jpで終わる"],
+    selectedChoice: "",
+    reward: 20,
+  },
+  {
+    name: "フィッシング🐟",
+    description:
+      "知らない宛先からメールが届いた。メールにはURLが貼られている。どうする？",
+    answer: "無視する",
+    choices: [
+      "URLをクリックしてサイトを確認する",
+      "返信して送り主を確認する",
+      "URLをコピーして友達に聞く",
+    ],
     selectedChoice: "",
     reward: 20,
   },
