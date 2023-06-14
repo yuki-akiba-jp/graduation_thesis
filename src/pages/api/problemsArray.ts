@@ -5,15 +5,19 @@ export let problemsArray = [
     answer: "Maebashi1023City",
     choices: ["password", "cityMaebashi", "Tokyo2020"],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "パスワード2",
-    description: "どれが一番いいパスワード？",
-    answer: "Maebashi1@23City",
-    choices: ["Maebashi1023City", "City@Maebashi", "Tokyo2@2@"],
+    description: "パスワードに関して、適切なのはどれ？",
+    answer: "小文字と大文字のアルファベットと数字を使用する",
+    choices: [
+      "小文字と大文字のアルファベットを使用する",
+      "名前と生年月日とペットの名前を組み合わせる",
+      "パスワードは1つを使い回す",
+    ],
     selectedChoice: "",
-    reward: 10,
+    reward: 200,
   },
   {
     name: "パスワード3",
@@ -25,19 +29,15 @@ export let problemsArray = [
       "パスワードは覚えやすいものを使う",
     ],
     selectedChoice: "",
-    reward: 10,
+    reward: 300,
   },
   {
     name: "パスワード4",
-    description: "パスワードに関して、適切なのはどれ？",
-    answer: "小文字と大文字のアルファベットと数字を使用する",
-    choices: [
-      "小文字と大文字のアルファベットを使用する",
-      "名前と生年月日とペットの名前を組み合わせる",
-      "パスワードは1つを使い回す",
-    ],
+    description: "どれが一番いいパスワード？",
+    answer: "Maebashi1@23City",
+    choices: ["Maebashi1023City", "City@Maebashi", "Tokyo2@2@"],
     selectedChoice: "",
-    reward: 10,
+    reward: 400,
   },
   {
     name: "友達とスマホ",
@@ -45,7 +45,7 @@ export let problemsArray = [
     answer: "パスワードを教えない",
     choices: ["パスワードを教える", "無視する", "友達に嘘のパスワードを教える"],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "ネットの知らない人とのやりとり",
@@ -53,7 +53,7 @@ export let problemsArray = [
     answer: "本名を教えない",
     choices: ["本名を教える", "相手の本名を聞く", "嘘の名前を教える"],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "ダウンロード",
@@ -65,7 +65,7 @@ export let problemsArray = [
       "友達にダウンロードしてもらう",
     ],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "安全なウェブサイト？",
@@ -77,7 +77,7 @@ export let problemsArray = [
       "ポップアップが出てこなければ安全",
     ],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "アップデート",
@@ -85,7 +85,7 @@ export let problemsArray = [
     answer: "時間があるときにアップデートする",
     choices: ["アップデートを無視する", "すぐにアップデートする", "友達に聞く"],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "プライベートブラウジング",
@@ -93,7 +93,7 @@ export let problemsArray = [
     answer: "閲覧履歴を隠すため",
     choices: ["ゲームをするため", "面白い動画を見るため", "宿題をするため"],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "セーフサーチ",
@@ -105,7 +105,7 @@ export let problemsArray = [
       "個人情報を守るため",
     ],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "メール",
@@ -113,7 +113,7 @@ export let problemsArray = [
     answer: "送信元を確認する",
     choices: ["メールを開いて読む", "メールを消す", "返信する"],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "アプリの許可",
@@ -121,7 +121,7 @@ export let problemsArray = [
     answer: "アプリによって判断する",
     choices: ["許可する", "無視する", "アプリを消す"],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "オンライン",
@@ -134,7 +134,7 @@ export let problemsArray = [
       "学校の先生だった",
     ],
     selectedChoice: "",
-    reward: 10,
+    reward: 100,
   },
   {
     name: "SNSの匿名性",
@@ -142,7 +142,7 @@ export let problemsArray = [
     answer: "言い返す",
     choices: ["ブロックする", "無視する", "通報する"],
     selectedChoice: "",
-    reward: 20,
+    reward: 200,
   },
   {
     name: "パスワード",
@@ -154,7 +154,7 @@ export let problemsArray = [
       "名前と生年月日を入れる",
     ],
     selectedChoice: "",
-    reward: 20,
+    reward: 200,
   },
   {
     name: "信頼できるサイト",
@@ -162,7 +162,7 @@ export let problemsArray = [
     answer: "サイトのURL",
     choices: ["サイトのトップページ", "サイトのヘッダー", "サイトの名前"],
     selectedChoice: "",
-    reward: 20,
+    reward: 200,
   },
   {
     name: "危険なウェブサイト",
@@ -170,7 +170,7 @@ export let problemsArray = [
     answer: "http://から始まる",
     choices: ["https://から始まる", ".orgで終わる", ".jpで終わる"],
     selectedChoice: "",
-    reward: 20,
+    reward: 200,
   },
   {
     name: "フィッシング🐟",
@@ -183,6 +183,6 @@ export let problemsArray = [
       "URLをコピーして友達に聞く",
     ],
     selectedChoice: "",
-    reward: 20,
+    reward: 200,
   },
 ];

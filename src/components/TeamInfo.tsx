@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Heading, Text, Box } from "@chakra-ui/react";
-import { TeamDocument } from "../models/Team";
+import {  TeamForRanking } from "../models/Team";
 import { userIdStrage } from "../const";
 import axios from "axios";
 import { useCallback } from "react";
@@ -9,7 +9,7 @@ export function TeamInfo({
   team,
   index,
 }: {
-  team: TeamDocument;
+  team: TeamForRanking;
   index: number;
 }) {
   const [playerName, setPlayerName] = useState<string>("");
