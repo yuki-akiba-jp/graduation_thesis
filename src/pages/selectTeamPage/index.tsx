@@ -56,21 +56,24 @@ export default function SelectTeamPage() {
         m={10}
       >
         {teamNames.map((teamName, index) => (
-          <TeamPanel teamName={teamName} key={index} />
+          <TeamPanel teamName={teamName} key={index} playerName={playerName} />
         ))}
       </Grid>
     </>
   );
 }
 
-function TeamPanel({ teamName }: { teamName: string }) {
+function TeamPanel({
+  teamName,
+  playerName,
+}: {
+  teamName: string;
+  playerName: string;
+}) {
   const router = useRouter();
-  const { playerName, teamNames, fetchPlayerName, fetchTeamNames } =
-    useSelectTeamPage();
 
   useEffect(() => {
     if (!router.isReady) return;
-    fetchPlayerName();
   });
   const joinTeam = useCallback(async () => {
     try {
@@ -227,10 +230,8 @@ function useSelectTeamPage() {
 
   const fetchTeamNames = useCallback(async () => {
     try {
-      const res = await axios.get(`/api/teams`);
-      let names: string[] = [];
-      res.data.map((obj: any) => names.push(obj.name));
-      setTeamNames(names);
+      const res = await axios.get(`/api/teams/teamnames`);
+      setTeamNames(res.data);
     } catch (err) {
       console.log(err);
     }

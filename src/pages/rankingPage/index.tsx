@@ -5,15 +5,15 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { Button, Container, Heading, VStack } from "@chakra-ui/react";
 import { TeamInfo } from "../../components/TeamInfo";
-import { TeamDocument } from "@/models/Team";
+import { TeamDocument ,TeamForRanking} from "@/models/Team";
 import { userIdStrage } from "@/const";
 import Link from "next/link";
 
 export default function RankingPage() {
   const router = useRouter();
-  const [teams, setTeams] = useState<TeamDocument[]>([]);
+  const [teams, setTeams] = useState<TeamForRanking[]>([]);
   const fetchTeams = useCallback(async () => {
-    const res = await axios.get(`/api/teams`);
+    const res = await axios.get(`/api/teams/teamforranking`);
     setTeams(res.data);
   }, []);
 

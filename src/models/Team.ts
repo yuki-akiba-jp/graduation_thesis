@@ -9,7 +9,14 @@ export interface ITeam {
   problems: ProblemDocument[];
 }
 
+export interface ITeamForRanking {
+  name: string;
+  score?: number;
+  players: PlayerDocument[];
+}
+
 export interface TeamDocument extends ITeam, Document {}
+export interface TeamForRanking extends ITeamForRanking, Document {}
 
 const TeamSchema = new mongoose.Schema<TeamDocument>({
   name: {
