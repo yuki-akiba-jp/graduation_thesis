@@ -45,7 +45,6 @@ export default function SelectTeamPage() {
 
   return (
     <>
-      <div>playerName: {playerName}</div>
       <ModalWindow />
       <Grid
         templateColumns={{

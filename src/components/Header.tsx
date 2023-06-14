@@ -21,6 +21,7 @@ import {
 } from "@chakra-ui/icons";
 import { Link } from "@chakra-ui/react";
 import SelectProblemPage from "@/pages/selectProblemPage";
+import { userIdStrage } from "@/const";
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
 
