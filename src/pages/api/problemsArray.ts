@@ -40,6 +40,14 @@ export let problemsArray = [
     reward: 400,
   },
   {
+    name: "誹謗中傷2",
+    description: "SNSで誹謗中傷をすると、どのようなことが起きそう？",
+    answer: "法的な問題",
+    choices: ["何も起こらない", "スマホ端末の問題", "インターネット回線の問題"],
+    selectedChoice: "",
+    reward: 100,
+  },
+  {
     name: "誹謗中傷1",
     description:
       "SNSで誹謗中傷をしてしまい、その後焦ってアカウントを消した。適切なのはどれ？",
@@ -49,14 +57,6 @@ export let problemsArray = [
       "相手がチャットを見たあとなら情報は残る",
       "インターネット回線が早ければ情報は残る",
     ],
-    selectedChoice: "",
-    reward: 100,
-  },
-  {
-    name: "誹謗中傷2",
-    description: "SNSで誹謗中傷をすると、どのようなことが起きそう？",
-    answer: "法的な問題",
-    choices: ["何も起こらない", "スマホ端末の問題", "インターネット回線の問題"],
     selectedChoice: "",
     reward: 200,
   },
@@ -170,7 +170,7 @@ export let problemsArray = [
     answer: "時間があるときにアップデートする",
     choices: ["アップデートを無視する", "すぐにアップデートする", "友達に聞く"],
     selectedChoice: "",
-    reward: 100,
+    reward: 200,
   },
   {
     name: "プライベートブラウジング",
@@ -178,7 +178,7 @@ export let problemsArray = [
     answer: "閲覧履歴を隠すため",
     choices: ["ゲームをするため", "面白い動画を見るため", "宿題をするため"],
     selectedChoice: "",
-    reward: 100,
+    reward: 300,
   },
   {
     name: "セーフサーチ",
@@ -190,7 +190,7 @@ export let problemsArray = [
       "個人情報を守るため",
     ],
     selectedChoice: "",
-    reward: 100,
+    reward: 300,
   },
   {
     name: "メール",
@@ -198,7 +198,7 @@ export let problemsArray = [
     answer: "送信元を確認する",
     choices: ["メールを開いて読む", "メールを消す", "返信する"],
     selectedChoice: "",
-    reward: 100,
+    reward: 200,
   },
   {
     name: "アプリの許可",
@@ -251,7 +251,7 @@ export let problemsArray = [
     answer: "サイトのURL",
     choices: ["サイトのトップページ", "サイトのヘッダー", "サイトの名前"],
     selectedChoice: "",
-    reward: 200,
+    reward: 300,
   },
   {
     name: "危険なウェブサイト",
@@ -272,7 +272,7 @@ export let problemsArray = [
   {
     name: "フィッシング🐟",
     description:
-      "知らない宛先からメールが届いた。メールにはURLが貼られている。どうする？",
+      "知らない宛先からメールが届いた。メールにはURLのリンク貼られている。どうする？",
     answer: "無視する",
     choices: [
       "URLをクリックしてサイトを確認する",
@@ -288,6 +288,6 @@ export let problemsArray = [
     answer: "リンクをクリックするとき",
     choices: ["メールを開くとき", "SNSでチャットを開くとき", "写真を撮るとき"],
     selectedChoice: "",
-    reward: 200,
+    reward: 300,
   },
 ];

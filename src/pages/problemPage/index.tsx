@@ -145,9 +145,7 @@ function useProblemPage() {
       const res = await axios.get(`/api/teams/problems/${teamId}/${problemId}`);
       setProblem(res.data);
       setSelectedChoice(res.data.selectedChoice);
-      setSelectableChoices(
-        shuffleArray([res.data.answer, ...res.data.choices])
-      );
+      setSelectableChoices(res.data.choices);
     } catch (err) {
       console.log(err);
     }
