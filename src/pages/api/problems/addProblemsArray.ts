@@ -12,14 +12,18 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     case "POST":
       try {
         problemsArray.map(async (problem) => {
-          const shuffledChoices = shuffleArray([
-            problem.answer,
-            ...problem.choices,
-          ]);
+          const toUseChoices = shuffleArray(problem.choices).slice(0, 3);
+
+          const answerIndex = Math.floor(
+            Math.random() * problem.answers.length
+          );
+          const toUseAnswer = problem.answers[answerIndex];
+
+          const shuffledChoices = shuffleArray([toUseAnswer, ...toUseChoices]);
           const newProblem = await new Problem({
             name: problem.name,
             description: problem.description,
-            answer: problem.answer,
+            answer: toUseAnswer,
             choices: shuffledChoices,
             selectedChoice: problem.selectedChoice,
             reward: problem.reward,
