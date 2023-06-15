@@ -14,9 +14,6 @@ export default function Home() {
 
   useEffect(() => {
     if (!router.isReady) return;
-    axios.get("/api/hello").then((res) => {
-      console.log(res.data.message);
-    });
   }, [router]);
   return (
     <>
