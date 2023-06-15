@@ -2,7 +2,7 @@ import dbConnect from "@/lib/dbConnect";
 import { NextApiRequest, NextApiResponse } from "next";
 import Team from "../../../../models/Team";
 
-const handler =   async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const {
     query: { teamId, problemId },
     method,

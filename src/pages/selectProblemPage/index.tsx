@@ -42,6 +42,7 @@ export default function SelectProblemPage() {
         res.data.map((problem: ProblemDocument) =>
           fetchedProblems.push(problem)
         );
+      fetchedProblems.sort((a, b) => a.reward - b.reward);
       setProblems(fetchedProblems);
     } catch (err) {
       console.log(err);

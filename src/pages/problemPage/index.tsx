@@ -145,7 +145,9 @@ function useProblemPage() {
       const res = await axios.get(`/api/teams/problems/${teamId}/${problemId}`);
       setProblem(res.data);
       setSelectedChoice(res.data.selectedChoice);
-      setSelectableChoices([res.data.answer, ...res.data.choices]);
+      setSelectableChoices(
+        shuffleArray([res.data.answer, ...res.data.choices])
+      );
     } catch (err) {
       console.log(err);
     }
@@ -260,4 +262,12 @@ function SubmitAnswerModal({
       </Modal>
     </>
   );
+}
+
+function shuffleArray(array: string[]): string[] {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+  return array;
 }
