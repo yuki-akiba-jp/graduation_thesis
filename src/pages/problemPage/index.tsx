@@ -216,7 +216,7 @@ function SubmitAnswerModal({
           submit
         </Button>
       </HStack>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>RESULT</ModalHeader>
@@ -224,11 +224,11 @@ function SubmitAnswerModal({
           <ModalBody>
             {problem?.answer === selectedChoice ? (
               <Text fontSize="2xl" fontWeight="bold" textAlign="center">
-                correct answer!
+                正解です😁
               </Text>
             ) : (
               <Text fontSize="2xl" fontWeight="bold" textAlign="center">
-                wrong answer...
+                不正解です😭
               </Text>
             )}
           </ModalBody>
@@ -246,15 +246,31 @@ function SubmitAnswerModal({
             >
               問題一覧へ
             </Button>
-            <Button
-              colorScheme="orange"
-              mr={3}
-              onClick={() => {
-                onClose();
-              }}
-            >
-              もう一回
-            </Button>
+            {problem?.answer === selectedChoice ? (
+              <Button
+                colorScheme="orange"
+                mr={3}
+                onClick={() => {
+                  onClose();
+                  localStorage.setItem(problemIdStrage, problem._id);
+                  router.push({
+                    pathname: "/problemPage",
+                  });
+                }}
+              >
+                OK
+              </Button>
+            ) : (
+              <Button
+                colorScheme="orange"
+                mr={3}
+                onClick={() => {
+                  onClose();
+                }}
+              >
+                もう一回
+              </Button>
+            )}
           </ModalFooter>
         </ModalContent>
       </Modal>

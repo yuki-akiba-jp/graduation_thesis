@@ -19,7 +19,7 @@ export default function Admin() {
           colorScheme="orange"
           onClick={async () => {
             const del = await axios.delete(`/api/deletes`);
-            const res = await axios.post(`/api/problems/addProblemsArray`);
+            // const res = await axios.post(`/api/problems/addProblemsArray`);
           }}
         >
           init

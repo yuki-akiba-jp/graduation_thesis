@@ -38,12 +38,7 @@ export default function SelectProblemPage() {
       let fetchedProblems: ProblemDocument[] = [];
       const teamId = localStorage.getItem(teamIdStrage);
       const res = await axios.get(`/api/teams/${teamId}/problemsAll`);
-      if (Array.isArray(res.data))
-        res.data.map((problem: ProblemDocument) =>
-          fetchedProblems.push(problem)
-        );
-      fetchedProblems.sort((a, b) => a.reward - b.reward);
-      setProblems(fetchedProblems);
+      setProblems(res.data);
     } catch (err) {
       console.log(err);
     }

@@ -4,3 +4,4 @@ build/
 tags
 .env
 .DS_Store
+src/pages/admin.tsx

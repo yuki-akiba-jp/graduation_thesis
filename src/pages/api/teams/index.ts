@@ -1,7 +1,8 @@
 import dbConnect from "@/lib/dbConnect";
 import { NextApiRequest, NextApiResponse } from "next";
 import Team from "../../../models/Team";
-import Problem from "../../../models/Problem";
+import Problem, { ProblemDocument } from "../../../models/Problem";
+import { problemsArray } from "../problemsArray";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const {
@@ -25,7 +26,33 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         if (!(await isTeamNameValid(req.body.name)))
           return res.status(400).json("invalid");
 
-        const problems = await Problem.find();
+        //change this line to create problems from array
+        const problems: ProblemDocument[] = [];
+
+        problemsArray.map(async (problem) => {
+          const toUseChoices = shuffleArray(problem.choices).slice(0, 3);
+          const answerIndex = Math.floor(
+            Math.random() * problem.answers.length
+          );
+
+          const toUseAnswer = problem.answers[answerIndex];
+
+          const shuffledChoices = shuffleArray([toUseAnswer, ...toUseChoices]);
+          console.log(shuffledChoices);
+          const newProblem = new Problem({
+            name: problem.name,
+            description: problem.description,
+            answer: toUseAnswer,
+            choices: shuffledChoices,
+            selectedChoice: problem.selectedChoice,
+            reward: problem.reward,
+            answerCount: 0,
+            answerCountLimit: 2,
+          });
+          problems.push(newProblem);
+        });
+        problems.sort((a, b) => a.reward - b.reward);
+
         const newTeam = new Team({
           name: req.body.name,
           score: 0,
@@ -53,3 +80,11 @@ async function isTeamNameValid(name: string) {
 }
 
 export default handler;
+
+function shuffleArray(array: string[]): string[] {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+  return array;
+}

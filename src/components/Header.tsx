@@ -217,15 +217,15 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "selectTeam",
+    label: "チーム変更",
     href: "/selectTeamPage",
   },
+  // {
+  //   label: "問題一覧",
+  //   href: "/selectProblemPage",
+  // },
   {
-    label: "problems",
-    href: "/selectProblemPage",
-  },
-  {
-    label: "ranking",
+    label: "ランキング",
     href: "/rankingPage",
   },
 ];
