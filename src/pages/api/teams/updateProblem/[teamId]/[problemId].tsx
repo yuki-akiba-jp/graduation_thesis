@@ -5,6 +5,7 @@ import Team from "../../../../../models/Team";
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const {
     query: { teamId, problemId },
+    body: { selectedChoice, answerTime, isFirstAnswer },
     method,
   } = req;
 
@@ -13,16 +14,21 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   switch (method) {
     case "PUT":
       try {
+        let updateQuery: any = {
+          $set: {
+            "problems.$.selectedChoice": selectedChoice,
+          },
+          $inc: {
+            "problems.$.answerCount": 1,
+          },
+        };
+        if (isFirstAnswer)
+          updateQuery.$set["problems.$.firstAnswerTime"] = answerTime;
+        else updateQuery.$set["problems.$.secondAnswerTime"] = answerTime;
+
         const updatedTeam = await Team.updateOne(
           { _id: teamId, "problems._id": problemId },
-          {
-            $set: {
-              "problems.$.selectedChoice": req.body.selectedChoice,
-            },
-            $inc: {
-              "problems.$.answerCount": 1,
-            },
-          },
+          updateQuery,
           { new: true }
         );
 

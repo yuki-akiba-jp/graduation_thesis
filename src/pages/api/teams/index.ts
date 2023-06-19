@@ -26,7 +26,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         if (!(await isTeamNameValid(req.body.name)))
           return res.status(400).json("invalid");
 
-        //change this line to create problems from array
         const problems: ProblemDocument[] = [];
 
         problemsArray.map(async (problem) => {
@@ -38,7 +37,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           const toUseAnswer = problem.answers[answerIndex];
 
           const shuffledChoices = shuffleArray([toUseAnswer, ...toUseChoices]);
-          console.log(shuffledChoices);
           const newProblem = new Problem({
             name: problem.name,
             description: problem.description,
@@ -48,6 +46,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             reward: problem.reward,
             answerCount: 0,
             answerCountLimit: 2,
+            firstAnswerTime: [],
+            secondAnswerTime: [],
           });
           problems.push(newProblem);
         });

@@ -48,9 +48,12 @@ export default function ProblemPage() {
     handleClickChoice,
   } = useProblemPage();
 
+  const [startTime, setStartTime] = useState<Date | null>(null);
+
   useEffect(() => {
+    if (!startTime) setStartTime(new Date());
     fetchProblem();
-  }, [fetchProblem]);
+  }, [fetchProblem, startTime]);
 
   return (
     <>
@@ -123,6 +126,8 @@ export default function ProblemPage() {
               problem={problem}
               selectedChoice={selectedChoice}
               fetchProblem={fetchProblem}
+              startTime={startTime}
+              setStartTime={setStartTime}
             />
           </FormControl>
         </VStack>
@@ -165,13 +170,25 @@ function SubmitAnswerModal({
   problem,
   selectedChoice,
   fetchProblem,
+  startTime,
+  setStartTime,
 }: {
   problem: any;
   selectedChoice: string;
   fetchProblem: () => void;
+  startTime: Date | null;
+  setStartTime: React.Dispatch<React.SetStateAction<Date | null>>;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
+  const getAnswerTime = () => {
+    const endTime = new Date();
+    if (startTime) {
+      const diff = endTime.getTime() - startTime.getTime();
+      return diff / 1000;
+    }
+    return null;
+  };
 
   return (
     <>
@@ -200,11 +217,15 @@ function SubmitAnswerModal({
               );
               return;
             }
+            console.log("isFirstAnswer", problem?.answerCount === 0);
+            console.log("answerTime", getAnswerTime());
             const teamId = localStorage.getItem(teamIdStrage);
             await axios.put(
               `/api/teams/updateProblem/${teamId}/${problem?._id}`,
               {
                 selectedChoice,
+                answerTime: getAnswerTime(),
+                isFirstAnswer: problem?.answerCount === 0,
               }
             );
             await axios.put(`/api/teams/updateScore/${teamId}`);
@@ -266,6 +287,7 @@ function SubmitAnswerModal({
                 mr={3}
                 onClick={() => {
                   onClose();
+                  setStartTime(new Date());
                 }}
               >
                 もう一回
