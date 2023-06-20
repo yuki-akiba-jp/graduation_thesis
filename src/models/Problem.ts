@@ -9,8 +9,7 @@ export interface IProblem {
   reward: number;
   answerCount: number;
   answerCountLimit: number;
-  firstAnswerTime: number[];
-  secondAnswerTime: number[];
+  answerTimes: number[];
 }
 
 export interface ProblemDocument extends IProblem, Document {}
@@ -24,8 +23,7 @@ const ProblemSchema = new mongoose.Schema<ProblemDocument>({
   reward: { type: Number, required: true },
   answerCount: { type: Number, required: true },
   answerCountLimit: { type: Number, required: true },
-  firstAnswerTime: { type: [Number], required: true },
-  secondAnswerTime: { type: [Number], required: true },
+  answerTimes: { type: [Number], required: true },
 });
 
 let Problem: Model<ProblemDocument>;

@@ -25,9 +25,14 @@ export default function Home() {
           <Text fontSize="xl" marginBottom="2rem">
             腕試しをしてみよう
           </Text>
-          <Button colorScheme="blue" size="lg">
-            <Link href="/enterNamePage">Start app</Link>
-          </Button>
+          <Box>
+            <Button colorScheme="gray" size="lg" m={2}>
+              <Link href="/tutorial">使い方を見る</Link>
+            </Button>
+            <Button colorScheme="orange" size="lg">
+              <Link href="/enterNamePage">アプリを始める</Link>
+            </Button>
+          </Box>
         </Box>
       </Flex>
     </>

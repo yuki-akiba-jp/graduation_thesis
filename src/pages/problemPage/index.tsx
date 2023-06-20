@@ -1,12 +1,5 @@
 import { useCallback } from "react";
-import {
-  FormEvent,
-  ChangeEvent,
-  useState,
-  useEffect,
-  Fragment,
-  Profiler,
-} from "react";
+import { FormEvent, useState, useEffect } from "react";
 import {
   ModalOverlay,
   ModalHeader,
@@ -14,27 +7,22 @@ import {
   ModalBody,
   ModalFooter,
   ModalContent,
-  Stack,
   Modal,
   VStack,
   FormControl,
-  Input,
   Button,
   useColorModeValue,
   Heading,
   Container,
-  Flex,
   Grid,
-  Box,
   HStack,
-  GridItem,
   Spacer,
   Text,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/hooks";
 import React from "react";
 import { useRouter } from "next/router";
-import { problemIdStrage, teamIdStrage, userIdStrage } from "../../const";
+import { problemIdStrage, teamIdStrage } from "../../const";
 import axios from "axios";
 
 import { ProblemDocument } from "../../models/Problem";
@@ -206,36 +194,31 @@ function SubmitAnswerModal({
         >
           back
         </Button>
-        <Button
-          colorScheme="teal"
-          w="30%"
-          type="button"
-          onClick={async () => {
-            if (problem?.answerCount >= problem?.answerCountLimit) {
-              alert(
-                `回答数の上限に達しました。正解は[${problem?.answer}]です。`
-              );
-              return;
-            }
-            console.log("isFirstAnswer", problem?.answerCount === 0);
-            console.log("answerTime", getAnswerTime());
-            const teamId = localStorage.getItem(teamIdStrage);
-            await axios.put(
-              `/api/teams/updateProblem/${teamId}/${problem?._id}`,
-              {
-                selectedChoice,
-                answerTime: getAnswerTime(),
-                isFirstAnswer: problem?.answerCount === 0,
-              }
-            );
-            await axios.put(`/api/teams/updateScore/${teamId}`);
-            fetchProblem();
-            onOpen();
-          }}
-          isTruncated
-        >
-          submit
-        </Button>
+
+        {problem?.answerCount < problem?.answerCountLimit &&
+          problem?.answer !== problem?.selectedChoice && (
+            <Button
+              colorScheme="teal"
+              w="30%"
+              type="button"
+              onClick={async () => {
+                const teamId = localStorage.getItem(teamIdStrage);
+                await axios.put(
+                  `/api/teams/updateProblem/${teamId}/${problem?._id}`,
+                  {
+                    selectedChoice,
+                    answerTime: getAnswerTime(),
+                  }
+                );
+                await axios.put(`/api/teams/updateScore/${teamId}`);
+                fetchProblem();
+                onOpen();
+              }}
+              isTruncated
+            >
+              submit
+            </Button>
+          )}
       </HStack>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
@@ -250,6 +233,11 @@ function SubmitAnswerModal({
             ) : (
               <Text fontSize="2xl" fontWeight="bold" textAlign="center">
                 不正解です😭
+                {problem?.answerCount == problem?.answerCountLimit && (
+                  <Text fontSize="2xl" fontWeight="bold" textAlign="center">
+                    正解は [{problem?.answer}]です
+                  </Text>
+                )}
               </Text>
             )}
           </ModalBody>

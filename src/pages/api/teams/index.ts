@@ -46,8 +46,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             reward: problem.reward,
             answerCount: 0,
             answerCountLimit: 2,
-            firstAnswerTime: [],
-            secondAnswerTime: [],
+            answerTimes: [],
           });
           problems.push(newProblem);
         });
