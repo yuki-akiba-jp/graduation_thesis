@@ -43,7 +43,7 @@ export default function EnterNamePage() {
           textAlign={"center"}
           mb={5}
         >
-          Input Your Name
+          ニックネームを入れてね
         </Heading>
         <VStack
           direction={{ base: "column", md: "row" }}
@@ -64,7 +64,7 @@ export default function EnterNamePage() {
               }}
               borderColor={useColorModeValue("gray.300", "gray.700")}
               required
-              placeholder={"Your name"}
+              placeholder={"Your Nickname"}
               value={name}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setName(e.target.value)
