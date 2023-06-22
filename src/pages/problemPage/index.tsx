@@ -1,12 +1,5 @@
 import { useCallback } from "react";
-import {
-  FormEvent,
-  ChangeEvent,
-  useState,
-  useEffect,
-  Fragment,
-  Profiler,
-} from "react";
+import { FormEvent, useState, useEffect } from "react";
 import {
   ModalOverlay,
   ModalHeader,
@@ -14,27 +7,22 @@ import {
   ModalBody,
   ModalFooter,
   ModalContent,
-  Stack,
   Modal,
   VStack,
   FormControl,
-  Input,
   Button,
   useColorModeValue,
   Heading,
   Container,
-  Flex,
   Grid,
-  Box,
   HStack,
-  GridItem,
   Spacer,
   Text,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/hooks";
 import React from "react";
 import { useRouter } from "next/router";
-import { problemIdStrage, teamIdStrage, userIdStrage } from "../../const";
+import { problemIdStrage, teamIdStrage } from "../../const";
 import axios from "axios";
 
 import { ProblemDocument } from "../../models/Problem";
@@ -48,9 +36,12 @@ export default function ProblemPage() {
     handleClickChoice,
   } = useProblemPage();
 
+  const [startTime, setStartTime] = useState<Date | null>(null);
+
   useEffect(() => {
+    if (!startTime) setStartTime(new Date());
     fetchProblem();
-  }, [fetchProblem]);
+  }, [fetchProblem, startTime]);
 
   return (
     <>
@@ -123,6 +114,8 @@ export default function ProblemPage() {
               problem={problem}
               selectedChoice={selectedChoice}
               fetchProblem={fetchProblem}
+              startTime={startTime}
+              setStartTime={setStartTime}
             />
           </FormControl>
         </VStack>
@@ -165,13 +158,25 @@ function SubmitAnswerModal({
   problem,
   selectedChoice,
   fetchProblem,
+  startTime,
+  setStartTime,
 }: {
   problem: any;
   selectedChoice: string;
   fetchProblem: () => void;
+  startTime: Date | null;
+  setStartTime: React.Dispatch<React.SetStateAction<Date | null>>;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
+  const getAnswerTime = () => {
+    const endTime = new Date();
+    if (startTime) {
+      const diff = endTime.getTime() - startTime.getTime();
+      return diff / 1000;
+    }
+    return null;
+  };
 
   return (
     <>
@@ -189,32 +194,31 @@ function SubmitAnswerModal({
         >
           back
         </Button>
-        <Button
-          colorScheme="teal"
-          w="30%"
-          type="button"
-          onClick={async () => {
-            if (problem?.answerCount >= problem?.answerCountLimit) {
-              alert(
-                `回答数の上限に達しました。正解は[${problem?.answer}]です。`
-              );
-              return;
-            }
-            const teamId = localStorage.getItem(teamIdStrage);
-            await axios.put(
-              `/api/teams/updateProblem/${teamId}/${problem?._id}`,
-              {
-                selectedChoice,
-              }
-            );
-            await axios.put(`/api/teams/updateScore/${teamId}`);
-            fetchProblem();
-            onOpen();
-          }}
-          isTruncated
-        >
-          submit
-        </Button>
+
+        {problem?.answerCount < problem?.answerCountLimit &&
+          problem?.answer !== problem?.selectedChoice && (
+            <Button
+              colorScheme="teal"
+              w="30%"
+              type="button"
+              onClick={async () => {
+                const teamId = localStorage.getItem(teamIdStrage);
+                await axios.put(
+                  `/api/teams/updateProblem/${teamId}/${problem?._id}`,
+                  {
+                    selectedChoice,
+                    answerTime: getAnswerTime(),
+                  }
+                );
+                await axios.put(`/api/teams/updateScore/${teamId}`);
+                fetchProblem();
+                onOpen();
+              }}
+              isTruncated
+            >
+              submit
+            </Button>
+          )}
       </HStack>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
@@ -229,6 +233,11 @@ function SubmitAnswerModal({
             ) : (
               <Text fontSize="2xl" fontWeight="bold" textAlign="center">
                 不正解です😭
+                {problem?.answerCount == problem?.answerCountLimit && (
+                  <Text fontSize="2xl" fontWeight="bold" textAlign="center">
+                    正解は [{problem?.answer}]です
+                  </Text>
+                )}
               </Text>
             )}
           </ModalBody>
@@ -266,6 +275,7 @@ function SubmitAnswerModal({
                 mr={3}
                 onClick={() => {
                   onClose();
+                  setStartTime(new Date());
                 }}
               >
                 もう一回

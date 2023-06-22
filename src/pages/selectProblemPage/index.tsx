@@ -102,7 +102,7 @@ function ProblemPanel({ problem }: { problem: ProblemDocument }) {
     <Container
       maxW={{ base: "sm", md: "xl" }}
       // bg={useColorModeValue("gray", "blue.100")}
-      bg={problem?.selectedChoice === problem?.answer ? "green.100" : "red.100"}
+      bg={problem.selectedChoice === problem.answer ? "green.100" : "red.100"}
       boxShadow={"xl"}
       rounded={"lg"}
       p={30}

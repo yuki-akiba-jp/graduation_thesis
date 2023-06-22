@@ -154,7 +154,7 @@ function ModalWindow() {
   return (
     <>
       <Button colorScheme={"orange"} type="button" onClick={onOpen}>
-        New Team
+        新しいチームを作る
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -194,7 +194,7 @@ function ModalWindow() {
                 onClose();
               }}
             >
-              cancel
+              キャンセル
             </Button>
             <Button
               colorScheme="orange"
@@ -203,7 +203,7 @@ function ModalWindow() {
                 onClose();
               }}
             >
-              ok
+              作成
             </Button>
           </ModalFooter>
         </ModalContent>
