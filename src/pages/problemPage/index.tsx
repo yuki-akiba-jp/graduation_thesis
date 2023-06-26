@@ -22,7 +22,7 @@ import {
 import { useDisclosure } from "@chakra-ui/hooks";
 import React from "react";
 import { useRouter } from "next/router";
-import { problemIdStrage, teamIdStrage } from "../../const";
+import { problemIdStrage, teamIdStrage, isTimerMode } from "../../const";
 import axios from "axios";
 
 import { ProblemDocument } from "../../models/Problem";
@@ -192,33 +192,28 @@ function SubmitAnswerModal({
           }}
           isTruncated
         >
-          back
+          問題一覧へ
         </Button>
 
-        {problem?.answerCount < problem?.answerCountLimit &&
-          problem?.answer !== problem?.selectedChoice && (
-            <Button
-              colorScheme="teal"
-              w="30%"
-              type="button"
-              onClick={async () => {
-                const teamId = localStorage.getItem(teamIdStrage);
-                await axios.put(
-                  `/api/teams/updateProblem/${teamId}/${problem?._id}`,
-                  {
-                    selectedChoice,
-                    answerTime: getAnswerTime(),
-                  }
-                );
-                await axios.put(`/api/teams/updateScore/${teamId}`);
-                fetchProblem();
-                onOpen();
-              }}
-              isTruncated
-            >
-              submit
-            </Button>
-          )}
+        {canAnswer(problem) && !isTimerMode && (
+          <AnswerButton
+            selectedChoice={selectedChoice}
+            problem={problem}
+            getAnswerTime={getAnswerTime}
+            fetchProblem={fetchProblem}
+            onOpen={onOpen}
+          />
+        )}
+        {canAnswer(problem) && isTimerMode && (
+          <TimerAnswerButton
+            initialSeconds={5}
+            selectedChoice={selectedChoice}
+            problem={problem}
+            getAnswerTime={getAnswerTime}
+            fetchProblem={fetchProblem}
+            onOpen={onOpen}
+          />
+        )}
       </HStack>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
@@ -295,3 +290,104 @@ function shuffleArray(array: string[]): string[] {
   }
   return array;
 }
+
+function canAnswer(problem: ProblemDocument): boolean {
+  if (
+    problem?.answerCount < problem?.answerCountLimit &&
+    problem?.answer !== problem?.selectedChoice
+  )
+    return true;
+  return false;
+}
+
+const TimerAnswerButton = ({
+  initialSeconds,
+  selectedChoice,
+  problem,
+  getAnswerTime,
+  fetchProblem,
+  onOpen,
+}: {
+  initialSeconds: number;
+  selectedChoice: string;
+  problem: any;
+  getAnswerTime: () => number | null;
+  fetchProblem: () => void;
+  onOpen: () => void;
+}) => {
+  const [seconds, setSeconds] = useState<number>(initialSeconds);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (seconds > 0) {
+      interval = setInterval(() => {
+        setSeconds(seconds - 1);
+      }, 1000);
+    }
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, [seconds]);
+
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const remainingSeconds = time % 60;
+    return `${minutes}:${
+      remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds
+    }`;
+  };
+
+  return (
+    <>
+      <h1>{formatTime(seconds)}</h1>
+      {seconds > 0 && (
+        <AnswerButton
+          selectedChoice={selectedChoice}
+          problem={problem}
+          getAnswerTime={getAnswerTime}
+          fetchProblem={fetchProblem}
+          onOpen={onOpen}
+        />
+      )}
+    </>
+  );
+};
+
+const AnswerButton = ({
+  selectedChoice,
+  problem,
+  getAnswerTime,
+  fetchProblem,
+  onOpen,
+}: {
+  selectedChoice: string;
+  problem: any;
+  getAnswerTime: () => number | null;
+  fetchProblem: () => void;
+  onOpen: () => void;
+}) => {
+  return (
+    <Button
+      colorScheme="teal"
+      w="30%"
+      type="button"
+      onClick={async () => {
+        const teamId = localStorage.getItem(teamIdStrage);
+        await axios.put(`/api/teams/updateProblem/${teamId}/${problem?._id}`, {
+          selectedChoice,
+          answerTime: getAnswerTime(),
+        });
+        await axios.put(`/api/teams/updateScore/${teamId}`);
+        fetchProblem();
+        onOpen();
+      }}
+      isTruncated
+    >
+      解答
+    </Button>
+  );
+};
