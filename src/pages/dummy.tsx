@@ -1,16 +1,8 @@
 import React from "react";
 import Lottie from "lottie-react";
-import animationData from "../98571-testing-checking-animation.json"; // Import your Lottie JSON file
+import animationData from "../33886-check-okey-done.json"; // Import your Lottie JSON file
 import { Box } from "@chakra-ui/react";
 
-interface LottieOptions {
-  loop: boolean;
-  autoplay: boolean;
-  animationData: any; // The Lottie JSON
-  rendererSettings: {
-    preserveAspectRatio: string;
-  };
-}
 
 const App: React.FC = () => {
   return (

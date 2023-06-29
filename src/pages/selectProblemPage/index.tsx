@@ -28,6 +28,8 @@ import axios from "axios";
 import { problemIdStrage } from "../../const";
 import { ProblemDocument } from "../../models/Problem";
 import { teamIdStrage, userIdStrage } from "../../const";
+import SolvedIcon from "@/components/SolverIcon";
+import CrossMarcIcon from "@/components/CrossMarkIcon";
 
 export default function SelectProblemPage() {
   const [problems, setProblems] = useState<ProblemDocument[]>([]);
@@ -106,6 +108,7 @@ function ProblemPanel({ problem }: { problem: ProblemDocument }) {
       boxShadow={"xl"}
       rounded={"lg"}
       p={30}
+      style={{ position: "relative" }}
     >
       <Heading
         as={"h2"}
@@ -122,6 +125,8 @@ function ProblemPanel({ problem }: { problem: ProblemDocument }) {
         mb={5}
       >
         reward: {problem.reward}
+        {problem.answerCountLimit == problem.answerCount &&
+          problem.selectedChoice !== problem.answer && <CrossMarcIcon />}
       </Heading>
       <Heading
         as={"h5"}
@@ -141,6 +146,7 @@ function ProblemPanel({ problem }: { problem: ProblemDocument }) {
       >
         <FormControl w={{ base: "100%", md: "40%" }}>
           <Button
+            zIndex={100}
             colorScheme={"orange"}
             w="100%"
             type="button"

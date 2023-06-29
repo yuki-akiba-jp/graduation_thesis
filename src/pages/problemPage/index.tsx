@@ -26,6 +26,8 @@ import { problemIdStrage, teamIdStrage, isTimerMode } from "../../const";
 import axios from "axios";
 
 import { ProblemDocument } from "../../models/Problem";
+import CelebrationIcon from "@/components/CelebrationIcon";
+import WrongAnswerIcon from "@/components/WrongAnswerIcon";
 export default function ProblemPage() {
   const router = useRouter();
   const {
@@ -123,7 +125,6 @@ export default function ProblemPage() {
     </>
   );
 }
-
 function useProblemPage() {
   const [problem, setProblem] = useState<ProblemDocument>();
   const [selectedChoice, setSelectedChoice] = useState<string>("");
@@ -161,7 +162,7 @@ function SubmitAnswerModal({
   startTime,
   setStartTime,
 }: {
-  problem: any;
+  problem: ProblemDocument;
   selectedChoice: string;
   fetchProblem: () => void;
   startTime: Date | null;
@@ -183,6 +184,7 @@ function SubmitAnswerModal({
       <HStack justifyContent={"center"}>
         <Button
           colorScheme="blue"
+          zIndex={2000}
           w="30%"
           type="button"
           onClick={() => {
@@ -194,6 +196,13 @@ function SubmitAnswerModal({
         >
           問題一覧へ
         </Button>
+        {problem?.selectedChoice === selectedChoice &&
+          problem?.answer === selectedChoice && <CelebrationIcon />}
+        {problem &&
+          (problem?.answerCount === problem?.answerCountLimit ||
+            (isOpen && problem?.answer !== selectedChoice)) && (
+            <WrongAnswerIcon />
+          )}
 
         {canAnswer(problem) && !isTimerMode && (
           <AnswerButton
@@ -239,6 +248,7 @@ function SubmitAnswerModal({
 
           <ModalFooter>
             <Button
+              zIndex={99999}
               colorScheme="blue"
               variant="ghost"
               onClick={() => {
@@ -250,8 +260,10 @@ function SubmitAnswerModal({
             >
               問題一覧へ
             </Button>
-            {problem?.answer === selectedChoice ? (
+            {problem?.answer === selectedChoice ||
+            problem?.answerCountLimit === problem?.answerCount ? (
               <Button
+                zIndex={99999}
                 colorScheme="orange"
                 mr={3}
                 onClick={() => {
@@ -266,6 +278,7 @@ function SubmitAnswerModal({
               </Button>
             ) : (
               <Button
+                zIndex={99999}
                 colorScheme="orange"
                 mr={3}
                 onClick={() => {
