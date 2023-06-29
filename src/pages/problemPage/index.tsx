@@ -236,14 +236,16 @@ function SubmitAnswerModal({
                 正解です😁
               </Text>
             ) : (
-              <Text fontSize="2xl" fontWeight="bold" textAlign="center">
-                不正解です😭
+              <div>
+                <Text fontSize="2xl" fontWeight="bold" textAlign="center">
+                  不正解です😭
+                </Text>
                 {problem?.answerCount === problem?.answerCountLimit && (
                   <Text fontSize="2xl" fontWeight="bold" textAlign="center">
                     正解は [{problem?.answer}]です
                   </Text>
                 )}
-              </Text>
+              </div>
             )}
           </ModalBody>
 
