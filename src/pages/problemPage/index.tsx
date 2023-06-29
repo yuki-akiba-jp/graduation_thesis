@@ -184,7 +184,7 @@ function SubmitAnswerModal({
       <HStack justifyContent={"center"}>
         <Button
           colorScheme="blue"
-          zIndex={2000}
+          zIndex={300}
           w="30%"
           type="button"
           onClick={() => {
@@ -251,7 +251,7 @@ function SubmitAnswerModal({
 
           <ModalFooter>
             <Button
-              zIndex={99999}
+              zIndex={20}
               colorScheme="blue"
               variant="ghost"
               onClick={() => {
