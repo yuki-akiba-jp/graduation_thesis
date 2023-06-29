@@ -50,10 +50,11 @@ export default function Header() {
             }
             variant={"ghost"}
             aria-label={"Toggle Navigation"}
+            style={{ zIndex: 99999 }}
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Link href="/">
+          <Link href="/" style={{ zIndex: 99999 }}>
             <Text
               textAlign={useBreakpointValue({ base: "center", md: "left" })}
               fontFamily={"heading"}
@@ -87,7 +88,7 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={"row"} spacing={4} style={{ zIndex: 99999 }}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -102,6 +103,7 @@ const DesktopNav = () => {
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
+                zIndex={99999}
               >
                 {navItem.label}
               </Link>
@@ -116,6 +118,7 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href }: NavItem) => {
   return (
     <Link
+      zIndex={99999}
       href={href}
       role={"group"}
       display={"block"}
@@ -170,6 +173,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
     <Stack spacing={4} onClick={onToggle}>
       <Flex
         py={2}
+        zIndex={99999}
         as={Link}
         href={href ?? "#"}
         justify={"space-between"}

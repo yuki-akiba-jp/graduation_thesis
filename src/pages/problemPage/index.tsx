@@ -59,18 +59,18 @@ export default function ProblemPage() {
           rounded={"xl"}
           as={"form"}
           spacing={{ base: "1", md: "10" }}
-          bg={useColorModeValue("blue.100", "gray.700")}
+          bg={useColorModeValue("gray.300", "gray.300")}
           onSubmit={(e: FormEvent) => {
             e.preventDefault();
           }}
-          py={20}
+          py={5}
         >
           <Heading
             as={"h1"}
             fontSize={{ base: "2xl", sm: "3xl" }}
             fontStyle={"italic"}
             textAlign={"center"}
-            mb={5}
+            mb={3}
           >
             {problem?.name}
             <Spacer />
