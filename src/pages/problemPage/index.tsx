@@ -162,7 +162,7 @@ function SubmitAnswerModal({
   startTime,
   setStartTime,
 }: {
-  problem: ProblemDocument;
+  problem: any;
   selectedChoice: string;
   fetchProblem: () => void;
   startTime: Date | null;
