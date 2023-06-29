@@ -1,7 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
 import animationData from "../75376-cross-mark-animarion.json"; // Import your Lottie JSON file
-import { Box } from "@chakra-ui/react";
 
 const CrossMarcIcon: React.FC = () => {
   return (
