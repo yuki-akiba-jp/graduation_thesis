@@ -199,7 +199,8 @@ function SubmitAnswerModal({
         {problem?.selectedChoice === selectedChoice &&
           problem?.answer === selectedChoice && <CelebrationIcon />}
         {problem &&
-          (problem?.answerCount === problem?.answerCountLimit ||
+          ((problem?.answerCount === problem?.answerCountLimit &&
+            problem?.answer !== selectedChoice) ||
             (isOpen && problem?.answer !== selectedChoice)) && (
             <WrongAnswerIcon />
           )}
@@ -237,7 +238,7 @@ function SubmitAnswerModal({
             ) : (
               <Text fontSize="2xl" fontWeight="bold" textAlign="center">
                 不正解です😭
-                {problem?.answerCount == problem?.answerCountLimit && (
+                {problem?.answerCount === problem?.answerCountLimit && (
                   <Text fontSize="2xl" fontWeight="bold" textAlign="center">
                     正解は [{problem?.answer}]です
                   </Text>
