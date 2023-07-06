@@ -10,27 +10,17 @@ import {
   FormLabel,
   Input,
   VStack,
-  HStack,
-  Textarea,
-  NumberInput,
-  NumberInputField,
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import { problemIdStrage } from "../const";
 
 export default function CreateProblemPage() {
   const router = useRouter();
-  const [name, setName] = useState<string>("name");
-  const [description, setDescription] = useState<string>("description");
-  const [reward, setReward] = useState<number>(0);
-  const [answers, setAnswers] = useState<string[]>(["ans1"]);
-  const [choices, setChoices] = useState<string[]>([
-    "choice1",
-    "choice2",
-    "choice3",
-  ]);
+  const [name, setName] = useState<string>("氏名");
+  const [studentId, setStudentId] = useState<string>("");
+  const [answers, setAnswers] = useState<string[]>(["", "", ""]);
+  const [choices, setChoices] = useState<string[]>(["", "", "", "", ""]);
 
   const handleAnswerChange = (index: number, value: string) => {
     setAnswers((prev) => {
@@ -52,7 +42,7 @@ export default function CreateProblemPage() {
     e.preventDefault();
     if (
       name === "" ||
-      description === "" ||
+      studentId === "" ||
       answers.includes("") ||
       choices.includes("")
     ) {
@@ -62,10 +52,9 @@ export default function CreateProblemPage() {
     try {
       const res = await axios.post(`/api/problems`, {
         name,
-        description,
+        studentId,
         answers,
         choices,
-        reward,
       });
       const problemId = res.data._id;
       const updateteams = await axios.put(`/api/teams/addProblem/${problemId}`);
@@ -89,11 +78,11 @@ export default function CreateProblemPage() {
           </FormControl>
 
           <FormControl>
-            <FormLabel>Description</FormLabel>
-            <Textarea
-              placeholder="Enter description"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
+            <FormLabel>学籍番号</FormLabel>
+            <Input
+              placeholder=""
+              value={studentId}
+              onChange={(e) => setStudentId(e.target.value)}
             />
           </FormControl>
 
@@ -123,17 +112,6 @@ export default function CreateProblemPage() {
                 />
               ))}
             </VStack>
-          </FormControl>
-
-          <FormControl>
-            <FormLabel>Reward</FormLabel>
-            <NumberInput
-              value={reward}
-              min={0}
-              onChange={(valueString) => setReward(Number(valueString))}
-            >
-              <NumberInputField />
-            </NumberInput>
           </FormControl>
 
           <Button
