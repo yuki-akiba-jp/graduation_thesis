@@ -79,6 +79,9 @@ export default function EnterNamePage() {
               type="button"
               onClick={async () => {
                 try {
+                  router.push({
+                    pathname: "/selectTeamPage",
+                  });
                   const res = await axios.post(`/api/players`, {
                     name: name,
                   });
@@ -88,6 +91,9 @@ export default function EnterNamePage() {
                   });
                 } catch (err: any) {
                   if (err.response.status === 400) {
+                    router.push({
+                      pathname: "/enterNamePage",
+                    });
                     if (name.length < 3 || name.length > 20)
                       alert("name should be between 3 and 20 characters");
                     else alert("this name already exists");
@@ -105,4 +111,3 @@ export default function EnterNamePage() {
     </Flex>
   );
 }
-
