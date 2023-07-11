@@ -18,6 +18,7 @@ export default function CreateProblemPage() {
   const router = useRouter();
   const [problem, setProblem] = useState<ProblemByStudentDocument>();
   useEffect(() => {
+    if (!router.isReady) return;
     const getProblem = async () => {
       const res = await axios.get(
         `/api/createProblemByStudent/${localStorage.getItem(
@@ -27,7 +28,7 @@ export default function CreateProblemPage() {
       setProblem(res.data);
     };
     getProblem();
-  }, []);
+  }, [router]);
 
   return (
     <>

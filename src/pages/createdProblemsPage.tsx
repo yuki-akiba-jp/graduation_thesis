@@ -1,23 +1,13 @@
 import { useCallback } from "react";
 import { FormEvent, useState, useEffect } from "react";
 import {
-  ModalOverlay,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  ModalFooter,
-  ModalContent,
-  Modal,
   VStack,
   FormControl,
   Button,
-  useColorModeValue,
+  Link,
   Heading,
   Container,
   Grid,
-  HStack,
-  Spacer,
-  Text,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/hooks";
 import React from "react";
@@ -49,6 +39,9 @@ export default function CreatedProblemsPage() {
           <ProblemPanel problem={problem} key={problem.problemName} />
         ))}
       </Grid>
+      <Button colorScheme="blue" size="lg" m={3}>
+        <Link href="/createProblemPage">問題登録</Link>
+      </Button>
     </Container>
   );
 }
@@ -101,7 +94,7 @@ function ProblemPanel({ problem }: { problem: ProblemByStudentDocument }) {
               localStorage.setItem(studentCreatedProblemId, problem._id);
             }}
           >
-          問題を見る
+            問題を見る
           </Button>
         </FormControl>
       </VStack>

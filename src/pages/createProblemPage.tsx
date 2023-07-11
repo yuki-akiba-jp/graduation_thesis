@@ -171,6 +171,7 @@ export default function CreateProblemPage() {
                     onChange={(e) => handleChoiceChange(index, e.target.value)}
                   />
                 ))}
+                問題を見る
               </VStack>
             </FormControl>
 
