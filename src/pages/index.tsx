@@ -29,8 +29,11 @@ export default function Home() {
             <Button colorScheme="gray" size="lg" m={2}>
               <Link href="/tutorial">使い方を見る</Link>
             </Button>
-            <Button colorScheme="orange" size="lg">
+            <Button colorScheme="orange" size="lg" m={2}>
               <Link href="/enterNamePage">アプリを始める</Link>
+            </Button>
+            <Button colorScheme="blue" size="lg">
+              <Link href="/createProblemPage">問題登録</Link>
             </Button>
           </Box>
         </Box>
