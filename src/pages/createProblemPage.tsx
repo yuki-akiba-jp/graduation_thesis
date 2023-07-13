@@ -113,7 +113,7 @@ export default function CreateProblemPage() {
             <FormControl>
               <FormLabel>学籍番号</FormLabel>
               <Input
-                placeholder="2000000"
+                placeholder="2160000"
                 value={studentId}
                 onChange={(e) => setStudentId(e.target.value)}
               />
