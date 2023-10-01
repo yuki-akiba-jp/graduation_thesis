@@ -19,9 +19,30 @@ export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
   const router = useRouter();
   const inputref = React.useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     inputref.current?.focus();
   }, []);
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post(`/api/players`, {
+        name: name,
+      });
+      localStorage.setItem(userIdStrage, res.data._id);
+      router.push({
+        pathname: "/selectTeamPage",
+      });
+    } catch (err: any) {
+      if (err.response.status === 400) {
+        if (name.length < 3 || name.length > 20)
+          alert("name should be between 3 and 20 characters");
+        else alert("this name already exists");
+      }
+      console.log(err);
+    }
+  };
 
   return (
     <Flex
@@ -49,9 +70,7 @@ export default function EnterNamePage() {
           direction={{ base: "column", md: "row" }}
           as={"form"}
           spacing={"12px"}
-          onSubmit={(e: FormEvent) => {
-            e.preventDefault();
-          }}
+          onSubmit={handleSubmit}
         >
           <FormControl>
             <Input
@@ -73,29 +92,7 @@ export default function EnterNamePage() {
             />
           </FormControl>
           <FormControl w={{ base: "100%", md: "40%" }}>
-            <Button
-              colorScheme={"orange"}
-              w="100%"
-              type="button"
-              onClick={async () => {
-                try {
-                  const res = await axios.post(`/api/players`, {
-                    name: name,
-                  });
-                  localStorage.setItem(userIdStrage, res.data._id);
-                  router.push({
-                    pathname: "/selectTeamPage",
-                  });
-                } catch (err: any) {
-                  if (err.response.status === 400) {
-                    if (name.length < 3 || name.length > 20)
-                      alert("name should be between 3 and 20 characters");
-                    else alert("this name already exists");
-                  }
-                  console.log(err);
-                }
-              }}
-            >
+            <Button colorScheme={"orange"} w="100%" type="submit">
               Enter
             </Button>
           </FormControl>
@@ -105,4 +102,3 @@ export default function EnterNamePage() {
     </Flex>
   );
 }
-

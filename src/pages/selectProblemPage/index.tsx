@@ -1,26 +1,11 @@
-import {
-  FormEvent,
-  ChangeEvent,
-  useState,
-  useEffect,
-  Fragment,
-  Profiler,
-  use,
-} from "react";
+import { FormEvent, useState, useEffect } from "react";
 import {
   VStack,
   FormControl,
-  Input,
   Button,
-  useColorModeValue,
   Heading,
   Container,
-  Flex,
   Grid,
-  Box,
-  HStack,
-  GridItem,
-  Spacer,
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
@@ -37,7 +22,6 @@ export default function SelectProblemPage() {
   const router = useRouter();
   const fetchProblems = async () => {
     try {
-      let fetchedProblems: ProblemDocument[] = [];
       const teamId = localStorage.getItem(teamIdStrage);
       const res = await axios.get(`/api/teams/${teamId}/problemsAll`);
       setProblems(res.data);
@@ -45,6 +29,7 @@ export default function SelectProblemPage() {
       console.log(err);
     }
   };
+
   const fetchTeamName = async () => {
     try {
       const teamId = localStorage.getItem(teamIdStrage);

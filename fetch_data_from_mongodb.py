@@ -14,28 +14,18 @@ client = MongoClient(NEXT_PUBLIC_MONGODB_URI)
 db = client["test"]  # replace "database" with your database name
 collection = db["problembystudents"]  # replace "collection" with your collection name
 
+
 documents = collection.find()
 
 
 
 for document in documents:
-    toprint = '{\n'
-    toprint += f'  name: "{document["problemName"]}",\n'
-    toprint += f'  description: "{document["description"]}",\n'
-    toprint += f'  answers: ["{document["answers"][0]}", "{document["answers"][1]}", "{document["answers"][2]}"],\n'
-    toprint += f'  choices: [\n'
-    for choice in document["choices"]:
-        toprint += f'    "{choice}",\n'
-    toprint += f'  ],\n'
-    toprint += f'  selectedChoice: "",\n'
-    toprint += '  reward: 100,\n'
-    toprint += '},\n'
-    print(toprint)
+   # print(toprint)
 
     # pprint(document)
     # print(json.dumps(document, indent=4, ensure_ascii=False))
     # print(document['studentName'])
-    # print(document['studentId'])
+    print(document['studentId'])
     # print(document['choices'])
 
 

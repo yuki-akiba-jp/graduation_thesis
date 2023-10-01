@@ -36,7 +36,8 @@
   },
   "devDependencies": {
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.1"
+    "lint-staged": "^13.2.1",
+    "nodemon": "^3.0.1"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": "npm run lint:precommit",

@@ -1,11 +1,7 @@
-"use client";
 import { Button, Link } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { useState } from "react";
-import axios from "axios";
-import { userIdStrage } from "@/const";
 
 import { Flex, Box, Heading, Text } from "@chakra-ui/react";
 
@@ -32,9 +28,11 @@ export default function Home() {
             <Button colorScheme="orange" size="lg" m={2}>
               <Link href="/enterNamePage">アプリを始める</Link>
             </Button>
+            {/* 
             <Button colorScheme="blue" size="lg">
               <Link href="/createProblemPage">問題登録</Link>
             </Button>
+            */}
           </Box>
         </Box>
       </Flex>
