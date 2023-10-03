@@ -403,7 +403,7 @@ const AnswerButton = ({
       }}
       isTruncated
     >
-      解答
+      解答する
     </Button>
   );
 };

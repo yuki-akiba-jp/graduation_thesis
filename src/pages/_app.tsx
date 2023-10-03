@@ -1,8 +1,7 @@
 import type { AppProps } from "next/app";
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { ChakraProvider, Box, Flex } from "@chakra-ui/react";
 import Head from "next/head";
 import Header from "@/components/Header";
-import { RecoilRoot } from "recoil";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,8 +13,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ChakraProvider>
-        <Header />
-        <Component {...pageProps} />
+        <Flex direction="column" minH="100vh">
+          <Header />
+          <Box as="main" flex="1" w="100vw">
+            <Component {...pageProps} />
+          </Box>
+        </Flex>
       </ChakraProvider>
     </>
   );

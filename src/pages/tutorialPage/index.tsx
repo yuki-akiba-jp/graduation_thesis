@@ -16,7 +16,7 @@ import React from "react";
 import useTutorialPage from "./useTutorialPage";
 
 export default function ProblemPage() {
-  const { problem, handleClickChoice } = useTutorialPage();
+  const { problem, setProblem, handleClickChoice } = useTutorialPage();
 
   return (
     <>
@@ -87,7 +87,10 @@ export default function ProblemPage() {
               ))}
             </Grid>
 
-            <SubmitTutorialAnswerModal problem={problem} />
+            <SubmitTutorialAnswerModal
+              problem={problem}
+              setProblem={setProblem}
+            />
           </FormControl>
         </VStack>
       </Container>

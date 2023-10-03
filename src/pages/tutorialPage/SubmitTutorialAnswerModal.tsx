@@ -21,8 +21,10 @@ import WrongAnswerIcon from "@/components/WrongAnswerIcon";
 import { ITutorialProblem } from "./useTutorialPage";
 export function SubmitTutorialAnswerModal({
   problem,
+  setProblem,
 }: {
   problem: ITutorialProblem;
+  setProblem: React.Dispatch<React.SetStateAction<ITutorialProblem>>;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
@@ -37,20 +39,28 @@ export function SubmitTutorialAnswerModal({
           type="button"
           onClick={() => {
             router.push({
-              pathname: "/tutorialPage",
+              pathname: "/",
             });
           }}
           isTruncated
         >
-          Finish
+          トップページへ
         </Button>
-        {problem?.selectedChoice === problem?.answer && <CelebrationIcon />}
+        {problem?.selectedChoice === problem?.answer && isOpen && (
+          <CelebrationIcon />
+        )}
 
         {problem?.answerCount >= problem?.answerCountLimit &&
           problem?.selectedChoice !== problem?.answer &&
           isOpen &&
           problem?.answer !== problem?.selectedChoice && <WrongAnswerIcon />}
-        {canAnswer(problem) && <AnswerTutorialButton onOpen={onOpen} />}
+        {canAnswer(problem) && (
+          <AnswerTutorialButton
+            onOpen={onOpen}
+            setProblem={setProblem}
+            problem={problem}
+          />
+        )}
       </HStack>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
@@ -77,19 +87,6 @@ export function SubmitTutorialAnswerModal({
           </ModalBody>
 
           <ModalFooter>
-            <Button
-              zIndex={20}
-              colorScheme="blue"
-              variant="ghost"
-              onClick={() => {
-                router.push({
-                  pathname: "/selectProblemPage",
-                });
-                onClose();
-              }}
-            >
-              問題一覧へ
-            </Button>
             {problem?.answer === problem?.selectedChoice ||
             problem?.answerCountLimit === problem?.answerCount ? (
               <Button
@@ -99,11 +96,11 @@ export function SubmitTutorialAnswerModal({
                 onClick={() => {
                   onClose();
                   router.push({
-                    pathname: "/tutorialPage",
+                    pathname: "/",
                   });
                 }}
               >
-                OK
+                トップページへ
               </Button>
             ) : (
               <Button

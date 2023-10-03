@@ -14,11 +14,11 @@ export interface ITutorialProblem {
 
 function useTutorialPage() {
   const [problem, setProblem] = useState<ITutorialProblem>({
-    name: "Sample Problem",
-    description: "Which one of these is a color?",
-    answer: "Blue",
-    choices: ["Apple", "Orange", "Car", "Blue"],
-    selectedChoice: "nothing",
+    name: "tutorial",
+    description: "サトシのピカチュウの好物って、なに？",
+    answer: "ケチャップ",
+    choices: ["ポケモンパン", "ケチャップ", "かみなりのいし", "アンパンマン"],
+    selectedChoice: "",
     reward: 10,
     answerCount: 0,
     answerCountLimit: 2,
@@ -31,8 +31,6 @@ function useTutorialPage() {
       return newProblem;
     });
   };
-
-  useEffect(() => {}, []);
 
   return {
     problem,
