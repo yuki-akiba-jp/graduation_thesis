@@ -2,10 +2,18 @@ import React from "react";
 import { Button } from "@chakra-ui/react";
 import _ from "lodash";
 
-export const AnswerTutorialButton = ({ onOpen, problem, setProblem }) => {
+export const AnswerTutorialButton = ({
+  onOpen,
+  problem,
+  setProblem,
+}: {
+  onOpen: () => void;
+  problem: any;
+  setProblem: any;
+}) => {
   const handleClick = async () => {
     if (problem.selectedChoice === "") return;
-    setProblem((problem) => {
+    setProblem((problem: any) => {
       const newProblem = _.cloneDeep(problem);
       newProblem.answerCount += 1;
       return newProblem;
