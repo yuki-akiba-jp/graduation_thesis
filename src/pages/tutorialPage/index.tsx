@@ -1,6 +1,7 @@
-import { FormEvent, useState, useEffect } from "react";
+import { FormEvent } from "react";
 import _ from "lodash";
-import { SubmitTutorialAnswerModal } from "./SubmitTutorialAnswerModal";
+import SubmitTutorialAnswerModal from "./SubmitTutorialAnswerModal";
+
 import {
   VStack,
   FormControl,

@@ -11,7 +11,7 @@ import {
   HStack,
   Text,
 } from "@chakra-ui/react";
-import { AnswerTutorialButton } from "./AnswerTutorialButton";
+import AnswerTutorialButton from "./AnswerTutorialButton";
 import { useDisclosure } from "@chakra-ui/hooks";
 import React from "react";
 import { useRouter } from "next/router";
@@ -19,7 +19,8 @@ import { useRouter } from "next/router";
 import CelebrationIcon from "@/components/CelebrationIcon";
 import WrongAnswerIcon from "@/components/WrongAnswerIcon";
 import { ITutorialProblem } from "./useTutorialPage";
-export function SubmitTutorialAnswerModal({
+
+function SubmitTutorialAnswerModal({
   problem,
   setProblem,
 }: {
@@ -125,3 +126,5 @@ function canAnswer(problem: ITutorialProblem): boolean {
   if (problem?.answerCount < problem?.answerCountLimit) return true;
   return false;
 }
+
+export default SubmitTutorialAnswerModal;
