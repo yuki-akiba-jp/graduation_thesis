@@ -23,7 +23,7 @@ export default function Home() {
           </Text>
           <Box>
             <Button colorScheme="gray" size="lg" m={2}>
-              <Link href="/tutorial">使い方を見る</Link>
+              <Link href="/guidance">使い方を見る</Link>
             </Button>
             <Button colorScheme="orange" size="lg" m={2}>
               <Link href="/enterNamePage">アプリを始める</Link>

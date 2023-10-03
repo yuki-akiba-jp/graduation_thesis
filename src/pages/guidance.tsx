@@ -28,7 +28,7 @@ export default function Home() {
             各問の解答回数は2回までです。一回間違えても、次に正解すれば得点は入ります。
           </Text>
           <Button colorScheme="orange" size="lg" marginRight={3}>
-            <Link href="/enterNamePage">チュートリアルを始める</Link>
+            <Link href="/tutorialPage">チュートリアルを始める</Link>
           </Button>
 
           <Button colorScheme="orange" size="lg">
