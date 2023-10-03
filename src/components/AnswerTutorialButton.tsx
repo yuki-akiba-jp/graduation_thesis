@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@chakra-ui/react";
 import _ from "lodash";
 
-const AnswerTutorialButton = ({
+export const AnswerTutorialButton = ({
   onOpen,
   problem,
   setProblem,
@@ -33,5 +33,3 @@ const AnswerTutorialButton = ({
     </Button>
   );
 };
-
-export default AnswerTutorialButton;

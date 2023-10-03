@@ -12,7 +12,7 @@ export interface ITutorialProblem {
   answerCountLimit: number;
 }
 
-function useTutorialPage() {
+export function useTutorialPage() {
   const [problem, setProblem] = useState<ITutorialProblem>({
     name: "tutorial",
     description: "サトシのピカチュウの好物って、なに？",
@@ -38,5 +38,3 @@ function useTutorialPage() {
     handleClickChoice,
   };
 }
-
-export default useTutorialPage; // Consider exporting if you want to use it in other components

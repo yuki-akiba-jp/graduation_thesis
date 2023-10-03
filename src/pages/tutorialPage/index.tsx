@@ -1,6 +1,6 @@
 import { FormEvent } from "react";
 import _ from "lodash";
-import SubmitTutorialAnswerModal from "./SubmitTutorialAnswerModal";
+import { SubmitTutorialAnswerModal } from "../../components/SubmitTutorialAnswerModal";
 
 import {
   VStack,
@@ -14,7 +14,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import useTutorialPage from "./useTutorialPage";
+import { useTutorialPage } from "../../hooks/useTutorialPage";
 
 export default function ProblemPage() {
   const { problem, setProblem, handleClickChoice } = useTutorialPage();
@@ -76,7 +76,11 @@ export default function ProblemPage() {
                   w="100%"
                   type="button"
                   key={index}
-                  onClick={() => handleClickChoice(choice)}
+                  onClick={() => {
+                    if (problem?.answerCount >= problem?.answerCountLimit)
+                      return;
+                    handleClickChoice(choice);
+                  }}
                   whiteSpace={"normal"}
                   height={"auto"}
                   blockSize={"auto"}

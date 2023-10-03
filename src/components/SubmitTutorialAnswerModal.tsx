@@ -11,16 +11,16 @@ import {
   HStack,
   Text,
 } from "@chakra-ui/react";
-import AnswerTutorialButton from "./AnswerTutorialButton";
+import { AnswerTutorialButton } from "@/components/AnswerTutorialButton";
 import { useDisclosure } from "@chakra-ui/hooks";
 import React from "react";
 import { useRouter } from "next/router";
 
 import CelebrationIcon from "@/components/CelebrationIcon";
 import WrongAnswerIcon from "@/components/WrongAnswerIcon";
-import { ITutorialProblem } from "./useTutorialPage";
+import { ITutorialProblem } from "../hooks/useTutorialPage";
 
-function SubmitTutorialAnswerModal({
+export function SubmitTutorialAnswerModal({
   problem,
   setProblem,
 }: {
