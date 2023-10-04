@@ -21,14 +21,10 @@ export default function ProblemPage() {
 
   return (
     <>
-      <Container
-        minW="100vw"
-        minH="100vh"
-        boxShadow={"xl"}
-        rounded={"lg"}
-        alignItems={"center"}
-      >
+      <Container minW="100vw" minH="100vh" boxShadow={"xl"} rounded={"lg"}>
         <VStack
+          justifyContent="center"
+          minH="100vh"
           direction={{ base: "column", md: "row" }}
           rounded={"xl"}
           as={"form"}

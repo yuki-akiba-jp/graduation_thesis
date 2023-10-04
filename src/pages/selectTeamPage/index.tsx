@@ -136,21 +136,27 @@ function ModalWindow() {
   const [teamName, setTeamName] = useState<string>("");
   const router = useRouter();
 
-  const handleClickCreateTeamBtn = useCallback(async () => {
-    try {
-      const res = await axios.post(`/api/teams`, {
-        name: teamName,
-      });
-      router.reload();
-    } catch (err: any) {
-      if (err.response.status === 400) {
-        if (teamName.length < 3 || teamName.length > 20)
-          alert("Team name should be between 3 and 20 characters");
-        else alert("Team name already exists");
+  const handleClickCreateTeamBtn = useCallback(
+    async (e: FormEvent) => {
+      e.preventDefault(); // Prevent the default form submission behavior
+      try {
+        await axios.post(`/api/teams`, {
+          name: teamName,
+        });
+        router.reload();
+      } catch (err: any) {
+        if (err.response.status === 400) {
+          if (teamName.length < 3 || teamName.length > 20)
+            alert("Team name should be between 3 and 20 characters");
+          else alert("Team name already exists");
+        }
+        console.log(err);
       }
-      console.log(err);
-    }
-  }, [teamName, router]);
+      onClose();
+    },
+    [teamName, router, onClose]
+  );
+
   return (
     <>
       <Button colorScheme={"orange"} type="button" onClick={onOpen}>
@@ -162,56 +168,49 @@ function ModalWindow() {
         <ModalContent>
           <ModalHeader>Create Team</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>チーム名を入力してね</ModalBody>
-
-          <ModalFooter>
-            <FormControl>
-              <Input
-                variant={"solid"}
-                borderWidth={1}
-                color={"gray.800"}
-                _placeholder={{
-                  color: "gray.400",
-                }}
-                borderColor={useColorModeValue("gray.300", "gray.700")}
-                id={"name"}
-                type={"name"}
-                minLength={3}
-                required
-                placeholder={"team name"}
-                aria-label={"team name"}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  setTeamName(e.target.value)
-                }
-                autoFocus
-              />
-            </FormControl>
-            <Button
-              colorScheme="blue"
-              mr={3}
-              variant="ghost"
-              onClick={() => {
-                onClose();
-              }}
-            >
-              キャンセル
-            </Button>
-            <Button
-              colorScheme="orange"
-              onClick={() => {
-                handleClickCreateTeamBtn();
-                onClose();
-              }}
-            >
-              作成
-            </Button>
-          </ModalFooter>
+          <form onSubmit={handleClickCreateTeamBtn}>
+            <ModalBody>
+              <FormControl>
+                <Input
+                  variant={"solid"}
+                  borderWidth={1}
+                  color={"gray.800"}
+                  _placeholder={{
+                    color: "gray.400",
+                  }}
+                  borderColor={useColorModeValue("gray.300", "gray.700")}
+                  id={"name"}
+                  type={"name"}
+                  minLength={3}
+                  required
+                  placeholder={"team name"}
+                  aria-label={"team name"}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    setTeamName(e.target.value)
+                  }
+                  autoFocus
+                />
+              </FormControl>
+            </ModalBody>
+            <ModalFooter>
+              <Button
+                colorScheme="blue"
+                mr={3}
+                variant="ghost"
+                onClick={onClose}
+              >
+                キャンセル
+              </Button>
+              <Button colorScheme="orange" type="submit">
+                作成
+              </Button>
+            </ModalFooter>
+          </form>
         </ModalContent>
       </Modal>
     </>
   );
 }
-
 function useSelectTeamPage() {
   const router = useRouter();
   const [playerName, setPlayerName] = useState<string>("");
