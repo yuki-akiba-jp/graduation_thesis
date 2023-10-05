@@ -8,6 +8,7 @@ import {
   Flex,
   Box,
   Text,
+  StackDirection,
 } from "@chakra-ui/react";
 
 const AppDescription: React.FC<{
@@ -26,11 +27,11 @@ const AppDescription: React.FC<{
   </>
 );
 
-const AppButton: React.FC<{ href: string; width: string | undefined }> = ({
-  href,
-  width,
-  children,
-}) => (
+const AppButton: React.FC<{
+  href: string;
+  width: string | undefined;
+  children: React.ReactNode;
+}> = ({ href, width, children }) => (
   <Button colorScheme="orange" size="lg" width={width}>
     <Link href={href}>{children}</Link>
   </Button>
@@ -42,7 +43,9 @@ export default function Home() {
   const fontSize = useBreakpointValue({ base: "md", md: "xl" });
   const marginBottom = useBreakpointValue({ base: "1rem", md: "2rem" });
   const buttonWidth = useBreakpointValue({ base: "100%", md: "auto" });
-  const stackDirection = useBreakpointValue({ base: "column", md: "row" });
+  const stackDirection = useBreakpointValue({ base: "column", md: "row" }) as
+    | StackDirection
+    | undefined;
 
   useEffect(() => {
     if (!router.isReady) return;
