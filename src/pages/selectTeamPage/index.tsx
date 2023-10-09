@@ -34,7 +34,6 @@ export default function SelectTeamPage() {
     useSelectTeamPage();
 
   useEffect(() => {
-    router.push("/enterNamePage");
     if (!localStorage.getItem(userIdStrage)) {
       router.push("/enterNamePage");
       return;

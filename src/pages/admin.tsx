@@ -1,25 +1,72 @@
-import { Button, Link } from "@chakra-ui/react";
-import React from "react";
+import {
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  Input,
+  useToast,
+} from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
-import { useState } from "react";
 import axios from "axios";
-import { userIdStrage } from "@/const";
 
 export default function Admin() {
   const router = useRouter();
+  const toast = useToast();
+
+  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [password, setPassword] = useState("");
 
   useEffect(() => {
     if (!router.isReady) return;
   }, [router]);
+
+  const handlePasswordCheck = () => {
+    // Replace 'yourPassword' with the actual password you want to check against
+    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+
+    if (password === adminPassword) {
+      setIsModalOpen(false);
+    } else {
+      toast({
+        title: "Incorrect password.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
+
   return (
     <>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Password Check</ModalHeader>
+          <ModalBody>
+            <Input
+              type="password"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </ModalBody>
+          <ModalFooter>
+            <Button colorScheme="blue" onClick={handlePasswordCheck}>
+              Submit
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+
       <div>
         <Button
           colorScheme="orange"
           onClick={async () => {
-            const del = await axios.delete(`/api/deletes`);
-            // const res = await axios.post(`/api/problems/addProblemsArray`);
+            await axios.delete(`/api/deletes`);
           }}
         >
           init

@@ -18,9 +18,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             Math.random() * problem.answers.length
           );
           const toUseAnswer = problem.answers[answerIndex];
-
           const shuffledChoices = shuffleArray([toUseAnswer, ...toUseChoices]);
-          const newProblem = await new Problem({
+
+          const newProblem = new Problem({
             name: problem.name,
             description: problem.description,
             answer: toUseAnswer,

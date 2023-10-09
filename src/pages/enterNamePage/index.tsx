@@ -65,7 +65,6 @@ export default function EnterNamePage() {
         >
           ニックネームを入れてね
         </Heading>
-        ※現在アプリを使用できないようにしてます。
         <VStack
           direction={{ base: "column", md: "row" }}
           as={"form"}
