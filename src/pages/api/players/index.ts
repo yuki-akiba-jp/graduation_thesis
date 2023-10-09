@@ -11,7 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     case "POST":
       try {
         if (!(await isPlayerNameValid(req.body.name)))
-          return res.status(400).json("player already exists");
+          return res.status(400).json("invalid name");
         const newPlayer = new Player({
           name: req.body.name,
           score: 0,

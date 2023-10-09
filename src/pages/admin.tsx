@@ -25,7 +25,6 @@ export default function Admin() {
   }, [router]);
 
   const handlePasswordCheck = () => {
-    // Replace 'yourPassword' with the actual password you want to check against
     const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
     if (password === adminPassword) {

@@ -80,7 +80,7 @@ export let problemsArray = [
     reward: 100,
   },
   {
-    name: "誹謗中傷1",
+    name: "誹謗中傷2",
     description:
       "SNSで誹謗中傷をしてしまい、その後焦ってアカウントを消した。適切なのはどれ？",
     answers: [
@@ -280,9 +280,8 @@ export let problemsArray = [
     ],
     choices: [
       "アップデートを無視する",
-      "すぐにアップデートする",
       "友達に聞く",
-      "アップデートが必要でないならアップデートしない",
+      "アップデートを必要と感じなければアップデートしない",
       "アップデートをすると動かなくなるアプリがある場合はアップデートをしない",
     ],
     selectedChoice: "",
@@ -324,6 +323,7 @@ export let problemsArray = [
     selectedChoice: "",
     reward: 300,
   },
+
   {
     name: "メール",
     description: "知らない人からメールが届いた。どうする？",
@@ -455,9 +455,8 @@ export let problemsArray = [
     selectedChoice: "",
     reward: 300,
   },
-
-  //below problems are by students
-
+];
+const problemsByStudent = [
   {
     name: "偽警告",
     description:
@@ -560,12 +559,8 @@ export let problemsArray = [
   {
     name: "このPCはウイルスに感染しています！",
     description:
-      "夜中に1人でイケナイ動画を見ていた時、急に赤字で「このPCはウイルスに感染しています！」と出てきて下にサポート窓口の電話番号とウイルス対策ソフトウェアのダウンロードボタンがある。",
-    answers: [
-      "「ああ、またか」と思いながらそっとタブを閉じて閲覧履歴を消す",
-      "ブラウザを閉じる",
-      "気にしない",
-    ],
+      "赤字で「このPCはウイルスに感染しています！」と出てきて下にサポート窓口の電話番号とウイルス対策ソフトウェアのダウンロードボタンがある。",
+    answers: ["タブを閉じて閲覧履歴を消す", "ブラウザを閉じる", "気にしない"],
     choices: [
       "下に書いてある電話番号にすぐ電話する",
       "ダウンロードボタンを押してウイルス対策ソフトを入れる",

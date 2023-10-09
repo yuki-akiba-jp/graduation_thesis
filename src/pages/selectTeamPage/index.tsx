@@ -130,31 +130,50 @@ function TeamPanel({
     </Container>
   );
 }
+import { useToast } from "@chakra-ui/react";
 
 function ModalWindow() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [teamName, setTeamName] = useState<string>("");
   const router = useRouter();
+  const toast = useToast();
 
   const handleClickCreateTeamBtn = useCallback(
     async (e: FormEvent) => {
-      e.preventDefault(); // Prevent the default form submission behavior
+      e.preventDefault();
+
       try {
         await axios.post(`/api/teams`, {
           name: teamName,
         });
         router.reload();
+        onClose();
       } catch (err: any) {
         if (err.response.status === 400) {
-          if (teamName.length < 3 || teamName.length > 20)
-            alert("Team name should be between 3 and 20 characters");
-          else alert("Team name already exists");
+          if (teamName.length < 3 || teamName.length > 20) {
+            toast({
+              title: "Error",
+              description: "チーム名は3文字以上20文字以下で入力してください",
+              status: "error",
+              duration: 5000,
+              isClosable: true,
+              position: "top-right",
+            });
+            return;
+          }
+          toast({
+            title: "Error",
+            description: "チーム名は既に存在しています",
+            status: "error",
+            duration: 5000,
+            isClosable: true,
+            position: "top-right",
+          });
         }
         console.log(err);
       }
-      onClose();
     },
-    [teamName, router, onClose]
+    [teamName, router, toast, onClose]
   );
 
   return (
@@ -181,7 +200,6 @@ function ModalWindow() {
                   borderColor={useColorModeValue("gray.300", "gray.700")}
                   id={"name"}
                   type={"name"}
-                  minLength={3}
                   required
                   placeholder={"team name"}
                   aria-label={"team name"}
@@ -212,7 +230,6 @@ function ModalWindow() {
   );
 }
 function useSelectTeamPage() {
-  const router = useRouter();
   const [playerName, setPlayerName] = useState<string>("");
   const [teamNames, setTeamNames] = useState<string[]>([]);
   const fetchPlayerName = useCallback(async () => {

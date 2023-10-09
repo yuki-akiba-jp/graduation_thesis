@@ -8,6 +8,7 @@ import {
   Heading,
   Container,
   Flex,
+  useToast,
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
@@ -18,10 +19,11 @@ export default function EnterNamePage() {
   const [name, setName] = useState<string>("");
   const router = useRouter();
   const inputref = React.useRef<HTMLInputElement>(null);
+  const toast = useToast();
 
   useEffect(() => {
     inputref.current?.focus();
-  }, []);
+  }, [router]);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -36,8 +38,23 @@ export default function EnterNamePage() {
     } catch (err: any) {
       if (err.response.status === 400) {
         if (name.length < 3 || name.length > 20)
-          alert("name should be between 3 and 20 characters");
-        else alert("this name already exists");
+          toast({
+            title: "Error",
+            description: "名前は3文字以上20文字以下で入力してください",
+            status: "error",
+            duration: 5000,
+            isClosable: true,
+            position: "top-right",
+          });
+        else
+          toast({
+            title: "Error",
+            description: "この名前は既に使われています",
+            status: "error",
+            duration: 5000,
+            isClosable: true,
+            position: "top-right",
+          });
       }
       console.log(err);
     }
