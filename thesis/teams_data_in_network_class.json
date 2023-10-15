@@ -15,19 +15,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "wjxoSJAO2J1",
-        "choices": [
-          "cityMaebashi",
-          "Password",
-          "tokyo2020",
-          "wjxoSJAO2J1"
-        ],
+        "choices": ["cityMaebashi", "Password", "tokyo2020", "wjxoSJAO2J1"],
         "selectedChoice": "wjxoSJAO2J1",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.133
-        ]
+        "answerTimes": [10.133]
       },
       {
         "name": "誹謗中傷1",
@@ -43,45 +36,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          19.361
-        ]
+        "answerTimes": [19.361]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "一輪車",
-        "choices": [
-          "電気自動車",
-          "スマートスピーカー",
-          "一輪車",
-          "新幹線"
-        ],
+        "choices": ["電気自動車", "スマートスピーカー", "一輪車", "新幹線"],
         "selectedChoice": "一輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.78
-        ]
+        "answerTimes": [11.78]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "新聞",
-        "choices": [
-          "新聞",
-          "スマートフォン",
-          "タブレット",
-          "電子書籍リーダー"
-        ],
+        "choices": ["新聞", "スマートフォン", "タブレット", "電子書籍リーダー"],
         "selectedChoice": "新聞",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.353
-        ]
+        "answerTimes": [13.353]
       },
       {
         "name": "Picture 1",
@@ -97,9 +74,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.004
-        ]
+        "answerTimes": [15.004]
       },
       {
         "name": "友達とスマホ",
@@ -115,9 +90,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          16.106
-        ]
+        "answerTimes": [16.106]
       },
       {
         "name": "SNSでこんにちは",
@@ -133,9 +106,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.977
-        ]
+        "answerTimes": [9.977]
       },
       {
         "name": "ダウンロード",
@@ -151,9 +122,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          17.124
-        ]
+        "answerTimes": [17.124]
       },
       {
         "name": "アプリの許可",
@@ -169,10 +138,7 @@
         "reward": 100,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.275,
-          18.953
-        ]
+        "answerTimes": [14.275, 18.953]
       },
       {
         "name": "SNSの青年",
@@ -188,9 +154,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.906
-        ]
+        "answerTimes": [14.906]
       },
       {
         "name": "パスワード2",
@@ -206,9 +170,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          18.687
-        ]
+        "answerTimes": [18.687]
       },
       {
         "name": "誹謗中傷2",
@@ -224,9 +186,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          29.952
-        ]
+        "answerTimes": [29.952]
       },
       {
         "name": "アンハッカブル3",
@@ -242,9 +202,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.893
-        ]
+        "answerTimes": [6.893]
       },
       {
         "name": "Picture 2",
@@ -260,9 +218,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.825
-        ]
+        "answerTimes": [7.825]
       },
       {
         "name": "アップデート",
@@ -278,9 +234,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.02
-        ]
+        "answerTimes": [12.02]
       },
       {
         "name": "メール",
@@ -296,9 +250,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.776
-        ]
+        "answerTimes": [10.776]
       },
       {
         "name": "SNSの誘惑",
@@ -314,27 +266,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          34.625
-        ]
+        "answerTimes": [34.625]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "電車内",
-        "choices": [
-          "電車内",
-          "公園のベンチ",
-          "民宿の部屋",
-          "友達の家"
-        ],
+        "choices": ["電車内", "公園のベンチ", "民宿の部屋", "友達の家"],
         "selectedChoice": "電車内",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.099
-        ]
+        "answerTimes": [14.099]
       },
       {
         "name": "フィッシング🐟",
@@ -350,9 +293,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.528
-        ]
+        "answerTimes": [12.528]
       },
       {
         "name": "パスワード3",
@@ -368,9 +309,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.001
-        ]
+        "answerTimes": [9.001]
       },
       {
         "name": "誹謗中傷3",
@@ -386,9 +325,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.944
-        ]
+        "answerTimes": [12.944]
       },
       {
         "name": "Picture 3",
@@ -404,9 +341,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.449
-        ]
+        "answerTimes": [12.449]
       },
       {
         "name": "安全なウェブサイト？",
@@ -422,10 +357,7 @@
         "reward": 300,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          42.682,
-          51.344
-        ]
+        "answerTimes": [42.682, 51.344]
       },
       {
         "name": "シークレットモード",
@@ -441,9 +373,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          17
-        ]
+        "answerTimes": [17]
       },
       {
         "name": "セーフサーチ",
@@ -459,9 +389,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.105
-        ]
+        "answerTimes": [15.105]
       },
       {
         "name": "危険なURL",
@@ -477,9 +405,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          40.707
-        ]
+        "answerTimes": [40.707]
       },
       {
         "name": "モーメント",
@@ -495,9 +421,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.108
-        ]
+        "answerTimes": [10.108]
       },
       {
         "name": "パスワード4",
@@ -513,9 +437,7 @@
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.666
-        ]
+        "answerTimes": [15.666]
       }
     ]
   },
@@ -535,20 +457,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "toKIo202xy",
-        "choices": [
-          "password",
-          "tokyo2020",
-          "toKIo202xy",
-          "vwxyz11"
-        ],
+        "choices": ["password", "tokyo2020", "toKIo202xy", "vwxyz11"],
         "selectedChoice": "toKIo202xy",
         "reward": 100,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.582,
-          8.048
-        ]
+        "answerTimes": [7.582, 8.048]
       },
       {
         "name": "誹謗中傷1",
@@ -564,45 +478,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.012
-        ]
+        "answerTimes": [6.012]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "三輪車",
-        "choices": [
-          "スマートスピーカー",
-          "三輪車",
-          "飛行機",
-          "新幹線"
-        ],
+        "choices": ["スマートスピーカー", "三輪車", "飛行機", "新幹線"],
         "selectedChoice": "三輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.764
-        ]
+        "answerTimes": [9.764]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "図書館の本",
-        "choices": [
-          "図書館の本",
-          "パソコン",
-          "テレビ",
-          "電子書籍リーダー"
-        ],
+        "choices": ["図書館の本", "パソコン", "テレビ", "電子書籍リーダー"],
         "selectedChoice": "図書館の本",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.828
-        ]
+        "answerTimes": [4.828]
       },
       {
         "name": "Picture 1",
@@ -618,9 +516,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.996
-        ]
+        "answerTimes": [7.996]
       },
       {
         "name": "友達とスマホ",
@@ -636,9 +532,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.041
-        ]
+        "answerTimes": [9.041]
       },
       {
         "name": "SNSでこんにちは",
@@ -654,9 +548,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.654
-        ]
+        "answerTimes": [6.654]
       },
       {
         "name": "ダウンロード",
@@ -672,9 +564,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.198
-        ]
+        "answerTimes": [6.198]
       },
       {
         "name": "アプリの許可",
@@ -690,9 +580,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.547
-        ]
+        "answerTimes": [7.547]
       },
       {
         "name": "SNSの青年",
@@ -708,9 +596,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.314
-        ]
+        "answerTimes": [9.314]
       },
       {
         "name": "パスワード2",
@@ -726,9 +612,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.043
-        ]
+        "answerTimes": [6.043]
       },
       {
         "name": "誹謗中傷2",
@@ -744,9 +628,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.199
-        ]
+        "answerTimes": [10.199]
       },
       {
         "name": "アンハッカブル3",
@@ -762,9 +644,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.525
-        ]
+        "answerTimes": [5.525]
       },
       {
         "name": "Picture 2",
@@ -780,9 +660,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.055
-        ]
+        "answerTimes": [12.055]
       },
       {
         "name": "アップデート",
@@ -798,9 +676,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.89
-        ]
+        "answerTimes": [11.89]
       },
       {
         "name": "メール",
@@ -816,9 +692,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.761
-        ]
+        "answerTimes": [4.761]
       },
       {
         "name": "SNSの誘惑",
@@ -834,27 +708,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          22.042
-        ]
+        "answerTimes": [22.042]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "電車内",
-        "choices": [
-          "民宿の部屋",
-          "公園のベンチ",
-          "自宅のリビング",
-          "電車内"
-        ],
+        "choices": ["民宿の部屋", "公園のベンチ", "自宅のリビング", "電車内"],
         "selectedChoice": "電車内",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.982
-        ]
+        "answerTimes": [11.982]
       },
       {
         "name": "フィッシング🐟",
@@ -870,9 +735,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.86
-        ]
+        "answerTimes": [10.86]
       },
       {
         "name": "パスワード3",
@@ -888,10 +751,7 @@
         "reward": 300,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          18.632,
-          1.912
-        ]
+        "answerTimes": [18.632, 1.912]
       },
       {
         "name": "誹謗中傷3",
@@ -907,9 +767,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.599
-        ]
+        "answerTimes": [14.599]
       },
       {
         "name": "Picture 3",
@@ -925,9 +783,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.559
-        ]
+        "answerTimes": [9.559]
       },
       {
         "name": "安全なウェブサイト？",
@@ -943,9 +799,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.139
-        ]
+        "answerTimes": [4.139]
       },
       {
         "name": "シークレットモード",
@@ -961,9 +815,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          20.615
-        ]
+        "answerTimes": [20.615]
       },
       {
         "name": "セーフサーチ",
@@ -979,9 +831,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.077
-        ]
+        "answerTimes": [9.077]
       },
       {
         "name": "危険なURL",
@@ -997,9 +847,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.802
-        ]
+        "answerTimes": [13.802]
       },
       {
         "name": "モーメント",
@@ -1015,9 +863,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.873
-        ]
+        "answerTimes": [7.873]
       },
       {
         "name": "パスワード4",
@@ -1033,10 +879,7 @@
         "reward": 400,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          17.416,
-          19.008
-        ]
+        "answerTimes": [17.416, 19.008]
       }
     ]
   },
@@ -1056,19 +899,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "wjxoSJAO2J1",
-        "choices": [
-          "wjxoSJAO2J1",
-          "tokyo2020",
-          "Password",
-          "vwxyz11"
-        ],
+        "choices": ["wjxoSJAO2J1", "tokyo2020", "Password", "vwxyz11"],
         "selectedChoice": "wjxoSJAO2J1",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.559
-        ]
+        "answerTimes": [6.559]
       },
       {
         "name": "誹謗中傷1",
@@ -1084,45 +920,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.863
-        ]
+        "answerTimes": [7.863]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "三輪車",
-        "choices": [
-          "三輪車",
-          "電気自動車",
-          "新幹線",
-          "飛行機"
-        ],
+        "choices": ["三輪車", "電気自動車", "新幹線", "飛行機"],
         "selectedChoice": "三輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.731
-        ]
+        "answerTimes": [7.731]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "雑誌",
-        "choices": [
-          "電子書籍リーダー",
-          "雑誌",
-          "テレビ",
-          "スマートフォン"
-        ],
+        "choices": ["電子書籍リーダー", "雑誌", "テレビ", "スマートフォン"],
         "selectedChoice": "雑誌",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.128
-        ]
+        "answerTimes": [4.128]
       },
       {
         "name": "Picture 1",
@@ -1138,9 +958,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.556
-        ]
+        "answerTimes": [6.556]
       },
       {
         "name": "友達とスマホ",
@@ -1156,9 +974,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.788
-        ]
+        "answerTimes": [5.788]
       },
       {
         "name": "SNSでこんにちは",
@@ -1174,9 +990,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.586
-        ]
+        "answerTimes": [7.586]
       },
       {
         "name": "ダウンロード",
@@ -1192,9 +1006,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.577
-        ]
+        "answerTimes": [5.577]
       },
       {
         "name": "アプリの許可",
@@ -1210,9 +1022,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.129
-        ]
+        "answerTimes": [7.129]
       },
       {
         "name": "SNSの青年",
@@ -1228,9 +1038,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.792
-        ]
+        "answerTimes": [5.792]
       },
       {
         "name": "パスワード2",
@@ -1246,9 +1054,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.44
-        ]
+        "answerTimes": [5.44]
       },
       {
         "name": "誹謗中傷2",
@@ -1264,9 +1070,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          16.472
-        ]
+        "answerTimes": [16.472]
       },
       {
         "name": "アンハッカブル3",
@@ -1282,9 +1086,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.275
-        ]
+        "answerTimes": [5.275]
       },
       {
         "name": "Picture 2",
@@ -1300,9 +1102,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.641
-        ]
+        "answerTimes": [5.641]
       },
       {
         "name": "アップデート",
@@ -1318,10 +1118,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.016,
-          8.518
-        ]
+        "answerTimes": [12.016, 8.518]
       },
       {
         "name": "メール",
@@ -1337,9 +1134,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.265
-        ]
+        "answerTimes": [6.265]
       },
       {
         "name": "SNSの誘惑",
@@ -1355,27 +1150,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.267
-        ]
+        "answerTimes": [8.267]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "電車内",
-        "choices": [
-          "民宿の部屋",
-          "電車内",
-          "自宅のリビング",
-          "車の中"
-        ],
+        "choices": ["民宿の部屋", "電車内", "自宅のリビング", "車の中"],
         "selectedChoice": "電車内",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.352
-        ]
+        "answerTimes": [5.352]
       },
       {
         "name": "フィッシング🐟",
@@ -1391,9 +1177,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.5
-        ]
+        "answerTimes": [6.5]
       },
       {
         "name": "パスワード3",
@@ -1409,9 +1193,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.607
-        ]
+        "answerTimes": [4.607]
       },
       {
         "name": "誹謗中傷3",
@@ -1427,9 +1209,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.643
-        ]
+        "answerTimes": [6.643]
       },
       {
         "name": "Picture 3",
@@ -1445,9 +1225,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.887
-        ]
+        "answerTimes": [10.887]
       },
       {
         "name": "安全なウェブサイト？",
@@ -1463,9 +1241,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.638
-        ]
+        "answerTimes": [6.638]
       },
       {
         "name": "シークレットモード",
@@ -1481,9 +1257,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.822
-        ]
+        "answerTimes": [6.822]
       },
       {
         "name": "セーフサーチ",
@@ -1499,9 +1273,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.172
-        ]
+        "answerTimes": [8.172]
       },
       {
         "name": "危険なURL",
@@ -1517,10 +1289,7 @@
         "reward": 300,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.462,
-          2.549
-        ]
+        "answerTimes": [7.462, 2.549]
       },
       {
         "name": "モーメント",
@@ -1536,28 +1305,18 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.601
-        ]
+        "answerTimes": [6.601]
       },
       {
         "name": "パスワード4",
         "description": "どれが一番いいパスワード？",
         "answer": "Tokyo2@$0",
-        "choices": [
-          "Maebashi1023City",
-          "Tokyo2020",
-          "TOKIO2020",
-          "Tokyo2@$0"
-        ],
+        "choices": ["Maebashi1023City", "Tokyo2020", "TOKIO2020", "Tokyo2@$0"],
         "selectedChoice": "Tokyo2@$0",
         "reward": 400,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.96,
-          2.992
-        ]
+        "answerTimes": [13.96, 2.992]
       }
     ]
   },
@@ -1577,19 +1336,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "toKIo202xy",
-        "choices": [
-          "toKIo202xy",
-          "password",
-          "onepiece",
-          "tokyo2020"
-        ],
+        "choices": ["toKIo202xy", "password", "onepiece", "tokyo2020"],
         "selectedChoice": "toKIo202xy",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.389
-        ]
+        "answerTimes": [7.389]
       },
       {
         "name": "誹謗中傷1",
@@ -1605,45 +1357,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.235
-        ]
+        "answerTimes": [8.235]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "一輪車",
-        "choices": [
-          "電気自動車",
-          "飛行機",
-          "一輪車",
-          "新幹線"
-        ],
+        "choices": ["電気自動車", "飛行機", "一輪車", "新幹線"],
         "selectedChoice": "一輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.725
-        ]
+        "answerTimes": [5.725]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "雑誌",
-        "choices": [
-          "電子書籍リーダー",
-          "スマートフォン",
-          "雑誌",
-          "パソコン"
-        ],
+        "choices": ["電子書籍リーダー", "スマートフォン", "雑誌", "パソコン"],
         "selectedChoice": "雑誌",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.828
-        ]
+        "answerTimes": [3.828]
       },
       {
         "name": "Picture 1",
@@ -1659,9 +1395,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.31
-        ]
+        "answerTimes": [11.31]
       },
       {
         "name": "友達とスマホ",
@@ -1677,9 +1411,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.654
-        ]
+        "answerTimes": [5.654]
       },
       {
         "name": "SNSでこんにちは",
@@ -1695,9 +1427,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.119
-        ]
+        "answerTimes": [5.119]
       },
       {
         "name": "ダウンロード",
@@ -1713,9 +1443,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.856
-        ]
+        "answerTimes": [6.856]
       },
       {
         "name": "アプリの許可",
@@ -1731,9 +1459,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.281
-        ]
+        "answerTimes": [7.281]
       },
       {
         "name": "SNSの青年",
@@ -1749,9 +1475,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.756
-        ]
+        "answerTimes": [8.756]
       },
       {
         "name": "パスワード2",
@@ -1767,9 +1491,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.511
-        ]
+        "answerTimes": [11.511]
       },
       {
         "name": "誹謗中傷2",
@@ -1785,9 +1507,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          19.795
-        ]
+        "answerTimes": [19.795]
       },
       {
         "name": "アンハッカブル3",
@@ -1803,9 +1523,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.319
-        ]
+        "answerTimes": [4.319]
       },
       {
         "name": "Picture 2",
@@ -1821,9 +1539,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.81
-        ]
+        "answerTimes": [4.81]
       },
       {
         "name": "アップデート",
@@ -1839,9 +1555,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          27.746
-        ]
+        "answerTimes": [27.746]
       },
       {
         "name": "メール",
@@ -1857,9 +1571,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.481
-        ]
+        "answerTimes": [4.481]
       },
       {
         "name": "SNSの誘惑",
@@ -1875,28 +1587,18 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          31.106,
-          2.545
-        ]
+        "answerTimes": [31.106, 2.545]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "電車内",
-        "choices": [
-          "友達の家",
-          "電車内",
-          "車の中",
-          "公園のベンチ"
-        ],
+        "choices": ["友達の家", "電車内", "車の中", "公園のベンチ"],
         "selectedChoice": "電車内",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.839
-        ]
+        "answerTimes": [9.839]
       },
       {
         "name": "フィッシング🐟",
@@ -1912,9 +1614,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.328
-        ]
+        "answerTimes": [7.328]
       },
       {
         "name": "パスワード3",
@@ -1930,9 +1630,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.455
-        ]
+        "answerTimes": [9.455]
       },
       {
         "name": "誹謗中傷3",
@@ -1948,9 +1646,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.464
-        ]
+        "answerTimes": [5.464]
       },
       {
         "name": "Picture 3",
@@ -1966,10 +1662,7 @@
         "reward": 300,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.708,
-          2.999
-        ]
+        "answerTimes": [11.708, 2.999]
       },
       {
         "name": "安全なウェブサイト？",
@@ -1985,9 +1678,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.562
-        ]
+        "answerTimes": [6.562]
       },
       {
         "name": "シークレットモード",
@@ -2003,9 +1694,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          20.794
-        ]
+        "answerTimes": [20.794]
       },
       {
         "name": "セーフサーチ",
@@ -2021,9 +1710,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.477
-        ]
+        "answerTimes": [9.477]
       },
       {
         "name": "危険なURL",
@@ -2039,9 +1726,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.333
-        ]
+        "answerTimes": [9.333]
       },
       {
         "name": "モーメント",
@@ -2057,9 +1742,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.541
-        ]
+        "answerTimes": [5.541]
       },
       {
         "name": "パスワード4",
@@ -2075,9 +1758,7 @@
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          29.02
-        ]
+        "answerTimes": [29.02]
       }
     ]
   },
@@ -2103,20 +1784,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "Maebashi1023City",
-        "choices": [
-          "onepiece",
-          "Maebashi1023City",
-          "vwxyz11",
-          "tokyo2020"
-        ],
+        "choices": ["onepiece", "Maebashi1023City", "vwxyz11", "tokyo2020"],
         "selectedChoice": "Maebashi1023City",
         "reward": 100,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          22.95,
-          1.804
-        ]
+        "answerTimes": [22.95, 1.804]
       },
       {
         "name": "誹謗中傷1",
@@ -2132,45 +1805,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.578
-        ]
+        "answerTimes": [7.578]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "自転車",
-        "choices": [
-          "自転車",
-          "飛行機",
-          "新幹線",
-          "車"
-        ],
+        "choices": ["自転車", "飛行機", "新幹線", "車"],
         "selectedChoice": "自転車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.18
-        ]
+        "answerTimes": [5.18]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "図書館の本",
-        "choices": [
-          "図書館の本",
-          "電子書籍リーダー",
-          "パソコン",
-          "タブレット"
-        ],
+        "choices": ["図書館の本", "電子書籍リーダー", "パソコン", "タブレット"],
         "selectedChoice": "図書館の本",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          2.822
-        ]
+        "answerTimes": [2.822]
       },
       {
         "name": "Picture 1",
@@ -2186,9 +1843,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.795
-        ]
+        "answerTimes": [4.795]
       },
       {
         "name": "友達とスマホ",
@@ -2204,9 +1859,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.412
-        ]
+        "answerTimes": [8.412]
       },
       {
         "name": "SNSでこんにちは",
@@ -2222,9 +1875,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.842
-        ]
+        "answerTimes": [5.842]
       },
       {
         "name": "ダウンロード",
@@ -2240,9 +1891,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.872
-        ]
+        "answerTimes": [4.872]
       },
       {
         "name": "アプリの許可",
@@ -2258,10 +1907,7 @@
         "reward": 100,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.31,
-          4.786
-        ]
+        "answerTimes": [3.31, 4.786]
       },
       {
         "name": "SNSの青年",
@@ -2277,9 +1923,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.086
-        ]
+        "answerTimes": [4.086]
       },
       {
         "name": "パスワード2",
@@ -2295,9 +1939,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.646
-        ]
+        "answerTimes": [5.646]
       },
       {
         "name": "誹謗中傷2",
@@ -2313,9 +1955,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.566
-        ]
+        "answerTimes": [7.566]
       },
       {
         "name": "アンハッカブル3",
@@ -2331,9 +1971,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.962
-        ]
+        "answerTimes": [3.962]
       },
       {
         "name": "Picture 2",
@@ -2349,10 +1987,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.756,
-          5.288
-        ]
+        "answerTimes": [3.756, 5.288]
       },
       {
         "name": "アップデート",
@@ -2368,9 +2003,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.381
-        ]
+        "answerTimes": [4.381]
       },
       {
         "name": "メール",
@@ -2386,9 +2019,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.186
-        ]
+        "answerTimes": [4.186]
       },
       {
         "name": "SNSの誘惑",
@@ -2404,28 +2035,18 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.909,
-          1.237
-        ]
+        "answerTimes": [7.909, 1.237]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "カフェ",
-        "choices": [
-          "友達の家",
-          "車の中",
-          "カフェ",
-          "自宅のリビング"
-        ],
+        "choices": ["友達の家", "車の中", "カフェ", "自宅のリビング"],
         "selectedChoice": "カフェ",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.897
-        ]
+        "answerTimes": [4.897]
       },
       {
         "name": "フィッシング🐟",
@@ -2441,9 +2062,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.758
-        ]
+        "answerTimes": [6.758]
       },
       {
         "name": "パスワード3",
@@ -2459,9 +2078,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          2.876
-        ]
+        "answerTimes": [2.876]
       },
       {
         "name": "誹謗中傷3",
@@ -2477,9 +2094,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.12
-        ]
+        "answerTimes": [6.12]
       },
       {
         "name": "Picture 3",
@@ -2495,9 +2110,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.46
-        ]
+        "answerTimes": [4.46]
       },
       {
         "name": "安全なウェブサイト？",
@@ -2513,9 +2126,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.608
-        ]
+        "answerTimes": [3.608]
       },
       {
         "name": "シークレットモード",
@@ -2531,9 +2142,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.091
-        ]
+        "answerTimes": [5.091]
       },
       {
         "name": "セーフサーチ",
@@ -2549,9 +2158,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.233
-        ]
+        "answerTimes": [5.233]
       },
       {
         "name": "危険なURL",
@@ -2567,10 +2174,7 @@
         "reward": 300,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.292,
-          3.802
-        ]
+        "answerTimes": [4.292, 3.802]
       },
       {
         "name": "モーメント",
@@ -2586,28 +2190,18 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.23
-        ]
+        "answerTimes": [4.23]
       },
       {
         "name": "パスワード4",
         "description": "どれが一番いいパスワード？",
         "answer": "Tokyo2@$0",
-        "choices": [
-          "Tokyo2@$0",
-          "TOKIO2020",
-          "fwaojfIII1",
-          "Maebashi1023City"
-        ],
+        "choices": ["Tokyo2@$0", "TOKIO2020", "fwaojfIII1", "Maebashi1023City"],
         "selectedChoice": "Tokyo2@$0",
         "reward": 400,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.056,
-          1.587
-        ]
+        "answerTimes": [4.056, 1.587]
       }
     ]
   },
@@ -2627,19 +2221,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "Maebashi1023City",
-        "choices": [
-          "Maebashi1023City",
-          "cityMaebashi",
-          "onepiece",
-          "vwxyz11"
-        ],
+        "choices": ["Maebashi1023City", "cityMaebashi", "onepiece", "vwxyz11"],
         "selectedChoice": "Maebashi1023City",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.409
-        ]
+        "answerTimes": [13.409]
       },
       {
         "name": "誹謗中傷1",
@@ -2655,45 +2242,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.147
-        ]
+        "answerTimes": [6.147]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "自転車",
-        "choices": [
-          "自転車",
-          "スマートスピーカー",
-          "車",
-          "電気自動車"
-        ],
+        "choices": ["自転車", "スマートスピーカー", "車", "電気自動車"],
         "selectedChoice": "自転車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.776
-        ]
+        "answerTimes": [6.776]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "図書館の本",
-        "choices": [
-          "図書館の本",
-          "タブレット",
-          "スマートフォン",
-          "テレビ"
-        ],
+        "choices": ["図書館の本", "タブレット", "スマートフォン", "テレビ"],
         "selectedChoice": "図書館の本",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.275
-        ]
+        "answerTimes": [5.275]
       },
       {
         "name": "Picture 1",
@@ -2709,9 +2280,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.132
-        ]
+        "answerTimes": [6.132]
       },
       {
         "name": "友達とスマホ",
@@ -2727,9 +2296,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.133
-        ]
+        "answerTimes": [15.133]
       },
       {
         "name": "SNSでこんにちは",
@@ -2745,9 +2312,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.308
-        ]
+        "answerTimes": [6.308]
       },
       {
         "name": "ダウンロード",
@@ -2763,9 +2328,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.835
-        ]
+        "answerTimes": [7.835]
       },
       {
         "name": "アプリの許可",
@@ -2781,9 +2344,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.759
-        ]
+        "answerTimes": [8.759]
       },
       {
         "name": "SNSの青年",
@@ -2799,9 +2360,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.389
-        ]
+        "answerTimes": [15.389]
       },
       {
         "name": "パスワード2",
@@ -2817,9 +2376,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.953
-        ]
+        "answerTimes": [7.953]
       },
       {
         "name": "誹謗中傷2",
@@ -2835,9 +2392,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.461
-        ]
+        "answerTimes": [10.461]
       },
       {
         "name": "アンハッカブル3",
@@ -2853,9 +2408,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.417
-        ]
+        "answerTimes": [7.417]
       },
       {
         "name": "Picture 2",
@@ -2871,9 +2424,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.001
-        ]
+        "answerTimes": [9.001]
       },
       {
         "name": "アップデート",
@@ -2889,9 +2440,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.433
-        ]
+        "answerTimes": [7.433]
       },
       {
         "name": "メール",
@@ -2907,9 +2456,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.704
-        ]
+        "answerTimes": [6.704]
       },
       {
         "name": "SNSの誘惑",
@@ -2925,9 +2472,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14
-        ]
+        "answerTimes": [14]
       },
       {
         "name": "場所選び",
@@ -2943,9 +2488,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.622
-        ]
+        "answerTimes": [15.622]
       },
       {
         "name": "フィッシング🐟",
@@ -2961,9 +2504,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.366
-        ]
+        "answerTimes": [7.366]
       },
       {
         "name": "パスワード3",
@@ -2979,9 +2520,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.019
-        ]
+        "answerTimes": [7.019]
       },
       {
         "name": "誹謗中傷3",
@@ -2997,27 +2536,18 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.307
-        ]
+        "answerTimes": [12.307]
       },
       {
         "name": "Picture 3",
         "description": "写真をSNSで共有する前に何を削除すべき？もっとも適切なのはどれ？",
         "answer": "写真の撮影場所",
-        "choices": [
-          "写真の色",
-          "写真の背景",
-          "写真の撮影場所",
-          "写真の照明"
-        ],
+        "choices": ["写真の色", "写真の背景", "写真の撮影場所", "写真の照明"],
         "selectedChoice": "写真の撮影場所",
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.335
-        ]
+        "answerTimes": [6.335]
       },
       {
         "name": "安全なウェブサイト？",
@@ -3033,10 +2563,7 @@
         "reward": 300,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          30.662,
-          3.273
-        ]
+        "answerTimes": [30.662, 3.273]
       },
       {
         "name": "シークレットモード",
@@ -3052,9 +2579,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.596
-        ]
+        "answerTimes": [6.596]
       },
       {
         "name": "セーフサーチ",
@@ -3070,9 +2595,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.164
-        ]
+        "answerTimes": [10.164]
       },
       {
         "name": "危険なURL",
@@ -3088,9 +2611,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.896
-        ]
+        "answerTimes": [10.896]
       },
       {
         "name": "モーメント",
@@ -3106,9 +2627,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.9
-        ]
+        "answerTimes": [12.9]
       },
       {
         "name": "パスワード4",
@@ -3124,9 +2643,7 @@
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          17.248
-        ]
+        "answerTimes": [17.248]
       }
     ]
   },
@@ -3156,9 +2673,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          20.154
-        ]
+        "answerTimes": [20.154]
       },
       {
         "name": "誹謗中傷1",
@@ -3174,45 +2689,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.786
-        ]
+        "answerTimes": [13.786]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "一輪車",
-        "choices": [
-          "一輪車",
-          "スマートスピーカー",
-          "車",
-          "電気自動車"
-        ],
+        "choices": ["一輪車", "スマートスピーカー", "車", "電気自動車"],
         "selectedChoice": "一輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.804
-        ]
+        "answerTimes": [10.804]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "雑誌",
-        "choices": [
-          "タブレット",
-          "雑誌",
-          "テレビ",
-          "電子書籍リーダー"
-        ],
+        "choices": ["タブレット", "雑誌", "テレビ", "電子書籍リーダー"],
         "selectedChoice": "雑誌",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.201
-        ]
+        "answerTimes": [8.201]
       },
       {
         "name": "Picture 1",
@@ -3228,9 +2727,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.074
-        ]
+        "answerTimes": [12.074]
       },
       {
         "name": "友達とスマホ",
@@ -3246,9 +2743,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          29.963
-        ]
+        "answerTimes": [29.963]
       },
       {
         "name": "SNSでこんにちは",
@@ -3264,9 +2759,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.664
-        ]
+        "answerTimes": [7.664]
       },
       {
         "name": "ダウンロード",
@@ -3282,9 +2775,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.012
-        ]
+        "answerTimes": [11.012]
       },
       {
         "name": "アプリの許可",
@@ -3300,9 +2791,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.337
-        ]
+        "answerTimes": [9.337]
       },
       {
         "name": "SNSの青年",
@@ -3318,9 +2807,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.903
-        ]
+        "answerTimes": [7.903]
       },
       {
         "name": "パスワード2",
@@ -3336,9 +2823,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.255
-        ]
+        "answerTimes": [8.255]
       },
       {
         "name": "誹謗中傷2",
@@ -3354,10 +2839,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          32.576,
-          7.23
-        ]
+        "answerTimes": [32.576, 7.23]
       },
       {
         "name": "アンハッカブル3",
@@ -3373,9 +2855,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.57
-        ]
+        "answerTimes": [4.57]
       },
       {
         "name": "Picture 2",
@@ -3391,9 +2871,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.563
-        ]
+        "answerTimes": [12.563]
       },
       {
         "name": "アップデート",
@@ -3409,9 +2887,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.438
-        ]
+        "answerTimes": [5.438]
       },
       {
         "name": "メール",
@@ -3427,9 +2903,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.491
-        ]
+        "answerTimes": [4.491]
       },
       {
         "name": "SNSの誘惑",
@@ -3445,27 +2919,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.343
-        ]
+        "answerTimes": [10.343]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "カフェ",
-        "choices": [
-          "民宿の部屋",
-          "自宅のリビング",
-          "車の中",
-          "カフェ"
-        ],
+        "choices": ["民宿の部屋", "自宅のリビング", "車の中", "カフェ"],
         "selectedChoice": "カフェ",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.196
-        ]
+        "answerTimes": [8.196]
       },
       {
         "name": "フィッシング🐟",
@@ -3481,9 +2946,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.754
-        ]
+        "answerTimes": [6.754]
       },
       {
         "name": "パスワード3",
@@ -3499,9 +2962,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.479
-        ]
+        "answerTimes": [4.479]
       },
       {
         "name": "誹謗中傷3",
@@ -3517,9 +2978,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.939
-        ]
+        "answerTimes": [5.939]
       },
       {
         "name": "Picture 3",
@@ -3535,9 +2994,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.162
-        ]
+        "answerTimes": [6.162]
       },
       {
         "name": "安全なウェブサイト？",
@@ -3553,9 +3010,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          2.97
-        ]
+        "answerTimes": [2.97]
       },
       {
         "name": "シークレットモード",
@@ -3571,9 +3026,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.688
-        ]
+        "answerTimes": [4.688]
       },
       {
         "name": "セーフサーチ",
@@ -3589,9 +3042,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.406
-        ]
+        "answerTimes": [5.406]
       },
       {
         "name": "危険なURL",
@@ -3607,9 +3058,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.851
-        ]
+        "answerTimes": [9.851]
       },
       {
         "name": "モーメント",
@@ -3625,27 +3074,18 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.299
-        ]
+        "answerTimes": [14.299]
       },
       {
         "name": "パスワード4",
         "description": "どれが一番いいパスワード？",
         "answer": "fjaoXY@@213",
-        "choices": [
-          "City@Maebashi",
-          "fjaoXY@@213",
-          "Tokyo2020",
-          "TOKIO2020"
-        ],
+        "choices": ["City@Maebashi", "fjaoXY@@213", "Tokyo2020", "TOKIO2020"],
         "selectedChoice": "fjaoXY@@213",
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.067
-        ]
+        "answerTimes": [8.067]
       }
     ]
   },
@@ -3665,19 +3105,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "toKIo202xy",
-        "choices": [
-          "tokyo2020",
-          "toKIo202xy",
-          "vwxyz11",
-          "cityMaebashi"
-        ],
+        "choices": ["tokyo2020", "toKIo202xy", "vwxyz11", "cityMaebashi"],
         "selectedChoice": "toKIo202xy",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.988
-        ]
+        "answerTimes": [8.988]
       },
       {
         "name": "誹謗中傷1",
@@ -3693,45 +3126,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.761
-        ]
+        "answerTimes": [7.761]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "自転車",
-        "choices": [
-          "電気自動車",
-          "自転車",
-          "飛行機",
-          "スマートスピーカー"
-        ],
+        "choices": ["電気自動車", "自転車", "飛行機", "スマートスピーカー"],
         "selectedChoice": "自転車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.936
-        ]
+        "answerTimes": [5.936]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "図書館の本",
-        "choices": [
-          "パソコン",
-          "図書館の本",
-          "タブレット",
-          "スマートフォン"
-        ],
+        "choices": ["パソコン", "図書館の本", "タブレット", "スマートフォン"],
         "selectedChoice": "図書館の本",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.896
-        ]
+        "answerTimes": [8.896]
       },
       {
         "name": "Picture 1",
@@ -3747,9 +3164,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.681
-        ]
+        "answerTimes": [6.681]
       },
       {
         "name": "友達とスマホ",
@@ -3765,9 +3180,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.403
-        ]
+        "answerTimes": [5.403]
       },
       {
         "name": "SNSでこんにちは",
@@ -3783,9 +3196,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.099
-        ]
+        "answerTimes": [11.099]
       },
       {
         "name": "ダウンロード",
@@ -3801,9 +3212,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.196
-        ]
+        "answerTimes": [8.196]
       },
       {
         "name": "アプリの許可",
@@ -3819,9 +3228,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.592
-        ]
+        "answerTimes": [13.592]
       },
       {
         "name": "SNSの青年",
@@ -3837,9 +3244,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.626
-        ]
+        "answerTimes": [6.626]
       },
       {
         "name": "パスワード2",
@@ -3855,9 +3260,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.173
-        ]
+        "answerTimes": [8.173]
       },
       {
         "name": "誹謗中傷2",
@@ -3873,9 +3276,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          35.855
-        ]
+        "answerTimes": [35.855]
       },
       {
         "name": "アンハッカブル3",
@@ -3891,9 +3292,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.438
-        ]
+        "answerTimes": [8.438]
       },
       {
         "name": "Picture 2",
@@ -3909,9 +3308,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          53.509
-        ]
+        "answerTimes": [53.509]
       },
       {
         "name": "アップデート",
@@ -3927,9 +3324,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          20.766
-        ]
+        "answerTimes": [20.766]
       },
       {
         "name": "メール",
@@ -3945,9 +3340,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.256
-        ]
+        "answerTimes": [11.256]
       },
       {
         "name": "SNSの誘惑",
@@ -3963,28 +3356,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.991
-        ]
+        "answerTimes": [12.991]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "カフェ",
-        "choices": [
-          "カフェ",
-          "車の中",
-          "公園のベンチ",
-          "自宅のリビング"
-        ],
+        "choices": ["カフェ", "車の中", "公園のベンチ", "自宅のリビング"],
         "selectedChoice": "カフェ",
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          36.073,
-          5.902
-        ]
+        "answerTimes": [36.073, 5.902]
       },
       {
         "name": "フィッシング🐟",
@@ -4000,9 +3383,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.472
-        ]
+        "answerTimes": [10.472]
       },
       {
         "name": "パスワード3",
@@ -4018,9 +3399,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.511
-        ]
+        "answerTimes": [6.511]
       },
       {
         "name": "誹謗中傷3",
@@ -4036,9 +3415,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.124
-        ]
+        "answerTimes": [9.124]
       },
       {
         "name": "Picture 3",
@@ -4054,9 +3431,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          17.194
-        ]
+        "answerTimes": [17.194]
       },
       {
         "name": "安全なウェブサイト？",
@@ -4072,9 +3447,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.035
-        ]
+        "answerTimes": [8.035]
       },
       {
         "name": "シークレットモード",
@@ -4090,9 +3463,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.538
-        ]
+        "answerTimes": [7.538]
       },
       {
         "name": "セーフサーチ",
@@ -4108,9 +3479,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.28
-        ]
+        "answerTimes": [7.28]
       },
       {
         "name": "危険なURL",
@@ -4126,9 +3495,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          34.329
-        ]
+        "answerTimes": [34.329]
       },
       {
         "name": "モーメント",
@@ -4144,27 +3511,18 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.464
-        ]
+        "answerTimes": [11.464]
       },
       {
         "name": "パスワード4",
         "description": "どれが一番いいパスワード？",
         "answer": "fjaoXY@@213",
-        "choices": [
-          "City@Maebashi",
-          "TOKIO2020",
-          "fjaoXY@@213",
-          "fwaojfIII1"
-        ],
+        "choices": ["City@Maebashi", "TOKIO2020", "fjaoXY@@213", "fwaojfIII1"],
         "selectedChoice": "fjaoXY@@213",
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.93
-        ]
+        "answerTimes": [8.93]
       }
     ]
   },
@@ -4184,19 +3542,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "Maebashi1023City",
-        "choices": [
-          "Password",
-          "Maebashi1023City",
-          "cityMaebashi",
-          "vwxyz11"
-        ],
+        "choices": ["Password", "Maebashi1023City", "cityMaebashi", "vwxyz11"],
         "selectedChoice": "Maebashi1023City",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          16.792
-        ]
+        "answerTimes": [16.792]
       },
       {
         "name": "誹謗中傷1",
@@ -4212,45 +3563,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          20.604
-        ]
+        "answerTimes": [20.604]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "一輪車",
-        "choices": [
-          "飛行機",
-          "新幹線",
-          "一輪車",
-          "電気自動車"
-        ],
+        "choices": ["飛行機", "新幹線", "一輪車", "電気自動車"],
         "selectedChoice": "一輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.272
-        ]
+        "answerTimes": [6.272]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "雑誌",
-        "choices": [
-          "タブレット",
-          "雑誌",
-          "テレビ",
-          "電子書籍リーダー"
-        ],
+        "choices": ["タブレット", "雑誌", "テレビ", "電子書籍リーダー"],
         "selectedChoice": "雑誌",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.982
-        ]
+        "answerTimes": [5.982]
       },
       {
         "name": "Picture 1",
@@ -4266,9 +3601,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.857
-        ]
+        "answerTimes": [8.857]
       },
       {
         "name": "友達とスマホ",
@@ -4284,9 +3617,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          19.145
-        ]
+        "answerTimes": [19.145]
       },
       {
         "name": "SNSでこんにちは",
@@ -4302,9 +3633,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.725
-        ]
+        "answerTimes": [13.725]
       },
       {
         "name": "ダウンロード",
@@ -4320,9 +3649,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.314
-        ]
+        "answerTimes": [11.314]
       },
       {
         "name": "アプリの許可",
@@ -4338,9 +3665,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.496
-        ]
+        "answerTimes": [5.496]
       },
       {
         "name": "SNSの青年",
@@ -4356,9 +3681,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          17.581
-        ]
+        "answerTimes": [17.581]
       },
       {
         "name": "パスワード2",
@@ -4374,9 +3697,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.967
-        ]
+        "answerTimes": [12.967]
       },
       {
         "name": "誹謗中傷2",
@@ -4392,9 +3713,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.063
-        ]
+        "answerTimes": [10.063]
       },
       {
         "name": "アンハッカブル3",
@@ -4410,9 +3729,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.256
-        ]
+        "answerTimes": [4.256]
       },
       {
         "name": "Picture 2",
@@ -4428,9 +3745,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.187
-        ]
+        "answerTimes": [8.187]
       },
       {
         "name": "アップデート",
@@ -4446,10 +3761,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.683,
-          49.184
-        ]
+        "answerTimes": [15.683, 49.184]
       },
       {
         "name": "メール",
@@ -4465,9 +3777,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.506
-        ]
+        "answerTimes": [8.506]
       },
       {
         "name": "SNSの誘惑",
@@ -4483,27 +3793,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          29.655
-        ]
+        "answerTimes": [29.655]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "カフェ",
-        "choices": [
-          "自宅のリビング",
-          "民宿の部屋",
-          "車の中",
-          "カフェ"
-        ],
+        "choices": ["自宅のリビング", "民宿の部屋", "車の中", "カフェ"],
         "selectedChoice": "カフェ",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.363
-        ]
+        "answerTimes": [10.363]
       },
       {
         "name": "フィッシング🐟",
@@ -4519,9 +3820,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.358
-        ]
+        "answerTimes": [13.358]
       },
       {
         "name": "パスワード3",
@@ -4537,9 +3836,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.947
-        ]
+        "answerTimes": [4.947]
       },
       {
         "name": "誹謗中傷3",
@@ -4555,9 +3852,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.959
-        ]
+        "answerTimes": [8.959]
       },
       {
         "name": "Picture 3",
@@ -4573,9 +3868,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.792
-        ]
+        "answerTimes": [8.792]
       },
       {
         "name": "安全なウェブサイト？",
@@ -4591,9 +3884,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.717
-        ]
+        "answerTimes": [13.717]
       },
       {
         "name": "シークレットモード",
@@ -4609,9 +3900,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.163
-        ]
+        "answerTimes": [8.163]
       },
       {
         "name": "セーフサーチ",
@@ -4627,9 +3916,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.372
-        ]
+        "answerTimes": [5.372]
       },
       {
         "name": "危険なURL",
@@ -4645,10 +3932,7 @@
         "reward": 300,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.577,
-          2.244
-        ]
+        "answerTimes": [10.577, 2.244]
       },
       {
         "name": "モーメント",
@@ -4664,27 +3948,18 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.617
-        ]
+        "answerTimes": [6.617]
       },
       {
         "name": "パスワード4",
         "description": "どれが一番いいパスワード？",
         "answer": "Tokyo2@$0",
-        "choices": [
-          "Tokyo2@$0",
-          "fwaojfIII1",
-          "Tokyo2020",
-          "TOKIO2020"
-        ],
+        "choices": ["Tokyo2@$0", "fwaojfIII1", "Tokyo2020", "TOKIO2020"],
         "selectedChoice": "Tokyo2@$0",
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.724
-        ]
+        "answerTimes": [8.724]
       }
     ]
   },
@@ -4704,20 +3979,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "Maebashi1023City",
-        "choices": [
-          "Password",
-          "cityMaebashi",
-          "vwxyz11",
-          "Maebashi1023City"
-        ],
+        "choices": ["Password", "cityMaebashi", "vwxyz11", "Maebashi1023City"],
         "selectedChoice": "Maebashi1023City",
         "reward": 100,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.929,
-          6.729
-        ]
+        "answerTimes": [15.929, 6.729]
       },
       {
         "name": "誹謗中傷1",
@@ -4733,45 +4000,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.086
-        ]
+        "answerTimes": [8.086]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "一輪車",
-        "choices": [
-          "一輪車",
-          "車",
-          "スマートスピーカー",
-          "電気自動車"
-        ],
+        "choices": ["一輪車", "車", "スマートスピーカー", "電気自動車"],
         "selectedChoice": "一輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.8
-        ]
+        "answerTimes": [8.8]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "図書館の本",
-        "choices": [
-          "電子書籍リーダー",
-          "タブレット",
-          "パソコン",
-          "図書館の本"
-        ],
+        "choices": ["電子書籍リーダー", "タブレット", "パソコン", "図書館の本"],
         "selectedChoice": "図書館の本",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.317
-        ]
+        "answerTimes": [3.317]
       },
       {
         "name": "Picture 1",
@@ -4787,9 +4038,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.011
-        ]
+        "answerTimes": [6.011]
       },
       {
         "name": "友達とスマホ",
@@ -4805,9 +4054,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.315
-        ]
+        "answerTimes": [7.315]
       },
       {
         "name": "SNSでこんにちは",
@@ -4823,9 +4070,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.535
-        ]
+        "answerTimes": [6.535]
       },
       {
         "name": "ダウンロード",
@@ -4841,9 +4086,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.517
-        ]
+        "answerTimes": [6.517]
       },
       {
         "name": "アプリの許可",
@@ -4859,9 +4102,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.855
-        ]
+        "answerTimes": [9.855]
       },
       {
         "name": "SNSの青年",
@@ -4877,9 +4118,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.117
-        ]
+        "answerTimes": [8.117]
       },
       {
         "name": "パスワード2",
@@ -4895,9 +4134,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.309
-        ]
+        "answerTimes": [8.309]
       },
       {
         "name": "誹謗中傷2",
@@ -4913,9 +4150,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.322
-        ]
+        "answerTimes": [5.322]
       },
       {
         "name": "アンハッカブル3",
@@ -4931,9 +4166,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.864
-        ]
+        "answerTimes": [4.864]
       },
       {
         "name": "Picture 2",
@@ -4949,9 +4182,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.526
-        ]
+        "answerTimes": [4.526]
       },
       {
         "name": "アップデート",
@@ -4967,9 +4198,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          16.436
-        ]
+        "answerTimes": [16.436]
       },
       {
         "name": "メール",
@@ -4985,9 +4214,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.446
-        ]
+        "answerTimes": [5.446]
       },
       {
         "name": "SNSの誘惑",
@@ -5003,27 +4230,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.313
-        ]
+        "answerTimes": [6.313]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "レストラン",
-        "choices": [
-          "自宅のリビング",
-          "レストラン",
-          "友達の家",
-          "公園のベンチ"
-        ],
+        "choices": ["自宅のリビング", "レストラン", "友達の家", "公園のベンチ"],
         "selectedChoice": "レストラン",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.382
-        ]
+        "answerTimes": [6.382]
       },
       {
         "name": "フィッシング🐟",
@@ -5039,10 +4257,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.088,
-          2.098
-        ]
+        "answerTimes": [12.088, 2.098]
       },
       {
         "name": "パスワード3",
@@ -5058,9 +4273,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.433
-        ]
+        "answerTimes": [5.433]
       },
       {
         "name": "誹謗中傷3",
@@ -5076,9 +4289,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.955
-        ]
+        "answerTimes": [5.955]
       },
       {
         "name": "Picture 3",
@@ -5094,9 +4305,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.387
-        ]
+        "answerTimes": [5.387]
       },
       {
         "name": "安全なウェブサイト？",
@@ -5112,9 +4321,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.194
-        ]
+        "answerTimes": [5.194]
       },
       {
         "name": "シークレットモード",
@@ -5130,9 +4337,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.163
-        ]
+        "answerTimes": [5.163]
       },
       {
         "name": "セーフサーチ",
@@ -5148,9 +4353,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.997
-        ]
+        "answerTimes": [5.997]
       },
       {
         "name": "危険なURL",
@@ -5166,10 +4369,7 @@
         "reward": 300,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.107,
-          1.946
-        ]
+        "answerTimes": [11.107, 1.946]
       },
       {
         "name": "モーメント",
@@ -5185,9 +4385,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.499
-        ]
+        "answerTimes": [9.499]
       },
       {
         "name": "パスワード4",
@@ -5203,10 +4401,7 @@
         "reward": 400,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          18.498,
-          12.374
-        ]
+        "answerTimes": [18.498, 12.374]
       }
     ]
   },
@@ -5215,7 +4410,7 @@
     "score": 5600,
     "players": [
       {
-        "name": "じょりーパスタ草加店",
+        "name": "草加店",
         "score": 0,
         "teamName": "布団さん",
         "__v": 0
@@ -5226,19 +4421,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "wjxoSJAO2J1",
-        "choices": [
-          "wjxoSJAO2J1",
-          "tokyo2020",
-          "onepiece",
-          "vwxyz11"
-        ],
+        "choices": ["wjxoSJAO2J1", "tokyo2020", "onepiece", "vwxyz11"],
         "selectedChoice": "wjxoSJAO2J1",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.716
-        ]
+        "answerTimes": [6.716]
       },
       {
         "name": "誹謗中傷1",
@@ -5254,45 +4442,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.758
-        ]
+        "answerTimes": [6.758]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "自転車",
-        "choices": [
-          "自転車",
-          "飛行機",
-          "車",
-          "電気自動車"
-        ],
+        "choices": ["自転車", "飛行機", "車", "電気自動車"],
         "selectedChoice": "自転車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.864
-        ]
+        "answerTimes": [5.864]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "図書館の本",
-        "choices": [
-          "スマートフォン",
-          "図書館の本",
-          "パソコン",
-          "テレビ"
-        ],
+        "choices": ["スマートフォン", "図書館の本", "パソコン", "テレビ"],
         "selectedChoice": "図書館の本",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.34
-        ]
+        "answerTimes": [5.34]
       },
       {
         "name": "Picture 1",
@@ -5308,9 +4480,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.348
-        ]
+        "answerTimes": [6.348]
       },
       {
         "name": "友達とスマホ",
@@ -5326,9 +4496,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.799
-        ]
+        "answerTimes": [10.799]
       },
       {
         "name": "SNSでこんにちは",
@@ -5344,9 +4512,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.899
-        ]
+        "answerTimes": [4.899]
       },
       {
         "name": "ダウンロード",
@@ -5362,9 +4528,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.81
-        ]
+        "answerTimes": [9.81]
       },
       {
         "name": "アプリの許可",
@@ -5380,9 +4544,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.534
-        ]
+        "answerTimes": [7.534]
       },
       {
         "name": "SNSの青年",
@@ -5398,9 +4560,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.488
-        ]
+        "answerTimes": [15.488]
       },
       {
         "name": "パスワード2",
@@ -5416,10 +4576,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          28.225,
-          3.511
-        ]
+        "answerTimes": [28.225, 3.511]
       },
       {
         "name": "誹謗中傷2",
@@ -5435,9 +4592,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.675
-        ]
+        "answerTimes": [14.675]
       },
       {
         "name": "アンハッカブル3",
@@ -5453,9 +4608,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.398
-        ]
+        "answerTimes": [7.398]
       },
       {
         "name": "Picture 2",
@@ -5471,9 +4624,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.865
-        ]
+        "answerTimes": [8.865]
       },
       {
         "name": "アップデート",
@@ -5489,9 +4640,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.855
-        ]
+        "answerTimes": [9.855]
       },
       {
         "name": "メール",
@@ -5507,9 +4656,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.3
-        ]
+        "answerTimes": [5.3]
       },
       {
         "name": "SNSの誘惑",
@@ -5525,28 +4672,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.555
-        ]
+        "answerTimes": [11.555]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "カフェ",
-        "choices": [
-          "カフェ",
-          "公園のベンチ",
-          "車の中",
-          "民宿の部屋"
-        ],
+        "choices": ["カフェ", "公園のベンチ", "車の中", "民宿の部屋"],
         "selectedChoice": "カフェ",
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          32.208,
-          6.998
-        ]
+        "answerTimes": [32.208, 6.998]
       },
       {
         "name": "フィッシング🐟",
@@ -5562,9 +4699,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.409
-        ]
+        "answerTimes": [8.409]
       },
       {
         "name": "パスワード3",
@@ -5580,9 +4715,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.717
-        ]
+        "answerTimes": [4.717]
       },
       {
         "name": "誹謗中傷3",
@@ -5598,9 +4731,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.942
-        ]
+        "answerTimes": [11.942]
       },
       {
         "name": "Picture 3",
@@ -5616,9 +4747,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.858
-        ]
+        "answerTimes": [6.858]
       },
       {
         "name": "安全なウェブサイト？",
@@ -5634,9 +4763,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.369
-        ]
+        "answerTimes": [5.369]
       },
       {
         "name": "シークレットモード",
@@ -5652,9 +4779,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.701
-        ]
+        "answerTimes": [6.701]
       },
       {
         "name": "セーフサーチ",
@@ -5670,9 +4795,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.673
-        ]
+        "answerTimes": [4.673]
       },
       {
         "name": "危険なURL",
@@ -5688,9 +4811,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.877
-        ]
+        "answerTimes": [3.877]
       },
       {
         "name": "モーメント",
@@ -5706,9 +4827,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.03
-        ]
+        "answerTimes": [7.03]
       },
       {
         "name": "パスワード4",
@@ -5724,9 +4843,7 @@
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.57
-        ]
+        "answerTimes": [8.57]
       }
     ]
   },
@@ -5746,20 +4863,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "Maebashi1023City",
-        "choices": [
-          "cityMaebashi",
-          "vwxyz11",
-          "tokyo2020",
-          "Maebashi1023City"
-        ],
+        "choices": ["cityMaebashi", "vwxyz11", "tokyo2020", "Maebashi1023City"],
         "selectedChoice": "Maebashi1023City",
         "reward": 100,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.415,
-          10.128
-        ]
+        "answerTimes": [8.415, 10.128]
       },
       {
         "name": "誹謗中傷1",
@@ -5775,45 +4884,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.818
-        ]
+        "answerTimes": [4.818]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "自転車",
-        "choices": [
-          "スマートスピーカー",
-          "新幹線",
-          "自転車",
-          "電気自動車"
-        ],
+        "choices": ["スマートスピーカー", "新幹線", "自転車", "電気自動車"],
         "selectedChoice": "自転車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.049
-        ]
+        "answerTimes": [4.049]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "新聞",
-        "choices": [
-          "スマートフォン",
-          "新聞",
-          "パソコン",
-          "テレビ"
-        ],
+        "choices": ["スマートフォン", "新聞", "パソコン", "テレビ"],
         "selectedChoice": "新聞",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.722
-        ]
+        "answerTimes": [3.722]
       },
       {
         "name": "Picture 1",
@@ -5829,9 +4922,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.166
-        ]
+        "answerTimes": [10.166]
       },
       {
         "name": "友達とスマホ",
@@ -5847,9 +4938,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.143
-        ]
+        "answerTimes": [6.143]
       },
       {
         "name": "SNSでこんにちは",
@@ -5865,9 +4954,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.966
-        ]
+        "answerTimes": [5.966]
       },
       {
         "name": "ダウンロード",
@@ -5883,9 +4970,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.301
-        ]
+        "answerTimes": [8.301]
       },
       {
         "name": "アプリの許可",
@@ -5901,10 +4986,7 @@
         "reward": 100,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.8,
-          4.251
-        ]
+        "answerTimes": [3.8, 4.251]
       },
       {
         "name": "SNSの青年",
@@ -5920,9 +5002,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.017
-        ]
+        "answerTimes": [11.017]
       },
       {
         "name": "パスワード2",
@@ -5938,10 +5018,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          22.449,
-          11.438
-        ]
+        "answerTimes": [22.449, 11.438]
       },
       {
         "name": "誹謗中傷2",
@@ -5957,9 +5034,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          16.377
-        ]
+        "answerTimes": [16.377]
       },
       {
         "name": "アンハッカブル3",
@@ -5975,9 +5050,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.574
-        ]
+        "answerTimes": [5.574]
       },
       {
         "name": "Picture 2",
@@ -5993,9 +5066,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.198
-        ]
+        "answerTimes": [7.198]
       },
       {
         "name": "アップデート",
@@ -6011,10 +5082,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          21.828,
-          12.495
-        ]
+        "answerTimes": [21.828, 12.495]
       },
       {
         "name": "メール",
@@ -6030,9 +5098,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.466
-        ]
+        "answerTimes": [11.466]
       },
       {
         "name": "SNSの誘惑",
@@ -6048,27 +5114,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.85
-        ]
+        "answerTimes": [10.85]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "カフェ",
-        "choices": [
-          "民宿の部屋",
-          "カフェ",
-          "友達の家",
-          "公園のベンチ"
-        ],
+        "choices": ["民宿の部屋", "カフェ", "友達の家", "公園のベンチ"],
         "selectedChoice": "カフェ",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          18.733
-        ]
+        "answerTimes": [18.733]
       },
       {
         "name": "フィッシング🐟",
@@ -6084,9 +5141,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.691
-        ]
+        "answerTimes": [10.691]
       },
       {
         "name": "パスワード3",
@@ -6102,9 +5157,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.657
-        ]
+        "answerTimes": [9.657]
       },
       {
         "name": "誹謗中傷3",
@@ -6120,9 +5173,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.435
-        ]
+        "answerTimes": [12.435]
       },
       {
         "name": "Picture 3",
@@ -6138,9 +5189,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.188
-        ]
+        "answerTimes": [8.188]
       },
       {
         "name": "安全なウェブサイト？",
@@ -6156,9 +5205,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.812
-        ]
+        "answerTimes": [8.812]
       },
       {
         "name": "シークレットモード",
@@ -6174,9 +5221,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.711
-        ]
+        "answerTimes": [6.711]
       },
       {
         "name": "セーフサーチ",
@@ -6192,9 +5237,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.55
-        ]
+        "answerTimes": [12.55]
       },
       {
         "name": "危険なURL",
@@ -6210,9 +5253,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.776
-        ]
+        "answerTimes": [7.776]
       },
       {
         "name": "モーメント",
@@ -6228,9 +5269,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.371
-        ]
+        "answerTimes": [11.371]
       },
       {
         "name": "パスワード4",
@@ -6246,9 +5285,7 @@
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.899
-        ]
+        "answerTimes": [9.899]
       }
     ]
   },
@@ -6268,19 +5305,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "toKIo202xy",
-        "choices": [
-          "cityMaebashi",
-          "Password",
-          "tokyo2020",
-          "toKIo202xy"
-        ],
+        "choices": ["cityMaebashi", "Password", "tokyo2020", "toKIo202xy"],
         "selectedChoice": "toKIo202xy",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.743
-        ]
+        "answerTimes": [10.743]
       },
       {
         "name": "誹謗中傷1",
@@ -6296,45 +5326,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.384
-        ]
+        "answerTimes": [7.384]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "三輪車",
-        "choices": [
-          "三輪車",
-          "スマートスピーカー",
-          "車",
-          "電気自動車"
-        ],
+        "choices": ["三輪車", "スマートスピーカー", "車", "電気自動車"],
         "selectedChoice": "三輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.393
-        ]
+        "answerTimes": [6.393]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "新聞",
-        "choices": [
-          "タブレット",
-          "新聞",
-          "テレビ",
-          "スマートフォン"
-        ],
+        "choices": ["タブレット", "新聞", "テレビ", "スマートフォン"],
         "selectedChoice": "新聞",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.657
-        ]
+        "answerTimes": [3.657]
       },
       {
         "name": "Picture 1",
@@ -6350,9 +5364,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.531
-        ]
+        "answerTimes": [6.531]
       },
       {
         "name": "友達とスマホ",
@@ -6368,9 +5380,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          36.169
-        ]
+        "answerTimes": [36.169]
       },
       {
         "name": "SNSでこんにちは",
@@ -6386,9 +5396,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.24
-        ]
+        "answerTimes": [6.24]
       },
       {
         "name": "ダウンロード",
@@ -6404,9 +5412,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.077
-        ]
+        "answerTimes": [7.077]
       },
       {
         "name": "アプリの許可",
@@ -6422,9 +5428,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.458
-        ]
+        "answerTimes": [7.458]
       },
       {
         "name": "SNSの青年",
@@ -6440,9 +5444,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.784
-        ]
+        "answerTimes": [6.784]
       },
       {
         "name": "パスワード2",
@@ -6458,9 +5460,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.042
-        ]
+        "answerTimes": [14.042]
       },
       {
         "name": "誹謗中傷2",
@@ -6476,9 +5476,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.802
-        ]
+        "answerTimes": [5.802]
       },
       {
         "name": "アンハッカブル3",
@@ -6494,9 +5492,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.668
-        ]
+        "answerTimes": [4.668]
       },
       {
         "name": "Picture 2",
@@ -6512,9 +5508,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.752
-        ]
+        "answerTimes": [7.752]
       },
       {
         "name": "アップデート",
@@ -6530,9 +5524,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          16.697
-        ]
+        "answerTimes": [16.697]
       },
       {
         "name": "メール",
@@ -6548,9 +5540,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.158
-        ]
+        "answerTimes": [9.158]
       },
       {
         "name": "SNSの誘惑",
@@ -6566,27 +5556,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.8
-        ]
+        "answerTimes": [12.8]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "カフェ",
-        "choices": [
-          "車の中",
-          "友達の家",
-          "カフェ",
-          "民宿の部屋"
-        ],
+        "choices": ["車の中", "友達の家", "カフェ", "民宿の部屋"],
         "selectedChoice": "カフェ",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          16.258
-        ]
+        "answerTimes": [16.258]
       },
       {
         "name": "フィッシング🐟",
@@ -6602,9 +5583,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.291
-        ]
+        "answerTimes": [6.291]
       },
       {
         "name": "パスワード3",
@@ -6620,9 +5599,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          22.491
-        ]
+        "answerTimes": [22.491]
       },
       {
         "name": "誹謗中傷3",
@@ -6638,11 +5615,7 @@
         "reward": 300,
         "answerCount": 3,
         "answerCountLimit": 2,
-        "answerTimes": [
-          33.655,
-          7.3,
-          5.749
-        ]
+        "answerTimes": [33.655, 7.3, 5.749]
       },
       {
         "name": "Picture 3",
@@ -6658,9 +5631,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          34.713
-        ]
+        "answerTimes": [34.713]
       },
       {
         "name": "安全なウェブサイト？",
@@ -6676,9 +5647,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.673
-        ]
+        "answerTimes": [5.673]
       },
       {
         "name": "シークレットモード",
@@ -6694,9 +5663,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          23.223
-        ]
+        "answerTimes": [23.223]
       },
       {
         "name": "セーフサーチ",
@@ -6712,9 +5679,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          33.239
-        ]
+        "answerTimes": [33.239]
       },
       {
         "name": "危険なURL",
@@ -6730,9 +5695,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.975
-        ]
+        "answerTimes": [8.975]
       },
       {
         "name": "モーメント",
@@ -6748,9 +5711,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.795
-        ]
+        "answerTimes": [9.795]
       },
       {
         "name": "パスワード4",
@@ -6766,9 +5727,7 @@
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.975
-        ]
+        "answerTimes": [3.975]
       }
     ]
   },
@@ -6788,19 +5747,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "wjxoSJAO2J1",
-        "choices": [
-          "onepiece",
-          "wjxoSJAO2J1",
-          "vwxyz11",
-          "tokyo2020"
-        ],
+        "choices": ["onepiece", "wjxoSJAO2J1", "vwxyz11", "tokyo2020"],
         "selectedChoice": "wjxoSJAO2J1",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.302
-        ]
+        "answerTimes": [8.302]
       },
       {
         "name": "誹謗中傷1",
@@ -6816,45 +5768,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.819
-        ]
+        "answerTimes": [8.819]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "自転車",
-        "choices": [
-          "スマートスピーカー",
-          "自転車",
-          "飛行機",
-          "電気自動車"
-        ],
+        "choices": ["スマートスピーカー", "自転車", "飛行機", "電気自動車"],
         "selectedChoice": "自転車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.061
-        ]
+        "answerTimes": [5.061]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "新聞",
-        "choices": [
-          "新聞",
-          "タブレット",
-          "パソコン",
-          "電子書籍リーダー"
-        ],
+        "choices": ["新聞", "タブレット", "パソコン", "電子書籍リーダー"],
         "selectedChoice": "新聞",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.009
-        ]
+        "answerTimes": [4.009]
       },
       {
         "name": "Picture 1",
@@ -6870,9 +5806,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.73
-        ]
+        "answerTimes": [6.73]
       },
       {
         "name": "友達とスマホ",
@@ -6888,9 +5822,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.456
-        ]
+        "answerTimes": [7.456]
       },
       {
         "name": "SNSでこんにちは",
@@ -6906,9 +5838,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.826
-        ]
+        "answerTimes": [3.826]
       },
       {
         "name": "ダウンロード",
@@ -6924,9 +5854,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.278
-        ]
+        "answerTimes": [4.278]
       },
       {
         "name": "アプリの許可",
@@ -6942,10 +5870,7 @@
         "reward": 100,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.173,
-          4.927
-        ]
+        "answerTimes": [3.173, 4.927]
       },
       {
         "name": "SNSの青年",
@@ -6961,9 +5886,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.161
-        ]
+        "answerTimes": [6.161]
       },
       {
         "name": "パスワード2",
@@ -6979,9 +5902,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.758
-        ]
+        "answerTimes": [4.758]
       },
       {
         "name": "誹謗中傷2",
@@ -6997,9 +5918,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.94
-        ]
+        "answerTimes": [7.94]
       },
       {
         "name": "アンハッカブル3",
@@ -7015,9 +5934,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          2.295
-        ]
+        "answerTimes": [2.295]
       },
       {
         "name": "Picture 2",
@@ -7033,9 +5950,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.518
-        ]
+        "answerTimes": [4.518]
       },
       {
         "name": "アップデート",
@@ -7051,10 +5966,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          22.588,
-          18.94
-        ]
+        "answerTimes": [22.588, 18.94]
       },
       {
         "name": "メール",
@@ -7070,9 +5982,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.223
-        ]
+        "answerTimes": [7.223]
       },
       {
         "name": "SNSの誘惑",
@@ -7088,27 +5998,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.919
-        ]
+        "answerTimes": [12.919]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "カフェ",
-        "choices": [
-          "自宅のリビング",
-          "友達の家",
-          "民宿の部屋",
-          "カフェ"
-        ],
+        "choices": ["自宅のリビング", "友達の家", "民宿の部屋", "カフェ"],
         "selectedChoice": "カフェ",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.225
-        ]
+        "answerTimes": [11.225]
       },
       {
         "name": "フィッシング🐟",
@@ -7124,9 +6025,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.31
-        ]
+        "answerTimes": [7.31]
       },
       {
         "name": "パスワード3",
@@ -7142,9 +6041,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.162
-        ]
+        "answerTimes": [6.162]
       },
       {
         "name": "誹謗中傷3",
@@ -7160,9 +6057,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.048
-        ]
+        "answerTimes": [4.048]
       },
       {
         "name": "Picture 3",
@@ -7178,9 +6073,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.345
-        ]
+        "answerTimes": [5.345]
       },
       {
         "name": "安全なウェブサイト？",
@@ -7196,9 +6089,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.963
-        ]
+        "answerTimes": [3.963]
       },
       {
         "name": "シークレットモード",
@@ -7214,9 +6105,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.164
-        ]
+        "answerTimes": [5.164]
       },
       {
         "name": "セーフサーチ",
@@ -7232,9 +6121,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.33
-        ]
+        "answerTimes": [6.33]
       },
       {
         "name": "危険なURL",
@@ -7250,9 +6137,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          17.478
-        ]
+        "answerTimes": [17.478]
       },
       {
         "name": "モーメント",
@@ -7268,9 +6153,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.903
-        ]
+        "answerTimes": [3.903]
       },
       {
         "name": "パスワード4",
@@ -7286,9 +6169,7 @@
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.83
-        ]
+        "answerTimes": [10.83]
       }
     ]
   },
@@ -7308,19 +6189,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "Maebashi1023City",
-        "choices": [
-          "Maebashi1023City",
-          "onepiece",
-          "tokyo2020",
-          "password"
-        ],
+        "choices": ["Maebashi1023City", "onepiece", "tokyo2020", "password"],
         "selectedChoice": "Maebashi1023City",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          28.108
-        ]
+        "answerTimes": [28.108]
       },
       {
         "name": "誹謗中傷1",
@@ -7336,45 +6210,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.949
-        ]
+        "answerTimes": [8.949]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "自転車",
-        "choices": [
-          "車",
-          "自転車",
-          "スマートスピーカー",
-          "新幹線"
-        ],
+        "choices": ["車", "自転車", "スマートスピーカー", "新幹線"],
         "selectedChoice": "自転車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          27.814
-        ]
+        "answerTimes": [27.814]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "新聞",
-        "choices": [
-          "タブレット",
-          "スマートフォン",
-          "電子書籍リーダー",
-          "新聞"
-        ],
+        "choices": ["タブレット", "スマートフォン", "電子書籍リーダー", "新聞"],
         "selectedChoice": "新聞",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.748
-        ]
+        "answerTimes": [4.748]
       },
       {
         "name": "Picture 1",
@@ -7390,9 +6248,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.771
-        ]
+        "answerTimes": [9.771]
       },
       {
         "name": "友達とスマホ",
@@ -7408,9 +6264,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          25.185
-        ]
+        "answerTimes": [25.185]
       },
       {
         "name": "SNSでこんにちは",
@@ -7426,9 +6280,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.56
-        ]
+        "answerTimes": [13.56]
       },
       {
         "name": "ダウンロード",
@@ -7444,9 +6296,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.249
-        ]
+        "answerTimes": [12.249]
       },
       {
         "name": "アプリの許可",
@@ -7462,9 +6312,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.588
-        ]
+        "answerTimes": [8.588]
       },
       {
         "name": "SNSの青年",
@@ -7480,9 +6328,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.77
-        ]
+        "answerTimes": [8.77]
       },
       {
         "name": "パスワード2",
@@ -7498,9 +6344,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.975
-        ]
+        "answerTimes": [8.975]
       },
       {
         "name": "誹謗中傷2",
@@ -7516,27 +6360,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.858
-        ]
+        "answerTimes": [10.858]
       },
       {
         "name": "アンハッカブル3",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "懐中電灯",
-        "choices": [
-          "監視カメラ",
-          "デジタルカメラ",
-          "デジタル時計",
-          "懐中電灯"
-        ],
+        "choices": ["監視カメラ", "デジタルカメラ", "デジタル時計", "懐中電灯"],
         "selectedChoice": "懐中電灯",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.703
-        ]
+        "answerTimes": [7.703]
       },
       {
         "name": "Picture 2",
@@ -7552,9 +6387,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          26.416
-        ]
+        "answerTimes": [26.416]
       },
       {
         "name": "アップデート",
@@ -7570,9 +6403,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          65.951
-        ]
+        "answerTimes": [65.951]
       },
       {
         "name": "メール",
@@ -7588,9 +6419,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.231
-        ]
+        "answerTimes": [14.231]
       },
       {
         "name": "SNSの誘惑",
@@ -7606,28 +6435,18 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          103.627,
-          2.623
-        ]
+        "answerTimes": [103.627, 2.623]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "電車内",
-        "choices": [
-          "民宿の部屋",
-          "友達の家",
-          "電車内",
-          "自宅のリビング"
-        ],
+        "choices": ["民宿の部屋", "友達の家", "電車内", "自宅のリビング"],
         "selectedChoice": "電車内",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          23.094
-        ]
+        "answerTimes": [23.094]
       },
       {
         "name": "フィッシング🐟",
@@ -7643,9 +6462,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          23.952
-        ]
+        "answerTimes": [23.952]
       },
       {
         "name": "パスワード3",
@@ -7661,9 +6478,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.952
-        ]
+        "answerTimes": [13.952]
       },
       {
         "name": "誹謗中傷3",
@@ -7679,27 +6494,18 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.63
-        ]
+        "answerTimes": [15.63]
       },
       {
         "name": "Picture 3",
         "description": "写真をSNSで共有する前に何を削除すべき？もっとも適切なのはどれ？",
         "answer": "写真の撮影場所",
-        "choices": [
-          "写真の背景",
-          "写真の色",
-          "写真の撮影場所",
-          "写真の形式"
-        ],
+        "choices": ["写真の背景", "写真の色", "写真の撮影場所", "写真の形式"],
         "selectedChoice": "写真の撮影場所",
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          27.125
-        ]
+        "answerTimes": [27.125]
       },
       {
         "name": "安全なウェブサイト？",
@@ -7715,9 +6521,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.51
-        ]
+        "answerTimes": [12.51]
       },
       {
         "name": "シークレットモード",
@@ -7733,9 +6537,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.107
-        ]
+        "answerTimes": [10.107]
       },
       {
         "name": "セーフサーチ",
@@ -7751,9 +6553,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.042
-        ]
+        "answerTimes": [8.042]
       },
       {
         "name": "危険なURL",
@@ -7769,9 +6569,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          29.087
-        ]
+        "answerTimes": [29.087]
       },
       {
         "name": "モーメント",
@@ -7787,9 +6585,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.181
-        ]
+        "answerTimes": [8.181]
       },
       {
         "name": "パスワード4",
@@ -7805,26 +6601,24 @@
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.186
-        ]
+        "answerTimes": [9.186]
       }
     ]
   },
   {
-    "name": "愛斗だいすきクラブ",
+    "name": "だいすきクラブ",
     "score": 5600,
     "players": [
       {
         "name": "manato daisuki club",
         "score": 0,
-        "teamName": "愛斗だいすきクラブ",
+        "teamName": "だいすきクラブ",
         "__v": 0
       },
       {
         "name": "キャロル",
         "score": 0,
-        "teamName": "愛斗だいすきクラブ",
+        "teamName": "だいすきクラブ",
         "__v": 0
       }
     ],
@@ -7833,19 +6627,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "wjxoSJAO2J1",
-        "choices": [
-          "wjxoSJAO2J1",
-          "cityMaebashi",
-          "onepiece",
-          "tokyo2020"
-        ],
+        "choices": ["wjxoSJAO2J1", "cityMaebashi", "onepiece", "tokyo2020"],
         "selectedChoice": "wjxoSJAO2J1",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.343
-        ]
+        "answerTimes": [6.343]
       },
       {
         "name": "誹謗中傷1",
@@ -7861,45 +6648,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.107
-        ]
+        "answerTimes": [10.107]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "一輪車",
-        "choices": [
-          "スマートスピーカー",
-          "電気自動車",
-          "一輪車",
-          "飛行機"
-        ],
+        "choices": ["スマートスピーカー", "電気自動車", "一輪車", "飛行機"],
         "selectedChoice": "一輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.007
-        ]
+        "answerTimes": [8.007]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "新聞",
-        "choices": [
-          "テレビ",
-          "スマートフォン",
-          "タブレット",
-          "新聞"
-        ],
+        "choices": ["テレビ", "スマートフォン", "タブレット", "新聞"],
         "selectedChoice": "新聞",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          3.721
-        ]
+        "answerTimes": [3.721]
       },
       {
         "name": "Picture 1",
@@ -7915,9 +6686,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.349
-        ]
+        "answerTimes": [5.349]
       },
       {
         "name": "友達とスマホ",
@@ -7933,9 +6702,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.101
-        ]
+        "answerTimes": [5.101]
       },
       {
         "name": "SNSでこんにちは",
@@ -7951,9 +6718,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.636
-        ]
+        "answerTimes": [4.636]
       },
       {
         "name": "ダウンロード",
@@ -7969,9 +6734,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.949
-        ]
+        "answerTimes": [5.949]
       },
       {
         "name": "アプリの許可",
@@ -7987,9 +6750,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          27.514
-        ]
+        "answerTimes": [27.514]
       },
       {
         "name": "SNSの青年",
@@ -8005,9 +6766,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.641
-        ]
+        "answerTimes": [4.641]
       },
       {
         "name": "パスワード2",
@@ -8023,9 +6782,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.196
-        ]
+        "answerTimes": [8.196]
       },
       {
         "name": "誹謗中傷2",
@@ -8041,10 +6798,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.75,
-          9.439
-        ]
+        "answerTimes": [13.75, 9.439]
       },
       {
         "name": "アンハッカブル3",
@@ -8060,9 +6814,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.046
-        ]
+        "answerTimes": [5.046]
       },
       {
         "name": "Picture 2",
@@ -8078,9 +6830,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.564
-        ]
+        "answerTimes": [6.564]
       },
       {
         "name": "アップデート",
@@ -8096,9 +6846,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.225
-        ]
+        "answerTimes": [6.225]
       },
       {
         "name": "メール",
@@ -8114,9 +6862,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.653
-        ]
+        "answerTimes": [5.653]
       },
       {
         "name": "SNSの誘惑",
@@ -8132,27 +6878,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.14
-        ]
+        "answerTimes": [13.14]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "カフェ",
-        "choices": [
-          "公園のベンチ",
-          "カフェ",
-          "友達の家",
-          "民宿の部屋"
-        ],
+        "choices": ["公園のベンチ", "カフェ", "友達の家", "民宿の部屋"],
         "selectedChoice": "カフェ",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.406
-        ]
+        "answerTimes": [13.406]
       },
       {
         "name": "フィッシング🐟",
@@ -8168,9 +6905,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.694
-        ]
+        "answerTimes": [9.694]
       },
       {
         "name": "パスワード3",
@@ -8186,9 +6921,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.919
-        ]
+        "answerTimes": [4.919]
       },
       {
         "name": "誹謗中傷3",
@@ -8204,27 +6937,18 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.213
-        ]
+        "answerTimes": [9.213]
       },
       {
         "name": "Picture 3",
         "description": "写真をSNSで共有する前に何を削除すべき？もっとも適切なのはどれ？",
         "answer": "写真の撮影場所",
-        "choices": [
-          "写真の形式",
-          "写真の撮影場所",
-          "写真の色",
-          "写真の背景"
-        ],
+        "choices": ["写真の形式", "写真の撮影場所", "写真の色", "写真の背景"],
         "selectedChoice": "写真の撮影場所",
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.026
-        ]
+        "answerTimes": [8.026]
       },
       {
         "name": "安全なウェブサイト？",
@@ -8240,9 +6964,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          17.92
-        ]
+        "answerTimes": [17.92]
       },
       {
         "name": "シークレットモード",
@@ -8258,9 +6980,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.704
-        ]
+        "answerTimes": [4.704]
       },
       {
         "name": "セーフサーチ",
@@ -8276,9 +6996,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          16.054
-        ]
+        "answerTimes": [16.054]
       },
       {
         "name": "危険なURL",
@@ -8294,9 +7012,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.955
-        ]
+        "answerTimes": [7.955]
       },
       {
         "name": "モーメント",
@@ -8312,9 +7028,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.317
-        ]
+        "answerTimes": [12.317]
       },
       {
         "name": "パスワード4",
@@ -8330,10 +7044,7 @@
         "reward": 400,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.426,
-          2.426
-        ]
+        "answerTimes": [10.426, 2.426]
       }
     ]
   },
@@ -8353,19 +7064,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "toKIo202xy",
-        "choices": [
-          "cityMaebashi",
-          "onepiece",
-          "vwxyz11",
-          "toKIo202xy"
-        ],
+        "choices": ["cityMaebashi", "onepiece", "vwxyz11", "toKIo202xy"],
         "selectedChoice": "toKIo202xy",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.731
-        ]
+        "answerTimes": [12.731]
       },
       {
         "name": "誹謗中傷1",
@@ -8381,45 +7085,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.526
-        ]
+        "answerTimes": [13.526]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "一輪車",
-        "choices": [
-          "飛行機",
-          "新幹線",
-          "一輪車",
-          "スマートスピーカー"
-        ],
+        "choices": ["飛行機", "新幹線", "一輪車", "スマートスピーカー"],
         "selectedChoice": "一輪車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.221
-        ]
+        "answerTimes": [7.221]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "雑誌",
-        "choices": [
-          "テレビ",
-          "タブレット",
-          "パソコン",
-          "雑誌"
-        ],
+        "choices": ["テレビ", "タブレット", "パソコン", "雑誌"],
         "selectedChoice": "雑誌",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.741
-        ]
+        "answerTimes": [4.741]
       },
       {
         "name": "Picture 1",
@@ -8435,9 +7123,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.658
-        ]
+        "answerTimes": [7.658]
       },
       {
         "name": "友達とスマホ",
@@ -8453,9 +7139,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.747
-        ]
+        "answerTimes": [8.747]
       },
       {
         "name": "SNSでこんにちは",
@@ -8471,9 +7155,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          22.581
-        ]
+        "answerTimes": [22.581]
       },
       {
         "name": "ダウンロード",
@@ -8489,9 +7171,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.647
-        ]
+        "answerTimes": [7.647]
       },
       {
         "name": "アプリの許可",
@@ -8507,9 +7187,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.67
-        ]
+        "answerTimes": [14.67]
       },
       {
         "name": "SNSの青年",
@@ -8525,9 +7203,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          32.763
-        ]
+        "answerTimes": [32.763]
       },
       {
         "name": "パスワード2",
@@ -8543,10 +7219,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          92.952,
-          2.936
-        ]
+        "answerTimes": [92.952, 2.936]
       },
       {
         "name": "誹謗中傷2",
@@ -8562,27 +7235,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.35
-        ]
+        "answerTimes": [11.35]
       },
       {
         "name": "アンハッカブル3",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "懐中電灯",
-        "choices": [
-          "監視カメラ",
-          "デジタルカメラ",
-          "デジタル時計",
-          "懐中電灯"
-        ],
+        "choices": ["監視カメラ", "デジタルカメラ", "デジタル時計", "懐中電灯"],
         "selectedChoice": "懐中電灯",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          16.379
-        ]
+        "answerTimes": [16.379]
       },
       {
         "name": "Picture 2",
@@ -8598,9 +7262,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.983
-        ]
+        "answerTimes": [11.983]
       },
       {
         "name": "アップデート",
@@ -8616,9 +7278,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          40.445
-        ]
+        "answerTimes": [40.445]
       },
       {
         "name": "メール",
@@ -8634,9 +7294,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.285
-        ]
+        "answerTimes": [6.285]
       },
       {
         "name": "SNSの誘惑",
@@ -8652,28 +7310,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.182
-        ]
+        "answerTimes": [12.182]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "レストラン",
-        "choices": [
-          "車の中",
-          "友達の家",
-          "民宿の部屋",
-          "レストラン"
-        ],
+        "choices": ["車の中", "友達の家", "民宿の部屋", "レストラン"],
         "selectedChoice": "レストラン",
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          24.53,
-          6.415
-        ]
+        "answerTimes": [24.53, 6.415]
       },
       {
         "name": "フィッシング🐟",
@@ -8689,9 +7337,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.82
-        ]
+        "answerTimes": [8.82]
       },
       {
         "name": "パスワード3",
@@ -8707,9 +7353,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.522
-        ]
+        "answerTimes": [7.522]
       },
       {
         "name": "誹謗中傷3",
@@ -8725,27 +7369,18 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          10.184
-        ]
+        "answerTimes": [10.184]
       },
       {
         "name": "Picture 3",
         "description": "写真をSNSで共有する前に何を削除すべき？もっとも適切なのはどれ？",
         "answer": "写真の撮影場所",
-        "choices": [
-          "写真の照明",
-          "写真のサイズ",
-          "写真の色",
-          "写真の撮影場所"
-        ],
+        "choices": ["写真の照明", "写真のサイズ", "写真の色", "写真の撮影場所"],
         "selectedChoice": "写真の撮影場所",
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.832
-        ]
+        "answerTimes": [5.832]
       },
       {
         "name": "安全なウェブサイト？",
@@ -8761,9 +7396,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.717
-        ]
+        "answerTimes": [4.717]
       },
       {
         "name": "シークレットモード",
@@ -8779,9 +7412,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.418
-        ]
+        "answerTimes": [6.418]
       },
       {
         "name": "セーフサーチ",
@@ -8797,9 +7428,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.665
-        ]
+        "answerTimes": [6.665]
       },
       {
         "name": "危険なURL",
@@ -8815,10 +7444,7 @@
         "reward": 300,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.412,
-          12.453
-        ]
+        "answerTimes": [8.412, 12.453]
       },
       {
         "name": "モーメント",
@@ -8834,38 +7460,29 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.396
-        ]
+        "answerTimes": [7.396]
       },
       {
         "name": "パスワード4",
         "description": "どれが一番いいパスワード？",
         "answer": "fjaoXY@@213",
-        "choices": [
-          "TOKIO2020",
-          "Tokyo2020",
-          "fjaoXY@@213",
-          "fwaojfIII1"
-        ],
+        "choices": ["TOKIO2020", "Tokyo2020", "fjaoXY@@213", "fwaojfIII1"],
         "selectedChoice": "fjaoXY@@213",
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.47
-        ]
+        "answerTimes": [14.47]
       }
     ]
   },
   {
-    "name": "クレールピア103",
+    "name": "ピア103",
     "score": 5400,
     "players": [
       {
-        "name": "クレールピア103",
+        "name": "ピア103",
         "score": 0,
-        "teamName": "クレールピア103",
+        "teamName": "ピア103",
         "__v": 0
       }
     ],
@@ -8874,19 +7491,12 @@
         "name": "パスワード1",
         "description": "どれが一番いいパスワード？",
         "answer": "wjxoSJAO2J1",
-        "choices": [
-          "wjxoSJAO2J1",
-          "password",
-          "onepiece",
-          "tokyo2020"
-        ],
+        "choices": ["wjxoSJAO2J1", "password", "onepiece", "tokyo2020"],
         "selectedChoice": "wjxoSJAO2J1",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          13.41
-        ]
+        "answerTimes": [13.41]
       },
       {
         "name": "誹謗中傷1",
@@ -8902,45 +7512,29 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.789
-        ]
+        "answerTimes": [7.789]
       },
       {
         "name": "アンハッカブル1",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "自転車",
-        "choices": [
-          "スマートスピーカー",
-          "飛行機",
-          "自転車",
-          "電気自動車"
-        ],
+        "choices": ["スマートスピーカー", "飛行機", "自転車", "電気自動車"],
         "selectedChoice": "自転車",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.726
-        ]
+        "answerTimes": [4.726]
       },
       {
         "name": "アンハッカブル2",
         "description": "この中でハッキングされないのはどれ？",
         "answer": "図書館の本",
-        "choices": [
-          "テレビ",
-          "図書館の本",
-          "電子書籍リーダー",
-          "タブレット"
-        ],
+        "choices": ["テレビ", "図書館の本", "電子書籍リーダー", "タブレット"],
         "selectedChoice": "図書館の本",
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.404
-        ]
+        "answerTimes": [6.404]
       },
       {
         "name": "Picture 1",
@@ -8956,9 +7550,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.439
-        ]
+        "answerTimes": [6.439]
       },
       {
         "name": "友達とスマホ",
@@ -8974,9 +7566,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.011
-        ]
+        "answerTimes": [6.011]
       },
       {
         "name": "SNSでこんにちは",
@@ -8992,9 +7582,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.848
-        ]
+        "answerTimes": [4.848]
       },
       {
         "name": "ダウンロード",
@@ -9010,9 +7598,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.053
-        ]
+        "answerTimes": [6.053]
       },
       {
         "name": "アプリの許可",
@@ -9028,9 +7614,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.353
-        ]
+        "answerTimes": [15.353]
       },
       {
         "name": "SNSの青年",
@@ -9046,9 +7630,7 @@
         "reward": 100,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.898
-        ]
+        "answerTimes": [5.898]
       },
       {
         "name": "パスワード2",
@@ -9064,9 +7646,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.533
-        ]
+        "answerTimes": [8.533]
       },
       {
         "name": "誹謗中傷2",
@@ -9082,9 +7662,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          15.156
-        ]
+        "answerTimes": [15.156]
       },
       {
         "name": "アンハッカブル3",
@@ -9100,9 +7678,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.592
-        ]
+        "answerTimes": [4.592]
       },
       {
         "name": "Picture 2",
@@ -9118,9 +7694,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          4.934
-        ]
+        "answerTimes": [4.934]
       },
       {
         "name": "アップデート",
@@ -9136,10 +7710,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.815,
-          35.206
-        ]
+        "answerTimes": [12.815, 35.206]
       },
       {
         "name": "メール",
@@ -9155,9 +7726,7 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          7.194
-        ]
+        "answerTimes": [7.194]
       },
       {
         "name": "SNSの誘惑",
@@ -9173,27 +7742,18 @@
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.086
-        ]
+        "answerTimes": [12.086]
       },
       {
         "name": "場所選び",
         "description": "スマホでパスワードを入力するとき、最も安全じゃない選択肢は？",
         "answer": "レストラン",
-        "choices": [
-          "友達の家",
-          "自宅のリビング",
-          "レストラン",
-          "民宿の部屋"
-        ],
+        "choices": ["友達の家", "自宅のリビング", "レストラン", "民宿の部屋"],
         "selectedChoice": "レストラン",
         "reward": 200,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.265
-        ]
+        "answerTimes": [14.265]
       },
       {
         "name": "フィッシング🐟",
@@ -9209,10 +7769,7 @@
         "reward": 200,
         "answerCount": 2,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.321,
-          4.566
-        ]
+        "answerTimes": [5.321, 4.566]
       },
       {
         "name": "パスワード3",
@@ -9228,9 +7785,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.615
-        ]
+        "answerTimes": [8.615]
       },
       {
         "name": "誹謗中傷3",
@@ -9246,9 +7801,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.16
-        ]
+        "answerTimes": [9.16]
       },
       {
         "name": "Picture 3",
@@ -9264,9 +7817,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          12.99
-        ]
+        "answerTimes": [12.99]
       },
       {
         "name": "安全なウェブサイト？",
@@ -9282,9 +7833,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          6.113
-        ]
+        "answerTimes": [6.113]
       },
       {
         "name": "シークレットモード",
@@ -9300,9 +7849,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          14.854
-        ]
+        "answerTimes": [14.854]
       },
       {
         "name": "セーフサーチ",
@@ -9318,9 +7865,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          8.794
-        ]
+        "answerTimes": [8.794]
       },
       {
         "name": "危険なURL",
@@ -9336,9 +7881,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          5.934
-        ]
+        "answerTimes": [5.934]
       },
       {
         "name": "モーメント",
@@ -9354,9 +7897,7 @@
         "reward": 300,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          9.256
-        ]
+        "answerTimes": [9.256]
       },
       {
         "name": "パスワード4",
@@ -9372,10 +7913,9 @@
         "reward": 400,
         "answerCount": 1,
         "answerCountLimit": 2,
-        "answerTimes": [
-          11.202
-        ]
+        "answerTimes": [11.202]
       }
     ]
   }
 ]
+
