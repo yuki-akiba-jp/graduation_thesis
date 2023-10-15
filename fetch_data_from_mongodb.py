@@ -1,76 +1,46 @@
 import json
 import os
-from logging import StringTemplateStyle
 from pprint import pprint
 
 from dotenv import load_dotenv
-from pymongo import MongoClient, collection
+from pymongo import MongoClient
 
 load_dotenv()
 NEXT_PUBLIC_MONGODB_URI = os.getenv("NEXT_PUBLIC_MONGODB_URI")
 
 client = MongoClient(NEXT_PUBLIC_MONGODB_URI)
-
-db = client["test"]  # replace "database" with your database name
-collection = db["problembystudents"]  # replace "collection" with your collection name
-
+db = client["test"]  # replace "test" with your database name
+collection = db["teams"]  # replace "teams" with your collection name
 
 documents = collection.find()
 
+# Convert all documents into a list
+doc_list = [doc for doc in documents]
+# print(json.dumps(doc_list, ensure_ascii=False, indent=2))
+
+for doc in doc_list:
+    del doc["_id"]
+    del doc["__v"]
+for doc in doc_list:
+    keys = doc.keys()
+    for key in keys:
+        objs = doc[key]
+        if type(objs) == list:
+            for obj in objs:
+                if "_id" in obj:
+                    del obj["_id"]
 
 
-for document in documents:
-    toprint = '{\n'
-    toprint += f'  name: "{document["problemName"]}",\n'
-    toprint += f'  description: "{document["description"]}",\n'
-    toprint += f'  answers: ["{document["answers"][0]}", "{document["answers"][1]}", "{document["answers"][2]}"],\n'
-    toprint += f'  choices: [\n'
-    for choice in document["choices"]:
-        toprint += f'    "{choice}",\n'
-    toprint += f'  ],\n'
-    toprint += f'  selectedChoice: "",\n'
-    toprint += '  reward: 100,\n'
-    toprint += '},\n'
-    print(toprint)
+# print(doc_list[0])
 
-    # pprint(document)
-    # print(json.dumps(document, indent=4, ensure_ascii=False))
-    # print(document['studentName'])
-    print(document['studentId'])
-    # print(document['choices'])
+# Open data.json in write mode with UTF-8 encoding
+with open('data.json', 'w', encoding='utf-8') as file:
+    pass
+    # for doc in doc_list:
+        # file.write(json.dumps(doc, ensure_ascii=False, indent=2))
+    # Serialize the list to a JSON formatted string and write to the file
+    file.write(json.dumps(doc_list,ensure_ascii=False, indent=2))  # indent=4 for pretty print
 
-
-
-#   {
-#     name: "パスワード1",
-#     description: "どれが一番いいパスワード？",
-#     answers: ["Maebashi1023City", "toKIo202xy", "wjxoSJAO2J1"],
-#     choices: [
-#       "password",
-#       "cityMaebashi",
-#       "tokyo2020",
-#       "Password",
-#       "onepiece",
-#       "vwxyz11",
-#     ],
-#     selectedChoice: "",
-#     reward: 100,
-#   },
-# import pandas as pd
-
-# df = pd.DataFrame(list(documents))
-# df = df.drop('decisionSkill', axis=1).join(df['decisionSkill'].apply(pd.Series).add_prefix('decisionSkill'))
-# df = df.drop('answers',axis=1).join(df['answers'].apply(pd.Series).add_prefix('answer'))
-# df = df.drop('choices', axis=1).join(df['choices'].apply(pd.Series).add_prefix('choice'))
-
-# Reorder the columns as required
-# columns_order = ["studentName", "studentId", "problemName", "description",
-#                  "decisionSkill0", 
-#                  "answer0", "answer1", "answer2",
-#                  "choice0", "choice1", "choice2", "choice3", "choice4"]
-
-# df = df[columns_order]
-# df.sort_values(by=['studentId'], inplace=True)
-
-# Write DataFrame to Excel
-# df.to_excel('new_problems.xlsx', index=False)
+# If you still want to print each document to the console
+# for doc in doc_list:
+#     pprint(doc)
