@@ -52,3 +52,9 @@
 - problems are designed for people who don't have specific cyber security knowledge
 - 20 minutes maximum for the event, but only 10 minutes taken
 - the event was held in network class, almost all players were 2nd year students and belonged to CS related majour
+- 48 students
+
+## assets
+
+- [questionnaire](https://docs.google.com/document/d/13qOCQz_Xxja2wJh_CcpP4CCIXHDqVT29HKCNYeVW9f4/edit)
+- [see app](https://graduation-thesis-bay.vercel.app/)
