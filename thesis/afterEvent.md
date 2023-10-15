@@ -29,3 +29,9 @@
   ただ公立の理系大学からのデータを年代という枠組みで考えるのは早急であると感じた。
 - 主体的に取り組んでくれた。
   初対面の人とチームワークをする際も、想像よりもコミュニケーションが円滑に進んでいた。
+
+## Environment
+
+- 18 team
+- one team has 2 to 3 members
+- 20 minutes maximum for the event, but only 10 minutes taken
