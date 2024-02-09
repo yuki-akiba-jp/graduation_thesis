@@ -28,3 +28,19 @@ Follow these steps to get the project up and running on your local machine.
    docker-compose up
    ```
    and visit ```localhost:3000```
+
+3. **connect to mongodb running in the docker
+
+```
+    docker ps
+```
+```
+    docker exec -it <mongodb's container id> bash
+```
+```
+    mongosh "mongodb://mongoadmin:secret@localhost:27017/mydatabase?authSource=admin"
+```
+```
+    show dbs
+```
+after showing dbs, you can see collections using mongodb's command.
