@@ -8,7 +8,13 @@ async function dbConnect() {
   }
 
   const db = await mongoose.connect(
-    process.env.NEXT_PUBLIC_MONGODB_URI as string
+
+    // to use mongodb in production like mongodb atlas
+    // process.env.NEXT_PUBLIC_MONGODB_URI as string
+
+    //
+    // to use mongodb in local
+    process.env.MONGODB_URI as string
   );
   connection.isConnected = db.connections[0].readyState;
 }

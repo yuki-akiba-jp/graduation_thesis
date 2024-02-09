@@ -94,6 +94,8 @@ export default function CreateProblemPage() {
     }
   };
 
+  //write NEXT_PUBLIC_CREATEPROBLEM_PASSWORD=<your_password> in .env
+
   return (
     <>
       {process.env.NEXT_PUBLIC_CREATEPROBLEM_PASSWORD !==

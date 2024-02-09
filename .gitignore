@@ -1,6 +1,4 @@
 node_modules/
 .next/
 build/
-tags
-.env
 .DS_Store

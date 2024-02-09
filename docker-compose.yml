@@ -13,3 +13,17 @@ services:
     command: npm run dev
     environment:
       - NODE_ENV=development
+      - MONGODB_URI=mongodb://mongoadmin:secret@mongodb:27017/mydatabase?authSource=admin
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+
+volumes:
+  mongodb-data:

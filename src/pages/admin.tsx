@@ -25,18 +25,20 @@ export default function Admin() {
   }, [router]);
 
   const handlePasswordCheck = () => {
-    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
-
-    if (password === adminPassword) {
-      setIsModalOpen(false);
-    } else {
-      toast({
-        title: "Incorrect password.",
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
-    }
+    //write your logic here
+    // const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+    //
+    // if (password === adminPassword) {
+    //   setIsModalOpen(false);
+    // } else {
+    //   toast({
+    //     title: "Incorrect password.",
+    //     status: "error",
+    //     duration: 3000,
+    //     isClosable: true,
+    //   });
+    // }
+    return true;
   };
 
   return (
