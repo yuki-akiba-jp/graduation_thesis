@@ -20,6 +20,7 @@ Follow these steps to get the project up and running on your local machine.
    ```bash
    git clone https://github.com/yuki-akiba-jp/graduation_thesis.git
    cd graduation_thesis
+   npm i
    ```
 
 2. **Set up using Docker**
