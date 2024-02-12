@@ -1,7 +1,9 @@
 # Graduation Thesis Project
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
+
 - **Git**: Required for cloning and managing the project repository.
 - **Docker & Docker Compose**: Essential for building and running the project within containerized environments.
 
@@ -27,20 +29,25 @@ Follow these steps to get the project up and running on your local machine.
    ```bash
    docker-compose up
    ```
-   and visit ```localhost:3000```
 
-3. **connect to mongodb running in the docker
+   and visit `bash localhost:3000`
+
+3. **connect to mongodb running in the docker**
 
 ```
     docker ps
 ```
+
 ```
     docker exec -it <mongodb's container id> bash
 ```
+
 ```
     mongosh "mongodb://mongoadmin:secret@localhost:27017/mydatabase?authSource=admin"
 ```
+
 ```
     show dbs
 ```
+
 after showing dbs, you can see collections using mongodb's command.
