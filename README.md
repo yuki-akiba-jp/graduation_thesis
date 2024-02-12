@@ -30,7 +30,12 @@ Follow these steps to get the project up and running on your local machine.
    docker-compose up
    ```
 
-   and visit `bash localhost:3000`
+   and visit
+
+   ```bash
+   localhost:3000
+
+   ```
 
 3. **connect to mongodb running in the docker**
 
